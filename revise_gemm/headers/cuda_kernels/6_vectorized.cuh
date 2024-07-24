@@ -4,8 +4,8 @@
 #include "cuda_runtime.h"
 
 template <const uint bm, const uint bn, const uint bk, const uint tw_m, const uint tw_n>
-__global__ void blocking_2d(const float *__restrict A, const float *__restrict B, float *C, int m, int n, int k, float alpha, float beta) {
-    __shared__ float A_shared[bm * bk];
+__global__ void vectorized(float *__restrict A, float *__restrict B, float *C, int m, int n, int k, float alpha, float beta) {
+    __shared__ float AT_shared[bk * bm];
     __shared__ float B_shared[bk * bn];
     float per_thread_result[tw_m * tw_n] = {0.0f};
     float reg_A[tw_m] = {0.0f};
@@ -19,30 +19,30 @@ __global__ void blocking_2d(const float *__restrict A, const float *__restrict B
     const int trow = threadIdx.x / (bn / tw_n);
     const int tcol = threadIdx.x % (bn / tw_n);
 
-    // coordinate of thread in thread block for each shared memory block
-    const int A_trow = threadIdx.x / bk;
-    const int A_tcol = threadIdx.x % bk;
-    const int B_trow = threadIdx.x / bn;
-    const int B_tcol = threadIdx.x % bn;
-
-    // total number of thread in thread block = total number of blocks in shared memory for each matrix
-    const int total_num_thread = (bm * bn) / (tw_m * tw_n);
-    const int A_row_num = total_num_thread / bk;
-    const int B_row_num = total_num_thread / bn; 
+    // coordinate of thread in thread block for each shared memory block to use LSD.128
+    // 128bits = 32bits * 4
+    // single load instruction can load 4 float type elements using vectorization
+    const int A_trow = threadIdx.x / (bk / 4);
+    const int A_tcol = threadIdx.x % (bk / 4);
+    const int B_trow = threadIdx.x / (bn / 4);
+    const int B_tcol = threadIdx.x % (bn / 4);
 
     // staring pointer of each matrcies
     A += brow * bm * k; // grid dimension = (m / bm) * (n / bn) => to recover the original shape, mulitply bm
     B += bcol * bn;
     C += brow * bm * n + bcol * bn;
-    
+
     // out most loop
     // divide whole matrix into blocks
     for(int i = 0; i < k; i += bk) {
         // load the data into shared memory
-        for(int j = 0; j < bm; j += A_row_num)
-            A_shared[(A_trow + j) * bk + A_tcol] = A[(A_trow + j) * k + A_tcol];
-        for(int j = 0; j < bk; j += B_row_num)
-            B_shared[(B_trow + j) * bn + B_tcol] = B[(B_trow + j) * n + B_tcol];
+        float4 A_tmp = reinterpret_cast<float4 *>(&A[A_trow * k + A_tcol * 4])[0];
+        AT_shared[(A_tcol * 4 + 0) * bm + A_trow] = A_tmp.x;
+        AT_shared[(A_tcol * 4 + 1) * bm + A_trow] = A_tmp.y;
+        AT_shared[(A_tcol * 4 + 2) * bm + A_trow] = A_tmp.z;
+        AT_shared[(A_tcol * 4 + 3) * bm + A_trow] = A_tmp.w;
+        
+        reinterpret_cast<float4 *>(&B_shared[B_trow * bn + B_tcol * 4])[0] = reinterpret_cast<float4 *>(&B[B_trow * n + B_tcol * 4])[0];
         // wait unit the whole threads in single thread block finish the data loading
         // unit of shared memory = thread block
         __syncthreads();
@@ -52,7 +52,7 @@ __global__ void blocking_2d(const float *__restrict A, const float *__restrict B
         for(int j = 0; j < bk; j++) {
             // load data in shared memory into local register
             for(int k = 0; k < tw_m; k++)
-                reg_A[k] = A_shared[(trow * tw_m + k) * bk + j];
+                reg_A[k] = AT_shared[j * bn + trow * tw_m + k];
             for(int k = 0; k < tw_n; k++)
                 reg_B[k] = B_shared[j * bn + tcol * tw_n + k];
             // outer product two vectors to make matrix
@@ -69,7 +69,18 @@ __global__ void blocking_2d(const float *__restrict A, const float *__restrict B
     }
 
     for(int i = 0; i < tw_m; i++) {
-        for(int j = 0; j < tw_n; j++)
-            C[(trow * tw_m + i) * n + tcol * tw_n + j] = alpha * per_thread_result[i * tw_n + j] + beta * C[(trow * tw_m + i) * n + tcol * tw_n + j];
+        for(int j = 0; j < tw_n; j += 4) {
+            // load vector into register
+            float4 tmp = reinterpret_cast<float4 *>(&C[(trow * tw_m + i) * n + tcol * tw_n + j])[0];
+
+            // write the result into register
+            tmp.x = alpha * per_thread_result[i * tw_n + j + 0] + beta * tmp.x;
+            tmp.y = alpha * per_thread_result[i * tw_n + j + 1] + beta * tmp.y;
+            tmp.z = alpha * per_thread_result[i * tw_n + j + 2] + beta * tmp.z;
+            tmp.w = alpha * per_thread_result[i * tw_n + j + 3] + beta * tmp.w;
+
+            // write the result into matrix C
+            reinterpret_cast<float4 *>(&C[(trow * tw_m + i) * n + tcol * tw_n + j])[0] = tmp;
+        }
     }
 }

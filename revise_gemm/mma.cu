@@ -41,6 +41,17 @@ void run_blocking_2d(float *A, float *B, float *C, int m, int n, int k, float al
     blocking_2d<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
+void run_vectorized(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    vectorized<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
 void run_global_tf32(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     float *tf32_A, *tf32_B;
     CHECK_CUDA(cudaMalloc((void**)&tf32_A, sizeof(float) * m * k));
@@ -135,9 +146,12 @@ void launch_kernel_with_option(int op, cublasHandle_t handle, float *A, float *B
             run_blocking_2d(A, B, C, m, n, k, alpha, beta);
             break;
         case 6 :
+            run_vectorized(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 10 :
             run_global_tf32(A, B, C, m, n, k, alpha, beta);
             break;
-        case 7 :
+        case 11 :
             run_global_fp16(A, B, C, m, n, k, alpha, beta);
             break;
     }
@@ -209,7 +223,7 @@ int main(int argc, char **argv) {
     CHECK_CUDA(cudaMemcpy(d_B, B, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
 
     // number of kernels
-    int op_num = 5;
+    int op_num = 6;
 
     // for storing the gflops and elapsed_time
     result **exe_results = (result**)malloc(sizeof(result*) * (op_num + 1));
@@ -217,11 +231,11 @@ int main(int argc, char **argv) {
         exe_results[i] = (result*)malloc(sizeof(result) * SIZE.size());
 
     // repeat same kernel as 'repeat'
-    int repeat = 100;
+    int repeat = 10;
 
     // index for accessing the 'exe_results', tracking the matrix size
     int cnt = 0;
-
+    
     // execute kernels from small size to largest size
     for(int size : SIZE) {
         long m, n, k;

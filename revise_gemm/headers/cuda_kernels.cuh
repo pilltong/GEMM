@@ -5,3 +5,4 @@
 #include "cuda_kernels/3_shared_caching.cuh"
 #include "cuda_kernels/4_blocking_1d.cuh"
 #include "cuda_kernels/5_blocking_2d.cuh"
+#include "cuda_kernels/6_vectorized.cuh"
