@@ -1,0 +1,263 @@
+Device ID: 0
+    Name: NVIDIA GeForce RTX 4060
+    Compute Capability: 8.9
+    memory Bus Width: 128 bits
+    max Threads Per Block: 1024
+    max Threads Per Streaming MultiProcessor: 1536
+    max Regs Per Block: 65536
+    max Regs Per Streaming MultiProcessor: 65536
+    total Global Mem: 7931 MB
+    shared Mem Per Block: 48 KB
+    shared Mem Per Streaming Multiprocessor: 100 KB
+    total Const Mem: 64 KB
+    multi Processor Count: 24
+    Warp Size: 32
+    max warps per multiprocessor: 48
+    reg allocation unit size: 256
+    reg allocation granularity: warp
+    CUDA runtime shared mem overhead per block: 1024 B
+    warp allocation granularity: 4
+
+This is FP32
+size : 128
+This is op 1
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+This is op 2
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+This is op 3
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+This is op 4
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+This is op 5
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+This is op 6
+Divergence! Should 22.158407, Is 22.158401 (Diff 0.000006) at 0
+Result is different
+
+op : 0, Average time : (0.000004)sec, performance : (  951.7) GFLOPs/s
+op : 1, Average time : (0.000058)sec, performance : (   72.7) GFLOPs/s
+op : 2, Average time : (0.000008)sec, performance : (  505.7) GFLOPs/s
+op : 3, Average time : (0.000007)sec, performance : (  616.3) GFLOPs/s
+op : 4, Average time : (0.000006)sec, performance : (  658.6) GFLOPs/s
+op : 5, Average time : (0.000014)sec, performance : (  300.9) GFLOPs/s
+op : 6, Average time : (0.000018)sec, performance : (  230.7) GFLOPs/s
+
+size : 256
+This is op 1
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+This is op 2
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+This is op 3
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+This is op 4
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+This is op 5
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+This is op 6
+Divergence! Should 5.037401, Is 5.037400 (Diff 0.000001) at 2
+Result is different
+
+op : 0, Average time : (0.000009)sec, performance : ( 3671.4) GFLOPs/s
+op : 1, Average time : (0.000334)sec, performance : (  100.3) GFLOPs/s
+op : 2, Average time : (0.000042)sec, performance : (  792.5) GFLOPs/s
+op : 3, Average time : (0.000033)sec, performance : ( 1005.2) GFLOPs/s
+op : 4, Average time : (0.000018)sec, performance : ( 1848.2) GFLOPs/s
+op : 5, Average time : (0.000025)sec, performance : ( 1368.2) GFLOPs/s
+op : 6, Average time : (0.000033)sec, performance : ( 1030.8) GFLOPs/s
+
+size : 512
+This is op 1
+Result is same
+
+This is op 2
+Result is same
+
+This is op 3
+Result is same
+
+This is op 4
+Result is same
+
+This is op 5
+Result is same
+
+This is op 6
+Result is same
+
+op : 0, Average time : (0.000038)sec, performance : ( 7033.8) GFLOPs/s
+op : 1, Average time : (0.002237)sec, performance : (  120.0) GFLOPs/s
+op : 2, Average time : (0.000266)sec, performance : ( 1010.7) GFLOPs/s
+op : 3, Average time : (0.000206)sec, performance : ( 1302.9) GFLOPs/s
+op : 4, Average time : (0.000094)sec, performance : ( 2844.8) GFLOPs/s
+op : 5, Average time : (0.000062)sec, performance : ( 4360.6) GFLOPs/s
+op : 6, Average time : (0.000056)sec, performance : ( 4762.5) GFLOPs/s
+
+size : 1024
+This is op 1
+Result is same
+
+This is op 2
+Result is same
+
+This is op 3
+Result is same
+
+This is op 4
+Result is same
+
+This is op 5
+Result is same
+
+This is op 6
+Result is same
+
+op : 0, Average time : (0.000235)sec, performance : ( 9140.0) GFLOPs/s
+op : 1, Average time : (0.016889)sec, performance : (  127.2) GFLOPs/s
+op : 2, Average time : (0.002048)sec, performance : ( 1048.5) GFLOPs/s
+op : 3, Average time : (0.001585)sec, performance : ( 1354.7) GFLOPs/s
+op : 4, Average time : (0.000728)sec, performance : ( 2950.0) GFLOPs/s
+op : 5, Average time : (0.000371)sec, performance : ( 5790.2) GFLOPs/s
+op : 6, Average time : (0.000284)sec, performance : ( 7558.2) GFLOPs/s
+
+size : 2048
+This is op 1
+Result is same
+
+This is op 2
+Result is same
+
+This is op 3
+Result is same
+
+This is op 4
+Result is same
+
+This is op 5
+Result is same
+
+This is op 6
+Result is same
+
+op : 0, Average time : (0.001946)sec, performance : ( 8826.8) GFLOPs/s
+op : 1, Average time : (0.133927)sec, performance : (  128.3) GFLOPs/s
+op : 2, Average time : (0.016749)sec, performance : ( 1025.7) GFLOPs/s
+op : 3, Average time : (0.012808)sec, performance : ( 1341.3) GFLOPs/s
+op : 4, Average time : (0.005926)sec, performance : ( 2898.9) GFLOPs/s
+op : 5, Average time : (0.002772)sec, performance : ( 6197.5) GFLOPs/s
+op : 6, Average time : (0.002066)sec, performance : ( 8313.7) GFLOPs/s
+
+size : 4096
+This is op 1
+Result is same
+
+This is op 2
+Result is same
+
+This is op 3
+Result is same
+
+This is op 4
+Result is same
+
+This is op 5
+Result is same
+
+This is op 6
+Result is same
+
+op : 0, Average time : (0.015916)sec, performance : ( 8635.4) GFLOPs/s
+op : 1, Average time : (1.070168)sec, performance : (  128.4) GFLOPs/s
+op : 2, Average time : (0.136219)sec, performance : ( 1009.0) GFLOPs/s
+op : 3, Average time : (0.112197)sec, performance : ( 1225.0) GFLOPs/s
+op : 4, Average time : (0.049973)sec, performance : ( 2750.3) GFLOPs/s
+op : 5, Average time : (0.021981)sec, performance : ( 6252.7) GFLOPs/s
+op : 6, Average time : (0.016663)sec, performance : ( 8248.1) GFLOPs/s
+
+execution finished
+
+This is FP32
+op : 0
+performance :   951.7 GFLOPs/s  3671.4 GFLOPs/s  7033.8 GFLOPs/s  9140.0 GFLOPs/s  8826.8 GFLOPs/s  8635.4 GFLOPs/s 
+op : 1
+performance :    72.7 GFLOPs/s   100.3 GFLOPs/s   120.0 GFLOPs/s   127.2 GFLOPs/s   128.3 GFLOPs/s   128.4 GFLOPs/s 
+op : 2
+performance :   505.7 GFLOPs/s   792.5 GFLOPs/s  1010.7 GFLOPs/s  1048.5 GFLOPs/s  1025.7 GFLOPs/s  1009.0 GFLOPs/s 
+op : 3
+performance :   616.3 GFLOPs/s  1005.2 GFLOPs/s  1302.9 GFLOPs/s  1354.7 GFLOPs/s  1341.3 GFLOPs/s  1225.0 GFLOPs/s 
+op : 4
+performance :   658.6 GFLOPs/s  1848.2 GFLOPs/s  2844.8 GFLOPs/s  2950.0 GFLOPs/s  2898.9 GFLOPs/s  2750.3 GFLOPs/s 
+op : 5
+performance :   300.9 GFLOPs/s  1368.2 GFLOPs/s  4360.6 GFLOPs/s  5790.2 GFLOPs/s  6197.5 GFLOPs/s  6252.7 GFLOPs/s 
+op : 6
+performance :   230.7 GFLOPs/s  1030.8 GFLOPs/s  4762.5 GFLOPs/s  7558.2 GFLOPs/s  8313.7 GFLOPs/s  8248.1 GFLOPs/s 
+
+
+precision : 0
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  1	128	   72.7			   0.076389				    7.638889%
+  1	256	  100.3			   0.027332				    2.733231%
+  1	512	  120.0			   0.017057				    1.705707%
+  1	1024	  127.2			   0.013912				    1.391161%
+  1	2048	  128.3			   0.014533				    1.453278%
+  1	4096	  128.4			   0.014872				    1.487215%
+
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  2	128	  505.7			   0.531389				   53.138863%
+  2	256	  792.5			   0.215848				   21.584795%
+  2	512	 1010.7			   0.143692				   14.369210%
+  2	1024	 1048.5			   0.114710				   11.471029%
+  2	2048	 1025.7			   0.116206				   11.620564%
+  2	4096	 1009.0			   0.116839				   11.683916%
+
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  3	128	  616.3			   0.647576				   64.757607%
+  3	256	 1005.2			   0.273783				   27.378262%
+  3	512	 1302.9			   0.185233				   18.523306%
+  3	1024	 1354.7			   0.148215				   14.821464%
+  3	2048	 1341.3			   0.151963				   15.196287%
+  3	4096	 1225.0			   0.141854				   14.185431%
+
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  4	128	  658.6			   0.691991				   69.199081%
+  4	256	 1848.2			   0.503419				   50.341953%
+  4	512	 2844.8			   0.404439				   40.443905%
+  4	1024	 2950.0			   0.322752				   32.275242%
+  4	2048	 2898.9			   0.328418				   32.841766%
+  4	4096	 2750.3			   0.318489				   31.848896%
+
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  5	128	  300.9			   0.316125				   31.612534%
+  5	256	 1368.2			   0.372664				   37.266438%
+  5	512	 4360.6			   0.619947				   61.994671%
+  5	1024	 5790.2			   0.633507				   63.350700%
+  5	2048	 6197.5			   0.702125				   70.212517%
+  5	4096	 6252.7			   0.724074				   72.407417%
+
+kernel	size	GFLOPs/s	Speed UP(time) relative to cuBLAS	Performance(Gflops) relative to cuBLAS
+  6	128	  230.7			   0.242439				   24.243917%
+  6	256	 1030.8			   0.280775				   28.077503%
+  6	512	 4762.5			   0.677092				   67.709229%
+  6	1024	 7558.2			   0.826935				   82.693497%
+  6	2048	 8313.7			   0.941869				   94.186905%
+  6	4096	 8248.1			   0.955149				   95.514893%
+

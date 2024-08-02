@@ -2,35 +2,91 @@
 #include "headers/cuda_kernels.cuh"
 #include "headers/tensor_kernels.cuh"
 
-void run_naive(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_naive_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     dim3 blockDim(32, 32);
     dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    naive<<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    naive_fp<<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_global_coalesce(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_naive_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32, 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    naive_bf<<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_naive_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32, 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    naive_h<<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_global_coalesce_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     dim3 blockDim(32 * 32);
     dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    global_coalesce<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    global_coalesce_fp<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_shared_caching(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_global_coalesce_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
     dim3 blockDim(32 * 32);
     dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    shared_caching<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    global_coalesce_bf<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_blocking_1d(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_global_coalesce_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32 * 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    global_coalesce_h<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_shared_caching_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32 * 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    shared_caching_fp<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_shared_caching_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32 * 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    shared_caching_bf<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_shared_caching_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(32 * 32);
+    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
+    shared_caching_h<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_blocking_1d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     const uint bm = 32;
     const uint bn = 32;
     const uint bk = 8;
     const uint tw = 4;
     dim3 blockDim((bm / tw) * bn);
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    blocking_1d<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    blocking_1d_fp<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_blocking_2d(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_blocking_1d_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 32;
+    const uint bn = 32;
+    const uint bk = 8;
+    const uint tw = 4;
+    dim3 blockDim((bm / tw) * bn);
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    blocking_1d_bf<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_blocking_1d_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 32;
+    const uint bn = 32;
+    const uint bk = 8;
+    const uint tw = 4;
+    dim3 blockDim((bm / tw) * bn);
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    blocking_1d_h<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_blocking_2d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     const uint bm = 64;
     const uint bn = 64;
     const uint bk = 8;
@@ -38,10 +94,32 @@ void run_blocking_2d(float *A, float *B, float *C, int m, int n, int k, float al
     const uint tw_n = 8;
     dim3 blockDim((bm / tw_m) * (bn / tw_n));
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    blocking_2d<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    blocking_2d_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_vectorized(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void run_blocking_2d_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 64;
+    const uint bn = 64;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    blocking_2d_bf<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_blocking_2d_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 64;
+    const uint bn = 64;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    blocking_2d_h<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_vectorized_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     const uint bm = 128;
     const uint bn = 128;
     const uint bk = 8;
@@ -49,110 +127,201 @@ void run_vectorized(float *A, float *B, float *C, int m, int n, int k, float alp
     const uint tw_n = 8;
     dim3 blockDim((bm / tw_m) * (bn / tw_n));
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    vectorized<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    vectorized_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_global_tf32(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    float *tf32_A, *tf32_B;
-    CHECK_CUDA(cudaMalloc((void**)&tf32_A, sizeof(float) * m * k));
-    CHECK_CUDA(cudaMalloc((void**)&tf32_B, sizeof(float) * k * n));
-    convert_to_tf32(tf32_A, tf32_B, A, B, m, n, k);
-    dim3 blockDim(16 * 16);
-    dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
-    global_tf32 <<<gridDim, blockDim>>>(tf32_A, tf32_B, C, m, n, k, alpha, beta);
-    CHECK_CUDA(cudaDeviceSynchronize());
-    CHECK_CUDA(cudaFree(tf32_A));
-    CHECK_CUDA(cudaFree(tf32_B));
+void run_vectorized_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    vectorized_bf<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
-void run_global_fp16(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    __half *half_A, *half_B;
-    cudaMalloc((void**)&half_A, sizeof(__half) * m * k);
-    cudaMalloc((void**)&half_B, sizeof(__half) * k * n);
-    convert_to_fp16(half_A, half_B, A, B, m, n, k);
+void run_vectorized_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    vectorized_h<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_global_tf(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     dim3 blockDim(16 * 16);
     dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
-    global_fp16 <<<gridDim, blockDim>>>(half_A, half_B, C, m, n, k, alpha, beta);
-    CHECK_CUDA(cudaDeviceSynchronize());
-    CHECK_CUDA(cudaFree(half_A));
-    CHECK_CUDA(cudaFree(half_B));
+    global_tf <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_global_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(16 * 16);
+    dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
+    global_bf <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_global_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(16 * 16);
+    dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
+    global_h <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void runCublasTF32_with_TC(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    float *tf32_A, *tf32_B;
-    cudaMalloc((void**)&tf32_A, sizeof(float) * m * k);
-    cudaMalloc((void**)&tf32_B, sizeof(float) * k * n);
     cublasSetMathMode(handle, CUBLAS_TENSOR_OP_MATH);
     cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
                 n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n,
                 CUBLAS_COMPUTE_32F_FAST_TF32, CUBLAS_GEMM_DEFAULT_TENSOR_OP);
-    CHECK_CUDA(cudaDeviceSynchronize());
-    CHECK_CUDA(cudaFree(tf32_A));
-    CHECK_CUDA(cudaFree(tf32_B));
+    cublasSetMathMode(handle, CUBLAS_DEFAULT_MATH);
 }
 
-void runCublasBF16_with_TC(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void runCublasBF16_with_TC(cublasHandle_t handle, __nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
     cublasSetMathMode(handle, CUBLAS_TENSOR_OP_MATH);
-    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
-                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n,
+    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_16BF,
+                n, A, CUDA_R_16BF, k, &beta, C, CUDA_R_32F, n,
                 CUBLAS_COMPUTE_32F_FAST_16BF, CUBLAS_GEMM_DEFAULT_TENSOR_OP);
+    cublasSetMathMode(handle, CUBLAS_DEFAULT_MATH);
 }
 
-void runCublasTF32(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    float *tf32_A, *tf32_B;
-    CHECK_CUDA(cudaMalloc((void**)&tf32_A, sizeof(float) * m * k));
-    CHECK_CUDA(cudaMalloc((void**)&tf32_B, sizeof(float) * k * n));
-    convert_to_tf32(tf32_A, tf32_B, A, B, m, n, k);
-    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, tf32_B, CUDA_R_32F,
-                n, tf32_A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n,
-                CUBLAS_COMPUTE_32F_FAST_TF32, CUBLAS_GEMM_DEFAULT_TENSOR_OP);
-    CHECK_CUDA(cudaDeviceSynchronize());
-    CHECK_CUDA(cudaFree(tf32_A));
-    CHECK_CUDA(cudaFree(tf32_B));
-}
-
-void runCublasBF16(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
-                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n,
-                CUBLAS_COMPUTE_32F_FAST_16BF, CUBLAS_GEMM_DEFAULT_TENSOR_OP);
+void runCublasFP16_with_TC(cublasHandle_t handle, __half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    cublasSetMathMode(handle, CUBLAS_TENSOR_OP_MATH);
+    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_16F,
+                n, A, CUDA_R_16F, k, &beta, C, CUDA_R_32F, n,
+                CUBLAS_COMPUTE_32F_FAST_16F, CUBLAS_GEMM_DEFAULT_TENSOR_OP);
+    cublasSetMathMode(handle, CUBLAS_DEFAULT_MATH);
 }
 
 void runCublasFP32(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     //nvtxRangePushA("outer");
     cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
-                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n, CUBLAS_COMPUTE_32F,
-                CUBLAS_GEMM_DEFAULT_TENSOR_OP);
+                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n, 
+                CUBLAS_COMPUTE_32F, CUBLAS_GEMM_DEFAULT);
     //nvtxRangePop();
 }
 
-void launch_kernel_with_option(int op, cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+void runCublasTF32(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
+                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n,
+                CUBLAS_COMPUTE_32F_FAST_TF32, CUBLAS_GEMM_DEFAULT);
+}
+
+void runCublasBF16(cublasHandle_t handle, __nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_16BF,
+                n, A, CUDA_R_16BF, k, &beta, C, CUDA_R_32F, n,
+                CUBLAS_COMPUTE_32F_FAST_16BF, CUBLAS_GEMM_DEFAULT);
+}
+
+void runCublasFP16(cublasHandle_t handle, __half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_16F,
+                n, A, CUDA_R_16F, k, &beta, C, CUDA_R_32F, n,
+                CUBLAS_COMPUTE_32F_FAST_16F, CUBLAS_GEMM_DEFAULT);
+}
+
+void launch_kernel_with_option_fp(int op, cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     switch(op) {
         case 0 :
             runCublasFP32(handle, A, B, C, m, n, k, alpha, beta);
             break;
         case 1 :
-            run_naive(A, B, C, m, n, k, alpha, beta);
+            run_naive_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 2 :
-            run_global_coalesce(A, B, C, m, n, k, alpha, beta);
+            run_global_coalesce_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 3 :
-            run_shared_caching(A, B, C, m, n, k, alpha, beta);
+            run_shared_caching_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 4 :
-            run_blocking_1d(A, B, C, m, n, k, alpha, beta);
+            run_blocking_1d_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 5 :
-            run_blocking_2d(A, B, C, m, n, k, alpha, beta);
+            run_blocking_2d_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 6 :
-            run_vectorized(A, B, C, m, n, k, alpha, beta);
+            run_vectorized_fp(A, B, C, m, n, k, alpha, beta);
             break;
-        case 10 :
-            run_global_tf32(A, B, C, m, n, k, alpha, beta);
+        case 7 :
+            run_global_tf(A, B, C, m, n, k, alpha, beta);
             break;
-        case 11 :
-            run_global_fp16(A, B, C, m, n, k, alpha, beta);
+        // case 8 :
+        //     runCublasTF32_with_TC(handle, A, B, C, m, n, k, alpha, beta);
+        //     break;
+    }
+}
+
+void launch_kernel_with_option_tf(int op, cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    switch(op) {
+        case 0 :
+            runCublasTF32_with_TC(handle, A, B, C, m, n, k, alpha, beta);
+            break;
+        case 1 :
+            runCublasTF32(handle, A, B, C, m, n, k, alpha, beta);
+            break;
+        case 2 :
+            run_global_tf(A, B, C, m, n, k, alpha, beta);
+            break;
+        default :
+            break;
+    }
+}
+
+void launch_kernel_with_option_bf(int op, cublasHandle_t handle, __nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
+    switch(op) {
+        case 0 :
+            runCublasBF16(handle, A, B, C, m, n, k, alpha, beta);
+            break;
+        case 1 :
+            run_naive_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 2 :
+            run_global_coalesce_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 3 :
+            run_shared_caching_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 4 :
+            run_blocking_1d_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 5 :
+            run_blocking_2d_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 6 :
+            run_vectorized_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 7 : 
+            run_global_bf(A, B, C, m, n, k, alpha, beta);
+            break;
+    }
+}
+
+void launch_kernel_with_option_h(int op, cublasHandle_t handle, __half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
+    switch(op) {
+        case 0 :
+            runCublasFP16(handle, A, B, C, m, n, k, alpha, beta);
+            break;
+        case 1 :
+            run_naive_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 2 :
+            run_global_coalesce_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 3 :
+            run_shared_caching_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 4 :
+            run_blocking_1d_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 5 :
+            run_blocking_2d_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 6 :
+            run_vectorized_h(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 7 : 
+            run_global_h(A, B, C, m, n, k, alpha, beta);
             break;
     }
 }
@@ -182,153 +351,296 @@ int main(int argc, char **argv) {
     // constant value for GEMM
     float alpha = 1.0, beta = 0.0;
 
-    // host memory pointer
-    float *A = nullptr;
-    float *B = nullptr;
-    float *C = nullptr;
-    float *C_ref = nullptr; // for cuBLAS
+    // host memory
+    Matrix *A = (Matrix*)malloc(sizeof(Matrix));
+    Matrix *B = (Matrix*)malloc(sizeof(Matrix));
+    Matrix_C *C = (Matrix_C*)malloc(sizeof(Matrix_C));
+    Matrix_C *C_ref = (Matrix_C*)malloc(sizeof(Matrix_C));
 
-    // device memory pointer
-    float *d_A = nullptr;
-    float *d_B = nullptr;
-    float *d_C = nullptr;
-    float *d_C_ref = nullptr; // for cuBLAS
+    // device Memory
+    Matrix *d_A = (Matrix*)malloc(sizeof(Matrix));
+    Matrix *d_B = (Matrix*)malloc(sizeof(Matrix));
+    Matrix_C *d_C = (Matrix_C*)malloc(sizeof(Matrix));
+    Matrix_C *d_C_ref = (Matrix_C*)malloc(sizeof(Matrix));
 
     // define the various matrix size
     std::vector<int> SIZE = {128, 256, 512, 1024, 2048, 4096};
     long max_size;
     max_size = SIZE[SIZE.size() - 1];
 
-    // allocate the memory as much as max_size
-    // for small size matrices, only use part of whole memoryng problem
-    // of not having proper bounds checking in the
-    // host memory
-    A = (float*)malloc(sizeof(float) * max_size * max_size);
-    B = (float*)malloc(sizeof(float) * max_size * max_size);
-    C = (float*)malloc(sizeof(float) * max_size * max_size);
-    C_ref = (float*)malloc(sizeof(float) * max_size * max_size);
+    // allocate and initialize host memory
+    initialize_host_matrix(max_size, A, B, C, C_ref);
 
-    // devide memory
-    CHECK_CUDA(cudaMalloc((void**)&d_A, sizeof(float) * max_size * max_size));
-    CHECK_CUDA(cudaMalloc((void**)&d_B, sizeof(float) * max_size * max_size));
-    CHECK_CUDA(cudaMalloc((void**)&d_C, sizeof(float) * max_size * max_size));
-    CHECK_CUDA(cudaMalloc((void**)&d_C_ref, sizeof(float) * max_size * max_size));
-
-    // initialize the matrices
-    randomize_matrix(A, max_size * max_size);
-    randomize_matrix(B, max_size * max_size);
+    // allocate device memory
+    allocate_device_matrix(max_size, d_A, d_B, d_C, d_C_ref);
 
     // copy the host memory to device memory
-    CHECK_CUDA(cudaMemcpy(d_A, A, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
-    CHECK_CUDA(cudaMemcpy(d_B, B, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
+    copy_host_to_device(max_size, A, B, d_A, d_B);
+
+    convert_to_tf32(d_A -> tf, d_B -> tf, max_size, max_size, max_size);
+
+    // number of precisions
+    // fp32, bf16, fp16
+    int precision_num = 4;
 
     // number of kernels
-    int op_num = 6;
+    int op_num = 7;
 
     // for storing the gflops and elapsed_time
-    result **exe_results = (result**)malloc(sizeof(result*) * (op_num + 1));
-    for(int i = 0; i <= op_num; i++)
-        exe_results[i] = (result*)malloc(sizeof(result) * SIZE.size());
+    result ***exe_results = (result***)malloc(sizeof(result**) * precision_num);
+    for(int i = 0; i < precision_num; i++) {
+        exe_results[i] = (result**)malloc(sizeof(result*) * (op_num + 1));
+        for(int j = 0; j <= op_num; j++)
+            exe_results[i][j] = (result*)malloc(sizeof(result) * SIZE.size());
+    }
 
     // repeat same kernel as 'repeat'
-    int repeat = 10;
+    int repeat = 100;
 
     // index for accessing the 'exe_results', tracking the matrix size
     int cnt = 0;
     
-    // execute kernels from small size to largest size
-    for(int size : SIZE) {
-        long m, n, k;
-        m = n = k = size;
-        std::cout << "size : " << size << std::endl;
+    // execute kernels with different precisions
+    for(int prec = FP32; prec <= FP16; prec++) {
+        cnt = 0;
+        if(prec == FP32)
+            printf("This is FP32\n");
+        else if(prec == TF32)
+            printf("This is TF32\n");
+        else if(prec == BF16)
+            printf("This is BF16\n");
+        else if(prec == FP16)
+            printf("This is FP16\n");
+        
+        // execute kernels from small size to largest 
+        for(int size : SIZE) {
+            long m, n, k;
+            m = n = k = size;
+            std::cout << "size : " << size << std::endl;
 
-        // warm up the device and compare the result
-        launch_kernel_with_option(0, handle, d_A, d_B, d_C_ref, m, n, k, alpha, beta);
-        for(int i = 1; i <= op_num; i++) {
-            std::cout << "This is op " << i << std::endl;
-            launch_kernel_with_option(i, handle, d_A, d_B, d_C, m, n, k, alpha, beta);
+            // warm up the device and compare the result
+            if(prec == FP32)
+                launch_kernel_with_option_fp(0, handle, d_A -> fp, d_B -> fp, d_C_ref -> fp, m, n, k, alpha, beta);
+            else if(prec == TF32)
+                launch_kernel_with_option_tf(0, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+            else if(prec == BF16)
+                launch_kernel_with_option_bf(0, handle, d_A -> bf, d_B -> bf, d_C_ref -> bf, m, n, k, alpha, beta);
+            else if(prec == FP16)
+                launch_kernel_with_option_h(0, handle, d_A -> h, d_B -> h, d_C_ref -> h, m, n, k, alpha, beta);
             CHECK_CUDA(cudaDeviceSynchronize());
-            CHECK_CUDA(cudaMemcpy(C, d_C, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
-            CHECK_CUDA(cudaMemcpy(C_ref, d_C_ref, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
-            if(!verify_matrix(C_ref, C, n))
-                std::cout << "Result is different" << std::endl; 
-            else
-                std::cout << "Result is same" << std::endl;
-            free(C);
-            free(C_ref);
-            C = (float*)malloc(sizeof(float) * max_size * max_size);
-            C_ref = (float*)malloc(sizeof(float) * max_size * max_size);
-            CHECK_CUDA(cudaFree(d_C));
-            CHECK_CUDA(cudaMalloc((void**)&d_C, sizeof(float) * max_size * max_size));
-        }
-        // for checking the correct result, deallocate the memory 
-        CHECK_CUDA(cudaFree(d_C_ref));
-        CHECK_CUDA(cudaMalloc((void**)&d_C_ref, sizeof(float) * max_size * max_size));
+            
+            for(int i = 1; i <= op_num; i++) {
+                std::cout << "This is op " << i << std::endl;
+                if(prec == FP32)
+                    launch_kernel_with_option_fp(i, handle, d_A -> fp, d_B -> fp, d_C -> fp, m, n, k, alpha, beta);
+                else if(prec == TF32)
+                    launch_kernel_with_option_tf(i, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+                else if(prec == BF16)
+                    launch_kernel_with_option_bf(i, handle, d_A -> bf, d_B -> bf, d_C -> bf, m, n, k, alpha, beta);
+                else if(prec == FP16)
+                    launch_kernel_with_option_h(i, handle, d_A -> h, d_B -> h, d_C -> h, m, n, k, alpha, beta);
+                CHECK_CUDA(cudaDeviceSynchronize());
 
-        // for comparing the GFLOPS
-        for(int i = 0; i <= op_num; i++) {
-            CHECK_CUDA(cudaEventRecord(begin));
-            for(int j = 0; j < repeat; j++) {
-                if(i == 0)
-                    launch_kernel_with_option(i, handle, d_A, d_B, d_C_ref, m, n, k, alpha, beta);
-                else
-                    launch_kernel_with_option(i, handle, d_A, d_B, d_C, m, n, k, alpha, beta);
+                // copy kernel results to host
+                if(prec == FP32)
+                    CHECK_CUDA(cudaMemcpy(C -> fp, d_C -> fp, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                else if(prec == TF32)
+                    CHECK_CUDA(cudaMemcpy(C -> tf, d_C -> tf, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                else if(prec == BF16)
+                    CHECK_CUDA(cudaMemcpy(C -> bf, d_C -> bf, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                else if(prec == FP16)
+                    CHECK_CUDA(cudaMemcpy(C -> h, d_C -> h, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+
+                if(prec == FP32)
+                    CHECK_CUDA(cudaMemcpy(C_ref -> fp, d_C_ref -> fp, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                if(prec == TF32)
+                    CHECK_CUDA(cudaMemcpy(C_ref -> tf, d_C_ref -> tf, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                if(prec == BF16)
+                    CHECK_CUDA(cudaMemcpy(C_ref -> bf, d_C_ref -> bf, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+                if(prec == FP16)
+                    CHECK_CUDA(cudaMemcpy(C_ref -> h, d_C_ref -> h, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
+
+                // verify the result between kernels and cuBLAS
+                if(prec == FP32) {
+                    if(!verify_matrix(C_ref -> fp, C -> fp, n))
+                        std::cout << "Result is different" << std::endl << std::endl; 
+                    else
+                        std::cout << "Result is same" << std::endl << std::endl;
+                }
+                else if(prec == TF32) {
+                    if(!verify_matrix(C_ref -> tf, C -> tf, n))
+                        std::cout << "Result is different" << std::endl << std::endl; 
+                    else
+                        std::cout << "Result is same" << std::endl << std::endl;
+                }
+                else if(prec == BF16) {
+                    if(!verify_matrix(C_ref -> bf, C -> bf, n))
+                        std::cout << "Result is different" << std::endl << std::endl; 
+                    else
+                        std::cout << "Result is same" << std::endl << std::endl;
+                }
+                else if(prec == FP16) {
+                    if(!verify_matrix(C_ref -> h, C -> h, n))
+                        std::cout << "Result is different" << std::endl << std::endl; 
+                    else
+                        std::cout << "Result is same" << std::endl << std::endl;
+                }
+                free_and_reallocate_C(0, max_size, prec, C, C_ref, d_C, d_C_ref);
             }
-            CHECK_CUDA(cudaEventRecord(end));
-            CHECK_CUDA(cudaEventSynchronize(begin));
-            CHECK_CUDA(cudaEventSynchronize(end));
-            CHECK_CUDA(cudaEventElapsedTime(&elapsed_time, begin, end));
-            elapsed_time /= 1000;
+            
+            // for checking the correct result, deallocate the memory 
+            if(prec == FP32) {
+                CHECK_CUDA(cudaFree(d_C_ref -> fp));
+                CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> fp, sizeof(float) * max_size * max_size));
+            }
+            else if(prec == TF32) {
+                CHECK_CUDA(cudaFree(d_C_ref -> tf));
+                CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> tf, sizeof(float) * max_size * max_size));
+            }
+            else if(prec == BF16) {
+                CHECK_CUDA(cudaFree(d_C_ref -> bf));
+                CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> bf, sizeof(float) * max_size * max_size));
+            }
+            else if(prec == FP16) {
+                CHECK_CUDA(cudaFree(d_C_ref -> h));
+                CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> h, sizeof(float) * max_size * max_size));
+            }
 
-            long flops = 2 * m * n * k;
-            printf("op : %d, Average time : (%7.6f)sec, performance : (%7.1f) GFLOPs/s\n", i, elapsed_time / repeat, (repeat * flops * 1e-9) / elapsed_time);
-            fflush(stdout);
-            exe_results[i][cnt].gflops = (repeat * flops * 1e-9) / elapsed_time;
-            exe_results[i][cnt].time = elapsed_time;
+            // for comparing the GFLOPS
+            for(int i = 0; i <= op_num; i++) {
+                CHECK_CUDA(cudaEventRecord(begin));
+                for(int j = 0; j < repeat; j++) {
+                    if(i == 0) {
+                        if(prec == FP32)
+                            launch_kernel_with_option_fp(0, handle, d_A -> fp, d_B -> fp, d_C_ref -> fp, m, n, k, alpha, beta);
+                        else if(prec == TF32)
+                            launch_kernel_with_option_tf(0, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+                        else if(prec == BF16)
+                            launch_kernel_with_option_bf(0, handle, d_A -> bf, d_B -> bf, d_C_ref -> bf, m, n, k, alpha, beta);
+                        else if(prec == FP16)
+                            launch_kernel_with_option_h(0, handle, d_A -> h, d_B -> h, d_C_ref -> h, m, n, k, alpha, beta);
+                    }
+                    else {
+                        if(prec == FP32)
+                            launch_kernel_with_option_fp(i, handle, d_A -> fp, d_B -> fp, d_C -> fp, m, n, k, alpha, beta);
+                        else if(prec == TF32)
+                            launch_kernel_with_option_tf(i, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+                        else if(prec == BF16)
+                            launch_kernel_with_option_bf(i, handle, d_A -> bf, d_B -> bf, d_C -> bf, m, n, k, alpha, beta);
+                        else if(prec == FP16)
+                            launch_kernel_with_option_h(i, handle, d_A -> h, d_B -> h, d_C -> h, m, n, k, alpha, beta);
+                    }
+                }
+                CHECK_CUDA(cudaEventRecord(end));
+                CHECK_CUDA(cudaEventSynchronize(begin));
+                CHECK_CUDA(cudaEventSynchronize(end));
+                CHECK_CUDA(cudaEventElapsedTime(&elapsed_time, begin, end));
+                
+                // print the results for each size
+                elapsed_time /= 1000;
+                long flops = 2 * m * n * k;
+                printf("op : %d, Average time : (%7.6f)sec, performance : (%7.1f) GFLOPs/s\n", i, elapsed_time / repeat, (repeat * flops * 1e-9) / elapsed_time);
+                fflush(stdout);
+                
+                // store the results
+                exe_results[prec][i][cnt].gflops = (repeat * flops * 1e-9) / elapsed_time;
+                exe_results[prec][i][cnt].time = elapsed_time;
+            }
+            printf("\n");
+            cnt++;
+            
+            // for checking the correct result, deallocate the memory 
+            free_and_reallocate_C(1, max_size, prec, C, C_ref, d_C, d_C_ref);
         }
-        printf("\n");
-        cnt++;
-
-        // for checking the correct result, deallocate the memory 
-        CHECK_CUDA(cudaFree(d_C_ref));
-        CHECK_CUDA(cudaMalloc((void**)&d_C_ref, sizeof(float) * max_size * max_size));
-        CHECK_CUDA(cudaFree(d_C));
-        CHECK_CUDA(cudaMalloc((void**)&d_C, sizeof(float) * max_size * max_size));
     }
 
     printf("execution finished\n\n");
 
     // display the result of each kernels
-    for(int i = 0; i <= op_num; i++) {
-        printf("op : %d\nperformance : ", i);
-        for(int j = 0; j < SIZE.size(); j++)
-            printf("%7.1f GFLOPs/s ", exe_results[i][j].gflops);
+    for(int i = 0; i < precision_num; i++) {
+        if(i == 0)
+            printf("This is FP32\n");
+        else if(i == 1)
+            printf("This is TF32\n");
+        else if(i == 2)
+            printf("This is BF16\n");
+        else if(i == 3)
+            printf("This is FP16\n");
+        for(int j = 0; j <= op_num; j++) {
+            printf("op : %d\nperformance : ", j);
+            for(int k = 0; k < SIZE.size(); k++)
+                printf("%7.1f GFLOPs/s ", exe_results[i][j][k].gflops);
+            printf("\n");
+        }
         printf("\n");
     }
     printf("\n");
 
     // summarize the execution results
-    printf("kernel\tsize\tGFLOPs/s\tSpeed UP(time) relative to cuBLAS\tPerformance(Gflops) relative to cuBLAS\n");
-    for(int i = 1; i <= op_num; i++) {
-        for(int j = 0; j < SIZE.size(); j++) {
-            printf("  %d\t%d\t%7.1f\t\t\t   %f\t\t\t\t   %9.6f%%\n", i, SIZE[j], exe_results[i][j].gflops, 
-                                                exe_results[0][j].time / exe_results[i][j].time, (exe_results[i][j].gflops / exe_results[0][j].gflops) * 100);
+    for(int i = 0; i < precision_num; i++) {
+        printf("precision : %d\n", precision_type(i));
+        for(int j = 0; j <= op_num; j++) {
+            printf("kernel\tsize\tGFLOPs/s\tSpeed UP(time) relative to cuBLAS\tPerformance(Gflops) relative to cuBLAS\n");
+            for(int k = 0; k < SIZE.size(); k++) {
+                printf("  %d\t%d\t%7.1f\t\t\t   %f\t\t\t\t   %9.6f%%\n", j, SIZE[k], exe_results[i][j][k].gflops, 
+                                                    exe_results[i][0][k].time / exe_results[i][j][k].time, (exe_results[i][j][k].gflops / exe_results[i][0][k].gflops) * 100);
+            }
+            printf("\n");
         }
-        printf("\n");
     }
     
-    // deallocate the memory
+    FILE *fp;
+    if(argc == 2) {
+        if(strcmp("-p", argv[1]) == 0) {
+            fp = fopen("result.txt", "w+");
+            if(fp == NULL)
+                printf("failed to open\n");
+            for(int i = 0; i < precision_num; i++) {
+                fprintf(fp, "precision : %d\n", precision_type(i));
+                for(int j = 0; j <= op_num; j++) {
+                    fprintf(fp, "kernel\tsize\tGFLOPs/s\tSpeed UP(time) relative to cuBLAS\tPerformance(Gflops) relative to cuBLAS\n");
+                    for(int k = 0; k < SIZE.size(); k++) {
+                        fprintf(fp, "  %d\t%d\t%7.1f\t\t\t   %f\t\t\t\t   %9.6f%%\n", j, SIZE[k], exe_results[i][j][k].gflops, 
+                                    exe_results[i][0][k].time / exe_results[i][j][k].time, (exe_results[i][j][k].gflops / exe_results[i][0][k].gflops) * 100);
+                    }
+                    fprintf(fp, "\n");
+                }
+            }
+        }
+    }
+
+    // deallocate the host memory
     free(A);
-    free(B);
-    free(C);
-    free(C_ref);
-    for(int i = 0; i < op_num; i++)
-        free(exe_results[i]);
-    free(exe_results);
-    CHECK_CUDA(cudaFree(d_A));
-    CHECK_CUDA(cudaFree(d_B));
-    CHECK_CUDA(cudaFree(d_C));
-    CHECK_CUDA(cudaFree(d_C_ref));
+	free(B);
+	free(C);
+	free(C_ref);
+	for(int i = 0; i < precision_num; i++) {
+		for(int j = 0; j < op_num; j++)
+        	free(exe_results[i][j]);
+    	free(exe_results[i]);
+	}
+	free(exe_results);
+
+    // deallocate the device memory
+    CHECK_CUDA(cudaFree(d_A -> fp));
+    CHECK_CUDA(cudaFree(d_A -> tf));
+    CHECK_CUDA(cudaFree(d_A -> bf));
+    CHECK_CUDA(cudaFree(d_A -> h));
+
+    CHECK_CUDA(cudaFree(d_B -> fp));
+    CHECK_CUDA(cudaFree(d_B -> tf));
+    CHECK_CUDA(cudaFree(d_B -> bf));
+    CHECK_CUDA(cudaFree(d_B -> h));
+
+    CHECK_CUDA(cudaFree(d_C -> fp));
+    CHECK_CUDA(cudaFree(d_C -> tf));
+    CHECK_CUDA(cudaFree(d_C -> bf));
+    CHECK_CUDA(cudaFree(d_C -> h));
+
+    CHECK_CUDA(cudaFree(d_C_ref -> fp));
+    CHECK_CUDA(cudaFree(d_C_ref -> tf));
+    CHECK_CUDA(cudaFree(d_C_ref -> bf));
+    CHECK_CUDA(cudaFree(d_C_ref -> h));
 
     // destroy the event variables
     CHECK_CUDA(cudaEventDestroy(begin));

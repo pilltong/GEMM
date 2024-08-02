@@ -27,6 +27,27 @@
 
 #define ceil_div(a, b) (((a) + (b) - 1) / (b))
 
+typedef enum _precision_type {
+    FP32 = 0,
+	TF32 = 1,
+	BF16 = 2,
+	FP16 = 3
+} precision_type;
+
+typedef struct _matrix {
+	float *fp = nullptr;
+	float *tf = nullptr;
+	__nv_bfloat16 *bf = nullptr;
+	__half *h = nullptr;
+} Matrix;
+
+typedef struct _matrix_c {
+	float *fp = nullptr;
+	float *tf = nullptr;
+	float *bf = nullptr;
+	float *h = nullptr;
+} Matrix_C;
+
 void CudaDeviceInfo() {
     int deviceId;
 
@@ -68,62 +89,160 @@ void CudaDeviceInfo() {
     );
 }
 
-void randomize_matrix(float *mat, int N) {
-  struct timeval time {};
-  
-  gettimeofday(&time, nullptr);
-  srand(time.tv_usec);
+void randomize_matrix(int N, Matrix *M) {
+	struct timeval time {};
+	
+	gettimeofday(&time, nullptr);
+	srand(time.tv_usec);
 
-  for (int i = 0; i < N; i++) {
-    float tmp = (float)(rand() % 5) + 0.01 * (rand() % 5);
-    tmp = (rand() % 2 == 0) ? tmp : tmp * (-1.);
-    mat[i] = tmp;
-  }
+	for (int i = 0; i < N; i++) {
+		float tmp = (float)(rand() % 5) + 0.01 * (rand() % 5);
+		tmp = (rand() % 2 == 0) ? tmp : tmp * (-1.);
+		M -> fp[i] = tmp;
+		M -> tf[i] = tmp; 
+		//nvcuda::wmma::__float_to_tf32(M -> fp[i]);
+		M -> bf[i] = __float2bfloat16(M -> fp[i]);
+		M -> h[i] = __float2half(M -> fp[i]);
+	}
 }
 
-bool verify_matrix(float *matRef, float *matOut, int N) {
-  double diff = 0.0;
-  int i;
-  for (i = 0; i < N; i++) {
-    diff = std::fabs(matRef[i] - matOut[i]);
-    if (diff > 0.01) {
-      printf("Divergence! Should %.6f, Is %.6f (Diff %.6f) at %d\n",
-             matRef[i], matOut[i], diff, i);
-      return false;
-    }
-  }
-  return true;
+void initialize_host_matrix(long max_size, Matrix *A, Matrix *B, Matrix_C *C, Matrix_C *C_ref) {
+	A -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+	B -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+	C -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+	C_ref -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+
+	A -> tf = (float*)malloc(sizeof(float) * max_size * max_size);
+	B -> tf = (float*)malloc(sizeof(float) * max_size * max_size);
+	C -> tf = (float*)malloc(sizeof(float) * max_size * max_size);
+	C_ref -> tf = (float*)malloc(sizeof(float) * max_size * max_size);
+
+	A -> bf = (__nv_bfloat16*)malloc(sizeof(__nv_bfloat16) * max_size * max_size);
+	B -> bf = (__nv_bfloat16*)malloc(sizeof(__nv_bfloat16) * max_size * max_size);
+	C -> bf = (float*)malloc(sizeof(float) * max_size * max_size);
+	C_ref -> bf = (float*)malloc(sizeof(float) * max_size * max_size);
+
+	A -> h = (__half*)malloc(sizeof(__half) * max_size * max_size);
+	B -> h = (__half*)malloc(sizeof(__half) * max_size * max_size);
+	C -> h = (float*)malloc(sizeof(float) * max_size * max_size);
+	C_ref -> h = (float*)malloc(sizeof(float) * max_size * max_size);
+
+	randomize_matrix(max_size, A);
+	randomize_matrix(max_size, B);
 }
 
-__global__ void convert_fp32_to_tf32(const float* input, float *output, int n) {
+void allocate_device_matrix(long max_size, Matrix *d_A, Matrix *d_B, Matrix_C *d_C, Matrix_C *d_C_ref) {
+	CHECK_CUDA(cudaMalloc((void**)&d_A -> fp, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_B -> fp, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C -> fp, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> fp, sizeof(float) * max_size * max_size));
+
+	CHECK_CUDA(cudaMalloc((void**)&d_A -> tf, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_B -> tf, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C -> tf, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> tf, sizeof(float) * max_size * max_size));
+
+	CHECK_CUDA(cudaMalloc((void**)&d_A -> bf, sizeof(__nv_bfloat16) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_B -> bf, sizeof(__nv_bfloat16) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C -> bf, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> bf, sizeof(float) * max_size * max_size));
+
+	CHECK_CUDA(cudaMalloc((void**)&d_A -> h, sizeof(__half) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_B -> h, sizeof(__half) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C -> h, sizeof(float) * max_size * max_size));
+	CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> h, sizeof(float) * max_size * max_size));
+}
+
+void copy_host_to_device(long max_size, Matrix *A, Matrix *B, Matrix *d_A, Matrix *d_B) {
+	CHECK_CUDA(cudaMemcpy(d_A -> fp, A -> fp, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
+	CHECK_CUDA(cudaMemcpy(d_B -> fp, B -> fp, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
+
+	CHECK_CUDA(cudaMemcpy(d_A -> tf, A -> tf, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
+	CHECK_CUDA(cudaMemcpy(d_B -> tf, B -> tf, sizeof(float) * max_size * max_size, cudaMemcpyHostToDevice));
+
+	CHECK_CUDA(cudaMemcpy(d_A -> bf, A -> bf, sizeof(__nv_bfloat16) * max_size * max_size, cudaMemcpyHostToDevice));
+	CHECK_CUDA(cudaMemcpy(d_B -> bf, B -> bf, sizeof(__nv_bfloat16) * max_size * max_size, cudaMemcpyHostToDevice));
+
+	CHECK_CUDA(cudaMemcpy(d_A -> h, A -> h, sizeof(__half) * max_size * max_size, cudaMemcpyHostToDevice));
+	CHECK_CUDA(cudaMemcpy(d_B -> h, B -> h, sizeof(__half) * max_size * max_size, cudaMemcpyHostToDevice));
+}
+
+void free_and_reallocate_C(int op, long max_size, int prec, Matrix_C *C, Matrix_C *C_ref, Matrix_C *d_C, Matrix_C *d_C_ref) {
+	if(prec == FP32) {
+		CHECK_CUDA(cudaFree(d_C -> fp));
+		CHECK_CUDA(cudaMalloc((void**)&d_C -> fp, sizeof(float) * max_size * max_size));
+		if(op == 0) {
+			free(C -> fp);
+			free(C_ref -> fp);
+			C -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+			C_ref -> fp = (float*)malloc(sizeof(float) * max_size * max_size);
+			
+		}
+		else {
+			CHECK_CUDA(cudaFree(d_C_ref -> fp));
+			CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> fp, sizeof(float) * max_size * max_size));
+		}
+	}
+	else if(prec == BF16) {
+		CHECK_CUDA(cudaFree(d_C -> bf));
+		CHECK_CUDA(cudaMalloc((void**)&d_C -> bf, sizeof(float) * max_size * max_size));
+		if(op == 0) {
+			free(C -> bf);
+			free(C_ref -> bf);
+			C -> bf = (float*)malloc(sizeof(float) * max_size * max_size);
+			C_ref -> bf = (float*)malloc(sizeof(float) * max_size * max_size);
+			
+		}
+		else {
+			CHECK_CUDA(cudaFree(d_C_ref -> bf));
+			CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> bf, sizeof(float) * max_size * max_size));
+		}
+	}
+	if(prec == FP16) {
+		CHECK_CUDA(cudaFree(d_C -> h));
+		CHECK_CUDA(cudaMalloc((void**)&d_C -> h, sizeof(float) * max_size * max_size));
+		if(op == 0) {
+			free(C -> h);
+			free(C_ref -> h);
+			C -> h = (float*)malloc(sizeof(float) * max_size * max_size);
+			C_ref -> h = (float*)malloc(sizeof(float) * max_size * max_size);
+			
+		}
+		else {
+			CHECK_CUDA(cudaFree(d_C_ref -> h));
+			CHECK_CUDA(cudaMalloc((void**)&d_C_ref -> h, sizeof(float) * max_size * max_size));
+		}
+	}
+}
+
+bool verify_matrix(void *matRef, void *matOut, int N) {
+	double diff = 0.0;
+	int i;
+	for (i = 0; i < N; i++) {
+		diff = std::fabs(((float*)matRef)[i] - ((float*)matOut)[i]);
+		if (diff > 0.001) {
+			printf("Divergence! Should %.6f, Is %.6f (Diff %.6f) at %d\n",
+				((float*)matRef)[i], ((float*)matOut)[i], diff, i);
+			return false;
+		}
+	}
+	return true;
+}
+
+__global__ void convert_fp32_to_tf32(float* input, int n) {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < n) {
-        output[idx] = nvcuda::wmma::__float_to_tf32(input[idx]);
+		float tmp;
+        tmp = input[idx];
+		input[idx] = nvcuda::wmma::__float_to_tf32(tmp);
     }
 }
 
-void convert_to_tf32(float *tf32_A, float *tf32_B, float *A, float *B, int m, int n, int k) {
+void convert_to_tf32(float *A, float *B, int m, int n, int k) {
     dim3 blockDim(1024);
     dim3 gridDim(ceil_div(m * k, blockDim.x));
-    convert_fp32_to_tf32 <<<gridDim, blockDim>>>(A, tf32_A, m * k);
+    convert_fp32_to_tf32 <<<gridDim, blockDim>>>(A, m * k);
     gridDim = {(ceil_div(k * n, blockDim.x))};
-    convert_fp32_to_tf32 <<<gridDim, blockDim>>>(B, tf32_B, k * n);
+    convert_fp32_to_tf32 <<<gridDim, blockDim>>>(B, k * n);
     CHECK_CUDA(cudaDeviceSynchronize());
 }
-
-__global__ void convert_fp32_to_fp16(const float* input, __half* output, int n) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < n) {
-        output[idx] = __float2half(input[idx]);
-    }
-}
-
-void convert_to_fp16(__half *half_A, __half *half_B, float *A, float *B, int m, int n, int k) {
-    dim3 blockDim(1024);
-    dim3 gridDim(ceil_div(m * k, blockDim.x));
-    convert_fp32_to_fp16 <<<gridDim, blockDim>>>(A, half_A, m * k);
-    gridDim = {(ceil_div(k * n, blockDim.x))};
-    convert_fp32_to_fp16 <<<gridDim, blockDim>>>(B, half_B, k * n);
-    CHECK_CUDA(cudaDeviceSynchronize());
-}
-
