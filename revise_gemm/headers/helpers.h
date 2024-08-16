@@ -127,8 +127,8 @@ void initialize_host_matrix(long max_size, Matrix *A, Matrix *B, Matrix_C *C, Ma
 	C -> h = (float*)malloc(sizeof(float) * max_size * max_size);
 	C_ref -> h = (float*)malloc(sizeof(float) * max_size * max_size);
 
-	randomize_matrix(max_size, A);
-	randomize_matrix(max_size, B);
+	randomize_matrix(max_size * max_size, A);
+	randomize_matrix(max_size * max_size, B);
 }
 
 void allocate_device_matrix(long max_size, Matrix *d_A, Matrix *d_B, Matrix_C *d_C, Matrix_C *d_C_ref) {

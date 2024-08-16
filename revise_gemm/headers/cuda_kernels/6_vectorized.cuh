@@ -55,7 +55,7 @@ __global__ void vectorized_fp(float *__restrict A, float *__restrict B, float *C
         for(int j = 0; j < bk; j++) {
             // load data in shared memory into local register
             for(int k = 0; k < tw_m; k++)
-                reg_A[k] = AT_shared[j * bn + trow * tw_m + k];
+                reg_A[k] = AT_shared[j * bm + trow * tw_m + k];
             for(int k = 0; k < tw_n; k++)
                 reg_B[k] = B_shared[j * bn + tcol * tw_n + k];
             // outer product two vectors to make matrix

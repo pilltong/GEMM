@@ -1,1 +1,1 @@
-nsys profile -t cuda,cublas --gpu-metrics-device all --cudabacktrace=all ./main
+nsys profile -t cuda,cublas,cusparse --gpu-metrics-device all --cudabacktrace=all --cuda-memory-usage true ./main

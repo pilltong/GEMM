@@ -57,38 +57,38 @@ void run_shared_caching_h(__half *A, __half *B, float *C, int m, int n, int k, f
 }
 
 void run_blocking_1d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 32;
-    const uint bn = 32;
+    const uint bm = 64;
+    const uint bn = 64;
     const uint bk = 8;
-    const uint tw = 4;
+    const uint tw = 8;
     dim3 blockDim((bm / tw) * bn);
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
     blocking_1d_fp<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void run_blocking_1d_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 32;
-    const uint bn = 32;
-    const uint bk = 8;
-    const uint tw = 4;
+    const uint bm = 64;
+    const uint bn = 64;
+    const uint bk = 16;
+    const uint tw = 8;
     dim3 blockDim((bm / tw) * bn);
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
     blocking_1d_bf<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void run_blocking_1d_h(__half *A, __half *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 32;
-    const uint bn = 32;
-    const uint bk = 8;
-    const uint tw = 4;
+    const uint bm = 64;
+    const uint bn = 64;
+    const uint bk = 16;
+    const uint tw = 8;
     dim3 blockDim((bm / tw) * bn);
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
     blocking_1d_h<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void run_blocking_2d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 64;
-    const uint bn = 64;
+    const uint bm = 128;
+    const uint bn = 128;
     const uint bk = 8;
     const uint tw_m = 8;
     const uint tw_n = 8;
@@ -130,6 +130,17 @@ void run_vectorized_fp(float *A, float *B, float *C, int m, int n, int k, float 
     vectorized_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
+void run_vectorized_fp_revised(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    vectorized_fp_revised<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
 void run_vectorized_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
     const uint bm = 128;
     const uint bn = 128;
@@ -150,6 +161,17 @@ void run_vectorized_h(__half *A, __half *B, float *C, int m, int n, int k, float
     dim3 blockDim((bm / tw_m) * (bn / tw_n));
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
     vectorized_h<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_resolve_bank_conflict(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 8;
+    const uint tw_m = 8;
+    const uint tw_n = 8;
+    dim3 blockDim((bm / tw_m) * (bn / tw_n));
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    resolve_bank_conflict<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void run_global_tf(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
@@ -241,10 +263,14 @@ void launch_kernel_with_option_fp(int op, cublasHandle_t handle, float *A, float
             run_blocking_2d_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 6 :
+            //run_vectorized_fp_revised(A, B, C, m, n, k, alpha, beta);
             run_vectorized_fp(A, B, C, m, n, k, alpha, beta);
             break;
-        case 7 :
-            run_global_tf(A, B, C, m, n, k, alpha, beta);
+        case 7:
+            run_vectorized_fp_revised(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 8 :
+            run_resolve_bank_conflict(A, B, C, m, n, k, alpha, beta);
             break;
         // case 8 :
         //     runCublasTF32_with_TC(handle, A, B, C, m, n, k, alpha, beta);
@@ -381,10 +407,10 @@ int main(int argc, char **argv) {
 
     // number of precisions
     // fp32, bf16, fp16
-    int precision_num = 4;
+    int precision_num = 1;
 
     // number of kernels
-    int op_num = 7;
+    int op_num = 8;
 
     // for storing the gflops and elapsed_time
     result ***exe_results = (result***)malloc(sizeof(result**) * precision_num);
@@ -401,7 +427,7 @@ int main(int argc, char **argv) {
     int cnt = 0;
     
     // execute kernels with different precisions
-    for(int prec = FP32; prec <= FP16; prec++) {
+    for(int prec = FP32; prec <= FP32; prec++) {
         cnt = 0;
         if(prec == FP32)
             printf("This is FP32\n");

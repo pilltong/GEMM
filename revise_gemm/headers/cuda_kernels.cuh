@@ -6,3 +6,5 @@
 #include "cuda_kernels/4_blocking_1d.cuh"
 #include "cuda_kernels/5_blocking_2d.cuh"
 #include "cuda_kernels/6_vectorized.cuh"
+#include "cuda_kernels/6_vectorized_revised.cuh"
+#include "cuda_kernels/7_resolve_bank_conflict.cuh"
