@@ -1,0 +1,171 @@
+Total correct results: 14
+
+================================================================================
+Step: 223/576
+cuBLAS Execution Time : 0.0170058 seconds
+cuBLAS Performance : 8081.88 GFLOPS
+Kernel Execution Time : 0.015050500 seconds
+Kernel Performance : 9131.85 GFLOPS
+Relative Percentage : 112.991655%
+BM : 256
+BN : 64
+BK : 16
+TW_M : 16
+TW_N : 4
+================================================================================
+Step: 331/576
+cuBLAS Execution Time : 0.0170354 seconds
+cuBLAS Performance : 8067.85 GFLOPS
+Kernel Execution Time : 0.015900700 seconds
+Kernel Performance : 8643.60 GFLOPS
+Relative Percentage : 107.136350%
+BM : 256
+BN : 64
+BK : 32
+TW_M : 8
+TW_N : 4
+================================================================================
+Step: 333/576
+cuBLAS Execution Time : 0.0170420 seconds
+cuBLAS Performance : 8064.74 GFLOPS
+Kernel Execution Time : 0.016763800 seconds
+Kernel Performance : 8198.56 GFLOPS
+Relative Percentage : 101.659322%
+BM : 256
+BN : 256
+BK : 32
+TW_M : 8
+TW_N : 4
+================================================================================
+Step: 332/576
+cuBLAS Execution Time : 0.0169063 seconds
+cuBLAS Performance : 8129.44 GFLOPS
+Kernel Execution Time : 0.016771400 seconds
+Kernel Performance : 8194.86 GFLOPS
+Relative Percentage : 100.804729%
+BM : 256
+BN : 128
+BK : 32
+TW_M : 8
+TW_N : 4
+================================================================================
+Step: 224/576
+cuBLAS Execution Time : 0.0169211 seconds
+cuBLAS Performance : 8122.33 GFLOPS
+Kernel Execution Time : 0.016791400 seconds
+Kernel Performance : 8185.08 GFLOPS
+Relative Percentage : 100.772562%
+BM : 256
+BN : 128
+BK : 16
+TW_M : 16
+TW_N : 4
+================================================================================
+Step: 197/576
+cuBLAS Execution Time : 0.0170067 seconds
+cuBLAS Performance : 8081.45 GFLOPS
+Kernel Execution Time : 0.016933800 seconds
+Kernel Performance : 8116.26 GFLOPS
+Relative Percentage : 100.430740%
+BM : 256
+BN : 128
+BK : 16
+TW_M : 8
+TW_N : 8
+================================================================================
+Step: 184/576
+cuBLAS Execution Time : 0.0169109 seconds
+cuBLAS Performance : 8127.26 GFLOPS
+Kernel Execution Time : 0.017361800 seconds
+Kernel Performance : 7916.19 GFLOPS
+Relative Percentage : 97.402938%
+BM : 128
+BN : 64
+BK : 16
+TW_M : 8
+TW_N : 4
+================================================================================
+Step: 185/576
+cuBLAS Execution Time : 0.0169880 seconds
+cuBLAS Performance : 8090.37 GFLOPS
+Kernel Execution Time : 0.017443500 seconds
+Kernel Performance : 7879.10 GFLOPS
+Relative Percentage : 97.388624%
+BM : 128
+BN : 128
+BK : 16
+TW_M : 8
+TW_N : 4
+================================================================================
+Step: 50/576
+cuBLAS Execution Time : 0.0170852 seconds
+cuBLAS Performance : 8044.31 GFLOPS
+Kernel Execution Time : 0.017848100 seconds
+Kernel Performance : 7700.48 GFLOPS
+Relative Percentage : 95.725799%
+BM : 128
+BN : 128
+BK : 8
+TW_M : 8
+TW_N : 8
+================================================================================
+Step: 89/576
+cuBLAS Execution Time : 0.0170347 seconds
+cuBLAS Performance : 8068.16 GFLOPS
+Kernel Execution Time : 0.017886000 seconds
+Kernel Performance : 7684.16 GFLOPS
+Relative Percentage : 95.240551%
+BM : 256
+BN : 128
+BK : 8
+TW_M : 16
+TW_N : 8
+================================================================================
+Step: 292/576
+cuBLAS Execution Time : 0.0171559 seconds
+cuBLAS Performance : 8011.16 GFLOPS
+Kernel Execution Time : 0.021066800 seconds
+Kernel Performance : 6523.96 GFLOPS
+Relative Percentage : 81.435897%
+BM : 128
+BN : 64
+BK : 32
+TW_M : 4
+TW_N : 4
+================================================================================
+Step: 293/576
+cuBLAS Execution Time : 0.0172465 seconds
+cuBLAS Performance : 7969.11 GFLOPS
+Kernel Execution Time : 0.022381900 seconds
+Kernel Performance : 6140.63 GFLOPS
+Relative Percentage : 77.055405%
+BM : 128
+BN : 128
+BK : 32
+TW_M : 4
+TW_N : 4
+================================================================================
+Step: 145/576
+cuBLAS Execution Time : 0.0170363 seconds
+cuBLAS Performance : 8067.42 GFLOPS
+Kernel Execution Time : 0.023149000 seconds
+Kernel Performance : 5937.15 GFLOPS
+Relative Percentage : 73.594160%
+BM : 64
+BN : 64
+BK : 16
+TW_M : 4
+TW_N : 4
+================================================================================
+Step: 158/576
+cuBLAS Execution Time : 0.0168752 seconds
+cuBLAS Performance : 8144.44 GFLOPS
+Kernel Execution Time : 0.027006500 seconds
+Kernel Performance : 5089.10 GFLOPS
+Relative Percentage : 62.485573%
+BM : 128
+BN : 128
+BK : 16
+TW_M : 4
+TW_N : 8
+================================================================================

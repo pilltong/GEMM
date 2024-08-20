@@ -1,6 +1,4 @@
-#include "../headers/helpers.h"
-#include "../headers/cuda_kernels.cuh"
-#include "../headers/tensor_kernels.cuh"
+#include "runner.cuh"
 
 void randomize_matrix_s(int N, float *M) {
 	struct timeval time {};
@@ -29,90 +27,6 @@ bool verify_matrix_s(void *matRef, void *matOut, int N) {
 	return true;
 }
 
-// 각 커널을 실행하는 함수 선언
-void run_naive_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    dim3 blockDim(32, 32);
-    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    naive_fp<<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_global_coalesce_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    dim3 blockDim(32 * 32);
-    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    global_coalesce_fp<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_shared_caching_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    dim3 blockDim(32 * 32);
-    dim3 gridDim(ceil_div(n, 32), ceil_div(m, 32));
-    shared_caching_fp<32> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_blocking_1d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 64;
-    const uint bn = 64;
-    const uint bk = 8;
-    const uint tw = 8;
-    dim3 blockDim((bm / tw) * bn);
-    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    blocking_1d_fp<bm, bn, bk, tw> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_blocking_2d_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
-    const uint bn = 128;
-    const uint bk = 8;
-    const uint tw_m = 8;
-    const uint tw_n = 8;
-    dim3 blockDim((bm / tw_m) * (bn / tw_n));
-    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    blocking_2d_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_vectorized_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
-    const uint bn = 128;
-    const uint bk = 8;
-    const uint tw_m = 8;
-    const uint tw_n = 8;
-    dim3 blockDim((bm / tw_m) * (bn / tw_n));
-    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    vectorized_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_vectorized_fp_revised(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
-    const uint bn = 128;
-    const uint bk = 8;
-    const uint tw_m = 8;
-    const uint tw_n = 8;
-    dim3 blockDim((bm / tw_m) * (bn / tw_n));
-    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    vectorized_fp_revised<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void run_resolve_bank_conflict(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
-    const uint bn = 128;
-    const uint bk = 8;
-    const uint tw_m = 8;
-    const uint tw_n = 8;
-    dim3 blockDim((bm / tw_m) * (bn / tw_n));
-    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
-    resolve_bank_conflict<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
-}
-
-void runCublasFP32(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    cublasGemmEx(handle, CUBLAS_OP_N, CUBLAS_OP_N, n, m, k, &alpha, B, CUDA_R_32F,
-                n, A, CUDA_R_32F, k, &beta, C, CUDA_R_32F, n, 
-                CUBLAS_COMPUTE_32F, CUBLAS_GEMM_DEFAULT);
-}
-
-typedef struct _execution_result {
-    float gflops;
-    float time;
-} result;
-
 int main(int argc, char **argv) {
     // 실행할 커널을 선택하기 위해 커널 번호를 인자로 받습니다.
     if (argc != 2) {
@@ -122,7 +36,7 @@ int main(int argc, char **argv) {
     int kernel_number = std::atoi(argv[1]);
 
     // 디바이스 정보 출력
-    CudaDeviceInfo();
+    //CudaDeviceInfo();
 
     // CuBLAS 핸들 생성
     cublasHandle_t handle;

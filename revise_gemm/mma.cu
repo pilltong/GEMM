@@ -120,11 +120,11 @@ void run_blocking_2d_h(__half *A, __half *B, float *C, int m, int n, int k, floa
 }
 
 void run_vectorized_fp(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
-    const uint bn = 128;
-    const uint bk = 8;
-    const uint tw_m = 8;
-    const uint tw_n = 8;
+    const uint bm = 256;
+    const uint bn = 64;
+    const uint bk = 16;
+    const uint tw_m = 16;
+    const uint tw_n = 4;
     dim3 blockDim((bm / tw_m) * (bn / tw_n));
     dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
     vectorized_fp<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
@@ -164,9 +164,9 @@ void run_vectorized_h(__half *A, __half *B, float *C, int m, int n, int k, float
 }
 
 void run_resolve_bank_conflict(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    const uint bm = 128;
+    const uint bm = 256;
     const uint bn = 128;
-    const uint bk = 8;
+    const uint bk = 16;
     const uint tw_m = 8;
     const uint tw_n = 8;
     dim3 blockDim((bm / tw_m) * (bn / tw_n));
@@ -421,7 +421,7 @@ int main(int argc, char **argv) {
     }
 
     // repeat same kernel as 'repeat'
-    int repeat = 100;
+    int repeat = 1;
 
     // index for accessing the 'exe_results', tracking the matrix size
     int cnt = 0;

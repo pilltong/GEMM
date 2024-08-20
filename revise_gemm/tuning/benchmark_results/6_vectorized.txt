@@ -1,0 +1,1044 @@
+
+(5/576)
+BK=8 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(6/576)
+Divergence! Should -80.272858, Is 0.000000 (Diff 80.272858) at 0
+Result is different
+cuBLAS Execution Time : 0.0169386 seconds
+cuBLAS Performance : 8113.96 GFLOPS
+
+Kernel Execution Time : 1.84032e-06 seconds
+Kernel Performance : 7.46821e+07 GFLOPS
+BK=8 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(8/576)
+Divergence! Should 577.280640, Is 0.000000 (Diff 577.280640) at 0
+Result is different
+cuBLAS Execution Time : 0.0170581 seconds
+cuBLAS Performance : 8057.11 GFLOPS
+
+Kernel Execution Time : 1.88704e-06 seconds
+Kernel Performance : 7.28331e+07 GFLOPS
+BK=8 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(9/576)
+Divergence! Should -232.804947, Is 0.000000 (Diff 232.804947) at 0
+Result is different
+cuBLAS Execution Time : 0.0170104 seconds
+cuBLAS Performance : 8079.71 GFLOPS
+
+Kernel Execution Time : 1.87584e-06 seconds
+Kernel Performance : 7.3268e+07 GFLOPS
+BK=8 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(14/576)
+BK=8 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(15/576)
+Divergence! Should -419.734558, Is 0.000000 (Diff 419.734558) at 0
+Result is different
+cuBLAS Execution Time : 0.0168517 seconds
+cuBLAS Performance : 8155.78 GFLOPS
+
+Kernel Execution Time : 2.08384e-06 seconds
+Kernel Performance : 6.59547e+07 GFLOPS
+BK=8 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(17/576)
+Divergence! Should 58.562820, Is 0.000000 (Diff 58.562820) at 0
+Result is different
+cuBLAS Execution Time : 0.017476 seconds
+cuBLAS Performance : 7864.45 GFLOPS
+
+Kernel Execution Time : 2.8368e-06 seconds
+Kernel Performance : 4.84486e+07 GFLOPS
+BK=8 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(18/576)
+Divergence! Should -931.398193, Is 0.000000 (Diff 931.398193) at 0
+Result is different
+cuBLAS Execution Time : 0.017238 seconds
+cuBLAS Performance : 7973 GFLOPS
+
+Kernel Execution Time : 1.81344e-06 seconds
+Kernel Performance : 7.57891e+07 GFLOPS
+BK=8 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(24/576)
+BK=8 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(27/576)
+Divergence! Should -440.726685, Is 0.000000 (Diff 440.726685) at 0
+Result is different
+cuBLAS Execution Time : 0.0172596 seconds
+cuBLAS Performance : 7963.03 GFLOPS
+
+Kernel Execution Time : 2.04192e-06 seconds
+Kernel Performance : 6.73087e+07 GFLOPS
+BK=8 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(41/576)
+BK=8 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(42/576)
+BK=8 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(44/576)
+BK=8 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(45/576)
+Divergence! Should 581.057312, Is 0.000000 (Diff 581.057312) at 0
+Result is different
+cuBLAS Execution Time : 0.0172041 seconds
+cuBLAS Performance : 7988.74 GFLOPS
+
+Kernel Execution Time : 2.47296e-06 seconds
+Kernel Performance : 5.55767e+07 GFLOPS
+BK=8 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(50/576)
+Result is correct
+cuBLAS Execution Time : 0.0170852 seconds
+cuBLAS Performance : 8044.31 GFLOPS
+
+Kernel Execution Time : 0.0178481 seconds
+Kernel Performance : 7700.48 GFLOPS
+BK=8 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(51/576)
+BK=8 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(53/576)
+BK=8 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(54/576)
+Divergence! Should -233.029648, Is 0.000000 (Diff 233.029648) at 0
+Result is different
+cuBLAS Execution Time : 0.0170898 seconds
+cuBLAS Performance : 8042.18 GFLOPS
+
+Kernel Execution Time : 1.94464e-06 seconds
+Kernel Performance : 7.06758e+07 GFLOPS
+BK=8 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(60/576)
+Divergence! Should 878.044128, Is 1220.421387 (Diff 342.377258) at 0
+Result is different
+cuBLAS Execution Time : 0.0170606 seconds
+cuBLAS Performance : 8055.91 GFLOPS
+
+Kernel Execution Time : 0.0243294 seconds
+Kernel Performance : 5649.08 GFLOPS
+BK=8 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(63/576)
+Divergence! Should -457.011719, Is 0.000000 (Diff 457.011719) at 0
+Result is different
+cuBLAS Execution Time : 0.0170143 seconds
+cuBLAS Performance : 8077.86 GFLOPS
+
+Kernel Execution Time : 2.2224e-06 seconds
+Kernel Performance : 6.18426e+07 GFLOPS
+BK=8 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(80/576)
+BK=8 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(81/576)
+Divergence! Should -101.206444, Is 0.000000 (Diff 101.206444) at 0
+Result is different
+cuBLAS Execution Time : 0.0170708 seconds
+cuBLAS Performance : 8051.1 GFLOPS
+
+Kernel Execution Time : 1.9968e-06 seconds
+Kernel Performance : 6.88296e+07 GFLOPS
+BK=8 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(89/576)
+Result is correct
+cuBLAS Execution Time : 0.0170347 seconds
+cuBLAS Performance : 8068.16 GFLOPS
+
+Kernel Execution Time : 0.017886 seconds
+Kernel Performance : 7684.16 GFLOPS
+BK=8 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(90/576)
+Divergence! Should 401.669556, Is 0.000000 (Diff 401.669556) at 0
+Result is different
+cuBLAS Execution Time : 0.0169684 seconds
+cuBLAS Performance : 8099.69 GFLOPS
+
+Kernel Execution Time : 2.07424e-06 seconds
+Kernel Performance : 6.62599e+07 GFLOPS
+BK=8 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(99/576)
+Divergence! Should -87.391464, Is -20143.521484 (Diff 20056.130859) at 0
+Result is different
+cuBLAS Execution Time : 0.0170007 seconds
+cuBLAS Performance : 8084.32 GFLOPS
+
+Kernel Execution Time : 0.112389 seconds
+Kernel Performance : 1222.88 GFLOPS
+BK=8 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(145/576)
+Result is correct
+cuBLAS Execution Time : 0.0170363 seconds
+cuBLAS Performance : 8067.42 GFLOPS
+
+Kernel Execution Time : 0.023149 seconds
+Kernel Performance : 5937.15 GFLOPS
+BK=16 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(146/576)
+BK=16 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(147/576)
+BK=16 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(148/576)
+BK=16 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(149/576)
+BK=16 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(150/576)
+Divergence! Should -937.233582, Is 0.000000 (Diff 937.233582) at 0
+Result is different
+cuBLAS Execution Time : 0.0170203 seconds
+cuBLAS Performance : 8075.01 GFLOPS
+
+Kernel Execution Time : 1.76032e-06 seconds
+Kernel Performance : 7.80761e+07 GFLOPS
+BK=16 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(151/576)
+BK=16 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(152/576)
+Divergence! Should 306.705505, Is 0.000000 (Diff 306.705505) at 0
+Result is different
+cuBLAS Execution Time : 0.016994 seconds
+cuBLAS Performance : 8087.49 GFLOPS
+
+Kernel Execution Time : 1.81024e-06 seconds
+Kernel Performance : 7.59231e+07 GFLOPS
+BK=16 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(153/576)
+Divergence! Should 354.395630, Is 0.000000 (Diff 354.395630) at 0
+Result is different
+cuBLAS Execution Time : 0.0169163 seconds
+cuBLAS Performance : 8124.65 GFLOPS
+
+Kernel Execution Time : 1.88992e-06 seconds
+Kernel Performance : 7.27221e+07 GFLOPS
+BK=16 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(155/576)
+Divergence! Should 491.176300, Is 88.175392 (Diff 403.000916) at 0
+Result is different
+cuBLAS Execution Time : 0.0169689 seconds
+cuBLAS Performance : 8099.48 GFLOPS
+
+Kernel Execution Time : 0.0234001 seconds
+Kernel Performance : 5873.43 GFLOPS
+BK=16 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(156/576)
+BK=16 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(158/576)
+Result is correct
+cuBLAS Execution Time : 0.0168752 seconds
+cuBLAS Performance : 8144.44 GFLOPS
+
+Kernel Execution Time : 0.0270065 seconds
+Kernel Performance : 5089.1 GFLOPS
+BK=16 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(159/576)
+Divergence! Should 126.942505, Is 0.000000 (Diff 126.942505) at 0
+Result is different
+cuBLAS Execution Time : 0.0170658 seconds
+cuBLAS Performance : 8053.46 GFLOPS
+
+Kernel Execution Time : 1.96064e-06 seconds
+Kernel Performance : 7.0099e+07 GFLOPS
+BK=16 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(161/576)
+Divergence! Should 342.222168, Is 0.000000 (Diff 342.222168) at 0
+Result is different
+cuBLAS Execution Time : 0.0169855 seconds
+cuBLAS Performance : 8091.56 GFLOPS
+
+Kernel Execution Time : 1.95712e-06 seconds
+Kernel Performance : 7.02251e+07 GFLOPS
+BK=16 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(162/576)
+Divergence! Should 132.392731, Is 0.000000 (Diff 132.392731) at 0
+Result is different
+cuBLAS Execution Time : 0.0170329 seconds
+cuBLAS Performance : 8069.03 GFLOPS
+
+Kernel Execution Time : 1.83744e-06 seconds
+Kernel Performance : 7.47992e+07 GFLOPS
+BK=16 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(165/576)
+Divergence! Should 401.698364, Is -70.039841 (Diff 471.738220) at 0
+Result is different
+cuBLAS Execution Time : 0.0169453 seconds
+cuBLAS Performance : 8110.75 GFLOPS
+
+Kernel Execution Time : 0.0350484 seconds
+Kernel Performance : 3921.4 GFLOPS
+BK=16 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(168/576)
+Divergence! Should 473.011871, Is 12583.453125 (Diff 12110.441406) at 0
+Result is different
+cuBLAS Execution Time : 0.0170448 seconds
+cuBLAS Performance : 8063.38 GFLOPS
+
+Kernel Execution Time : 0.0381851 seconds
+Kernel Performance : 3599.29 GFLOPS
+BK=16 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(171/576)
+Divergence! Should -225.148788, Is 0.000000 (Diff 225.148788) at 0
+Result is different
+cuBLAS Execution Time : 0.0170802 seconds
+cuBLAS Performance : 8046.67 GFLOPS
+
+Kernel Execution Time : 2.11552e-06 seconds
+Kernel Performance : 6.4967e+07 GFLOPS
+BK=16 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(184/576)
+Result is correct
+cuBLAS Execution Time : 0.0169109 seconds
+cuBLAS Performance : 8127.26 GFLOPS
+
+Kernel Execution Time : 0.0173618 seconds
+Kernel Performance : 7916.19 GFLOPS
+BK=16 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(185/576)
+Result is correct
+cuBLAS Execution Time : 0.016988 seconds
+cuBLAS Performance : 8090.37 GFLOPS
+
+Kernel Execution Time : 0.0174435 seconds
+Kernel Performance : 7879.1 GFLOPS
+BK=16 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(186/576)
+BK=16 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(187/576)
+BK=16 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(188/576)
+BK=16 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(189/576)
+Divergence! Should -88.694748, Is 0.000000 (Diff 88.694748) at 0
+Result is different
+cuBLAS Execution Time : 0.0169279 seconds
+cuBLAS Performance : 8119.09 GFLOPS
+
+Kernel Execution Time : 1.85056e-06 seconds
+Kernel Performance : 7.42688e+07 GFLOPS
+BK=16 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(194/576)
+Divergence! Should 472.396210, Is 317.776306 (Diff 154.619904) at 0
+Result is different
+cuBLAS Execution Time : 0.0169898 seconds
+cuBLAS Performance : 8089.51 GFLOPS
+
+Kernel Execution Time : 0.0153477 seconds
+Kernel Performance : 8955.01 GFLOPS
+BK=16 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(195/576)
+Divergence! Should -311.064209, Is -28569.712891 (Diff 28258.648438) at 0
+Result is different
+cuBLAS Execution Time : 0.0169095 seconds
+cuBLAS Performance : 8127.92 GFLOPS
+
+Kernel Execution Time : 0.0168217 seconds
+Kernel Performance : 8170.35 GFLOPS
+BK=16 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(197/576)
+Result is correct
+cuBLAS Execution Time : 0.0170067 seconds
+cuBLAS Performance : 8081.45 GFLOPS
+
+Kernel Execution Time : 0.0169338 seconds
+Kernel Performance : 8116.26 GFLOPS
+BK=16 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(198/576)
+Divergence! Should 323.888733, Is 0.000000 (Diff 323.888733) at 0
+Result is different
+cuBLAS Execution Time : 0.0170255 seconds
+cuBLAS Performance : 8072.53 GFLOPS
+
+Kernel Execution Time : 2.0592e-06 seconds
+Kernel Performance : 6.67439e+07 GFLOPS
+BK=16 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(204/576)
+Divergence! Should 932.019531, Is -3637.666260 (Diff 4569.685547) at 0
+Result is different
+cuBLAS Execution Time : 0.0169349 seconds
+cuBLAS Performance : 8115.71 GFLOPS
+
+Kernel Execution Time : 0.0208501 seconds
+Kernel Performance : 6591.77 GFLOPS
+BK=16 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(207/576)
+Divergence! Should -551.220337, Is 0.000000 (Diff 551.220337) at 0
+Result is different
+cuBLAS Execution Time : 0.0170251 seconds
+cuBLAS Performance : 8072.74 GFLOPS
+
+Kernel Execution Time : 2.13728e-06 seconds
+Kernel Performance : 6.43055e+07 GFLOPS
+BK=16 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(223/576)
+Result is correct
+cuBLAS Execution Time : 0.0170058 seconds
+cuBLAS Performance : 8081.88 GFLOPS
+
+Kernel Execution Time : 0.0150505 seconds
+Kernel Performance : 9131.85 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(224/576)
+Result is correct
+cuBLAS Execution Time : 0.0169211 seconds
+cuBLAS Performance : 8122.33 GFLOPS
+
+Kernel Execution Time : 0.0167914 seconds
+Kernel Performance : 8185.08 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(225/576)
+Divergence! Should -686.268372, Is 0.000000 (Diff 686.268372) at 0
+Result is different
+cuBLAS Execution Time : 0.0170492 seconds
+cuBLAS Performance : 8061.33 GFLOPS
+
+Kernel Execution Time : 2.06848e-06 seconds
+Kernel Performance : 6.64444e+07 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(233/576)
+Divergence! Should 521.575500, Is 400.683746 (Diff 120.891754) at 0
+Result is different
+cuBLAS Execution Time : 0.0170269 seconds
+cuBLAS Performance : 8071.86 GFLOPS
+
+Kernel Execution Time : 0.0151805 seconds
+Kernel Performance : 9053.67 GFLOPS
+BK=16 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(234/576)
+Divergence! Should -370.877838, Is 0.000000 (Diff 370.877838) at 0
+Result is different
+cuBLAS Execution Time : 0.0169642 seconds
+cuBLAS Performance : 8101.71 GFLOPS
+
+Kernel Execution Time : 2.19744e-06 seconds
+Kernel Performance : 6.2545e+07 GFLOPS
+BK=16 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(243/576)
+Divergence! Should 71.774788, Is -42066.585938 (Diff 42138.359375) at 0
+Result is different
+cuBLAS Execution Time : 0.016915 seconds
+cuBLAS Performance : 8125.26 GFLOPS
+
+Kernel Execution Time : 0.0485776 seconds
+Kernel Performance : 2829.26 GFLOPS
+BK=16 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(289/576)
+Divergence! Should 123.647621, Is -373.200439 (Diff 496.848053) at 0
+Result is different
+cuBLAS Execution Time : 0.0171065 seconds
+cuBLAS Performance : 8034.32 GFLOPS
+
+Kernel Execution Time : 0.0205576 seconds
+Kernel Performance : 6685.54 GFLOPS
+BK=32 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(290/576)
+Divergence! Should -370.838623, Is -555.906189 (Diff 185.067566) at 0
+Result is different
+cuBLAS Execution Time : 0.0169955 seconds
+cuBLAS Performance : 8086.79 GFLOPS
+
+Kernel Execution Time : 0.020798 seconds
+Kernel Performance : 6608.27 GFLOPS
+BK=32 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(291/576)
+BK=32 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(292/576)
+Result is correct
+cuBLAS Execution Time : 0.0171559 seconds
+cuBLAS Performance : 8011.16 GFLOPS
+
+Kernel Execution Time : 0.0210668 seconds
+Kernel Performance : 6523.96 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(293/576)
+Result is correct
+cuBLAS Execution Time : 0.0172465 seconds
+cuBLAS Performance : 7969.11 GFLOPS
+
+Kernel Execution Time : 0.0223819 seconds
+Kernel Performance : 6140.63 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(294/576)
+Divergence! Should 393.354156, Is 0.000000 (Diff 393.354156) at 0
+Result is different
+cuBLAS Execution Time : 0.0174717 seconds
+cuBLAS Performance : 7866.39 GFLOPS
+
+Kernel Execution Time : 2.45696e-06 seconds
+Kernel Performance : 5.59386e+07 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(295/576)
+BK=32 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(296/576)
+Divergence! Should 289.869659, Is 0.000000 (Diff 289.869659) at 0
+Result is different
+cuBLAS Execution Time : 0.0170081 seconds
+cuBLAS Performance : 8080.81 GFLOPS
+
+Kernel Execution Time : 1.86624e-06 seconds
+Kernel Performance : 7.36448e+07 GFLOPS
+BK=32 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(297/576)
+Divergence! Should -44.754204, Is 0.000000 (Diff 44.754204) at 0
+Result is different
+cuBLAS Execution Time : 0.0170609 seconds
+cuBLAS Performance : 8055.8 GFLOPS
+
+Kernel Execution Time : 2.1248e-06 seconds
+Kernel Performance : 6.46832e+07 GFLOPS
+BK=32 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(299/576)
+Divergence! Should -552.005371, Is -34495.218750 (Diff 33943.214844) at 0
+Result is different
+cuBLAS Execution Time : 0.0169663 seconds
+cuBLAS Performance : 8100.71 GFLOPS
+
+Kernel Execution Time : 0.0218631 seconds
+Kernel Performance : 6286.36 GFLOPS
+BK=32 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(300/576)
+Divergence! Should -172.772385, Is -250.619354 (Diff 77.846970) at 0
+Result is different
+cuBLAS Execution Time : 0.0169518 seconds
+cuBLAS Performance : 8107.65 GFLOPS
+
+Kernel Execution Time : 0.0229127 seconds
+Kernel Performance : 5998.38 GFLOPS
+BK=32 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(302/576)
+Divergence! Should 594.193481, Is -38507.859375 (Diff 39102.054688) at 0
+Result is different
+cuBLAS Execution Time : 0.0168873 seconds
+cuBLAS Performance : 8138.6 GFLOPS
+
+Kernel Execution Time : 0.0234818 seconds
+Kernel Performance : 5852.99 GFLOPS
+BK=32 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(303/576)
+Divergence! Should 682.745239, Is 0.000000 (Diff 682.745239) at 0
+Result is different
+cuBLAS Execution Time : 0.0169888 seconds
+cuBLAS Performance : 8089.96 GFLOPS
+
+Kernel Execution Time : 2.10016e-06 seconds
+Kernel Performance : 6.54421e+07 GFLOPS
+BK=32 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(305/576)
+Divergence! Should 99.691879, Is 0.000000 (Diff 99.691879) at 0
+Result is different
+cuBLAS Execution Time : 0.0170456 seconds
+cuBLAS Performance : 8063.01 GFLOPS
+
+Kernel Execution Time : 1.97216e-06 seconds
+Kernel Performance : 6.96896e+07 GFLOPS
+BK=32 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(306/576)
+Divergence! Should -200.479706, Is 0.000000 (Diff 200.479706) at 0
+Result is different
+cuBLAS Execution Time : 0.0170275 seconds
+cuBLAS Performance : 8071.6 GFLOPS
+
+Kernel Execution Time : 1.98592e-06 seconds
+Kernel Performance : 6.92067e+07 GFLOPS
+BK=32 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(309/576)
+Divergence! Should 88.150139, Is 445.588715 (Diff 357.438568) at 0
+Result is different
+cuBLAS Execution Time : 0.0169426 seconds
+cuBLAS Performance : 8112.03 GFLOPS
+
+Kernel Execution Time : 0.0344782 seconds
+Kernel Performance : 3986.26 GFLOPS
+BK=32 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(312/576)
+Divergence! Should -189.867157, Is 29497.777344 (Diff 29687.644531) at 0
+Result is different
+cuBLAS Execution Time : 0.0170175 seconds
+cuBLAS Performance : 8076.34 GFLOPS
+
+Kernel Execution Time : 0.0359516 seconds
+Kernel Performance : 3822.88 GFLOPS
+BK=32 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(315/576)
+Divergence! Should 74.082565, Is -30596.882812 (Diff 30670.964844) at 0
+Result is different
+cuBLAS Execution Time : 0.0171679 seconds
+cuBLAS Performance : 8005.58 GFLOPS
+
+Kernel Execution Time : 0.0359873 seconds
+Kernel Performance : 3819.09 GFLOPS
+BK=32 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(328/576)
+Divergence! Should -136.856094, Is 219.472519 (Diff 356.328613) at 0
+Result is different
+cuBLAS Execution Time : 0.0169743 seconds
+cuBLAS Performance : 8096.86 GFLOPS
+
+Kernel Execution Time : 0.0158649 seconds
+Kernel Performance : 8663.09 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(329/576)
+Divergence! Should -86.904228, Is 143.223145 (Diff 230.127380) at 0
+Result is different
+cuBLAS Execution Time : 0.0169808 seconds
+cuBLAS Performance : 8093.79 GFLOPS
+
+Kernel Execution Time : 0.015869 seconds
+Kernel Performance : 8660.83 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(330/576)
+Divergence! Should -423.638092, Is 12067.604492 (Diff 12491.242188) at 0
+Result is different
+cuBLAS Execution Time : 0.0169865 seconds
+cuBLAS Performance : 8091.07 GFLOPS
+
+Kernel Execution Time : 0.0166979 seconds
+Kernel Performance : 8230.92 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(331/576)
+Result is correct
+cuBLAS Execution Time : 0.0170354 seconds
+cuBLAS Performance : 8067.85 GFLOPS
+
+Kernel Execution Time : 0.0159007 seconds
+Kernel Performance : 8643.6 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(332/576)
+Result is correct
+cuBLAS Execution Time : 0.0169063 seconds
+cuBLAS Performance : 8129.44 GFLOPS
+
+Kernel Execution Time : 0.0167714 seconds
+Kernel Performance : 8194.86 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(333/576)
+Result is correct
+cuBLAS Execution Time : 0.017042 seconds
+cuBLAS Performance : 8064.74 GFLOPS
+
+Kernel Execution Time : 0.0167638 seconds
+Kernel Performance : 8198.56 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(338/576)
+Divergence! Should -450.064636, Is 332.637390 (Diff 782.702026) at 0
+Result is different
+cuBLAS Execution Time : 0.0169024 seconds
+cuBLAS Performance : 8131.32 GFLOPS
+
+Kernel Execution Time : 0.0138674 seconds
+Kernel Performance : 9910.96 GFLOPS
+BK=32 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(339/576)
+Divergence! Should 482.776520, Is -4580.395020 (Diff 5063.171387) at 0
+Result is different
+cuBLAS Execution Time : 0.0171118 seconds
+cuBLAS Performance : 8031.8 GFLOPS
+
+Kernel Execution Time : 0.0148535 seconds
+Kernel Performance : 9252.99 GFLOPS
+BK=32 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(341/576)
+Divergence! Should 120.572250, Is -1494.541870 (Diff 1615.114136) at 0
+Result is different
+cuBLAS Execution Time : 0.0168885 seconds
+cuBLAS Performance : 8138.04 GFLOPS
+
+Kernel Execution Time : 0.0150811 seconds
+Kernel Performance : 9113.35 GFLOPS
+BK=32 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(342/576)
+Divergence! Should -609.090637, Is 3699.644043 (Diff 4308.734863) at 0
+Result is different
+cuBLAS Execution Time : 0.0169931 seconds
+cuBLAS Performance : 8087.94 GFLOPS
+
+Kernel Execution Time : 0.0150931 seconds
+Kernel Performance : 9106.06 GFLOPS
+BK=32 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(348/576)
+Divergence! Should -544.192322, Is 18550.451172 (Diff 19094.642578) at 0
+Result is different
+cuBLAS Execution Time : 0.0168924 seconds
+cuBLAS Performance : 8136.15 GFLOPS
+
+Kernel Execution Time : 0.0197017 seconds
+Kernel Performance : 6976.01 GFLOPS
+BK=32 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(351/576)
+Divergence! Should -46.883144, Is 361.979584 (Diff 408.862732) at 0
+Result is different
+cuBLAS Execution Time : 0.0169191 seconds
+cuBLAS Performance : 8123.3 GFLOPS
+
+Kernel Execution Time : 0.019641 seconds
+Kernel Performance : 6997.55 GFLOPS
+BK=32 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(367/576)
+Divergence! Should 91.666580, Is 251.572845 (Diff 159.906265) at 0
+Result is different
+cuBLAS Execution Time : 0.0169586 seconds
+cuBLAS Performance : 8104.4 GFLOPS
+
+Kernel Execution Time : 0.0138425 seconds
+Kernel Performance : 9928.77 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(368/576)
+Divergence! Should 273.660797, Is 2809.072998 (Diff 2535.412109) at 0
+Result is different
+cuBLAS Execution Time : 0.0169403 seconds
+cuBLAS Performance : 8113.12 GFLOPS
+
+Kernel Execution Time : 0.014762 seconds
+Kernel Performance : 9310.35 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(369/576)
+Divergence! Should 246.429413, Is -14610.483398 (Diff 14856.913086) at 0
+Result is different
+cuBLAS Execution Time : 0.016933 seconds
+cuBLAS Performance : 8116.62 GFLOPS
+
+Kernel Execution Time : 0.0147592 seconds
+Kernel Performance : 9312.1 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(377/576)
+Divergence! Should -504.429047, Is 5325.255859 (Diff 5829.685059) at 0
+Result is different
+cuBLAS Execution Time : 0.0168979 seconds
+cuBLAS Performance : 8133.47 GFLOPS
+
+Kernel Execution Time : 0.0148307 seconds
+Kernel Performance : 9267.21 GFLOPS
+BK=32 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(378/576)
+Divergence! Should 222.477814, Is 226.308212 (Diff 3.830399) at 0
+Result is different
+cuBLAS Execution Time : 0.0169226 seconds
+cuBLAS Performance : 8121.61 GFLOPS
+
+Kernel Execution Time : 0.0147257 seconds
+Kernel Performance : 9333.28 GFLOPS
+BK=32 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(387/576)
+Divergence! Should -101.601227, Is -24610.042969 (Diff 24508.441406) at 0
+Result is different
+cuBLAS Execution Time : 0.0169944 seconds
+cuBLAS Performance : 8087.33 GFLOPS
+
+Kernel Execution Time : 0.0148814 seconds
+Kernel Performance : 9235.6 GFLOPS
+BK=32 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(433/576)
+Divergence! Should -250.613312, Is -333.002106 (Diff 82.388794) at 0
+Result is different
+cuBLAS Execution Time : 0.0169736 seconds
+cuBLAS Performance : 8097.24 GFLOPS
+
+Kernel Execution Time : 0.0195483 seconds
+Kernel Performance : 7030.73 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(434/576)
+Divergence! Should -39.936382, Is 611.971252 (Diff 651.907654) at 0
+Result is different
+cuBLAS Execution Time : 0.0169489 seconds
+cuBLAS Performance : 8109.02 GFLOPS
+
+Kernel Execution Time : 0.0196578 seconds
+Kernel Performance : 6991.58 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(435/576)
+Divergence! Should -24.171000, Is -285.794159 (Diff 261.623169) at 0
+Result is different
+cuBLAS Execution Time : 0.0169347 seconds
+cuBLAS Performance : 8115.8 GFLOPS
+
+Kernel Execution Time : 0.0196527 seconds
+Kernel Performance : 6993.4 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(436/576)
+Divergence! Should 508.624786, Is 113.503899 (Diff 395.120880) at 0
+Result is different
+cuBLAS Execution Time : 0.0169913 seconds
+cuBLAS Performance : 8088.77 GFLOPS
+
+Kernel Execution Time : 0.0199472 seconds
+Kernel Performance : 6890.15 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(437/576)
+Divergence! Should -81.541931, Is -288.564850 (Diff 207.022919) at 0
+Result is different
+cuBLAS Execution Time : 0.0170766 seconds
+cuBLAS Performance : 8048.39 GFLOPS
+
+Kernel Execution Time : 0.0198989 seconds
+Kernel Performance : 6906.85 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(438/576)
+Divergence! Should -81.997429, Is -293.789276 (Diff 211.791840) at 0
+Result is different
+cuBLAS Execution Time : 0.0169671 seconds
+cuBLAS Performance : 8100.34 GFLOPS
+
+Kernel Execution Time : 0.0199185 seconds
+Kernel Performance : 6900.07 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(439/576)
+Divergence! Should -137.545486, Is -347.108276 (Diff 209.562790) at 0
+Result is different
+cuBLAS Execution Time : 0.0168884 seconds
+cuBLAS Performance : 8138.06 GFLOPS
+
+Kernel Execution Time : 0.0199498 seconds
+Kernel Performance : 6889.24 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(440/576)
+Divergence! Should -418.883423, Is 20.540028 (Diff 439.423462) at 0
+Result is different
+cuBLAS Execution Time : 0.0170703 seconds
+cuBLAS Performance : 8051.37 GFLOPS
+
+Kernel Execution Time : 0.0198986 seconds
+Kernel Performance : 6906.98 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(441/576)
+Divergence! Should 130.668213, Is -72.238228 (Diff 202.906433) at 0
+Result is different
+cuBLAS Execution Time : 0.0169707 seconds
+cuBLAS Performance : 8098.61 GFLOPS
+
+Kernel Execution Time : 0.0198973 seconds
+Kernel Performance : 6907.42 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(443/576)
+Divergence! Should -728.177673, Is 472.662628 (Diff 1200.840332) at 0
+Result is different
+cuBLAS Execution Time : 0.0169508 seconds
+cuBLAS Performance : 8108.11 GFLOPS
+
+Kernel Execution Time : 0.0215836 seconds
+Kernel Performance : 6367.76 GFLOPS
+BK=64 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(444/576)
+Divergence! Should 136.595139, Is -261.960236 (Diff 398.555359) at 0
+Result is different
+cuBLAS Execution Time : 0.0169779 seconds
+cuBLAS Performance : 8095.17 GFLOPS
+
+Kernel Execution Time : 0.0215375 seconds
+Kernel Performance : 6381.38 GFLOPS
+BK=64 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(446/576)
+Divergence! Should 706.012512, Is -92.128777 (Diff 798.141296) at 0
+Result is different
+cuBLAS Execution Time : 0.0169127 seconds
+cuBLAS Performance : 8126.38 GFLOPS
+
+Kernel Execution Time : 0.0216113 seconds
+Kernel Performance : 6359.58 GFLOPS
+BK=64 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(447/576)
+Divergence! Should -393.030975, Is 127.598419 (Diff 520.629395) at 0
+Result is different
+cuBLAS Execution Time : 0.016988 seconds
+cuBLAS Performance : 8090.38 GFLOPS
+
+Kernel Execution Time : 0.02154 seconds
+Kernel Performance : 6380.65 GFLOPS
+BK=64 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(449/576)
+Divergence! Should 609.915405, Is -44.478745 (Diff 654.394165) at 0
+Result is different
+cuBLAS Execution Time : 0.0169895 seconds
+cuBLAS Performance : 8089.64 GFLOPS
+
+Kernel Execution Time : 0.0215315 seconds
+Kernel Performance : 6383.17 GFLOPS
+BK=64 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(450/576)
+Divergence! Should 477.278046, Is -276.420563 (Diff 753.698608) at 0
+Result is different
+cuBLAS Execution Time : 0.0169395 seconds
+cuBLAS Performance : 8113.54 GFLOPS
+
+Kernel Execution Time : 0.0215499 seconds
+Kernel Performance : 6377.7 GFLOPS
+BK=64 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(453/576)
+Divergence! Should 553.656189, Is 146.611404 (Diff 407.044800) at 0
+Result is different
+cuBLAS Execution Time : 0.0170049 seconds
+cuBLAS Performance : 8082.31 GFLOPS
+
+Kernel Execution Time : 0.0215883 seconds
+Kernel Performance : 6366.36 GFLOPS
+BK=64 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(456/576)
+Divergence! Should -371.505249, Is -268.435974 (Diff 103.069275) at 0
+Result is different
+cuBLAS Execution Time : 0.0167493 seconds
+cuBLAS Performance : 8205.67 GFLOPS
+
+Kernel Execution Time : 0.0216196 seconds
+Kernel Performance : 6357.15 GFLOPS
+BK=64 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(459/576)
+Divergence! Should 8.367240, Is -67.624001 (Diff 75.991241) at 0
+Result is different
+cuBLAS Execution Time : 0.0170032 seconds
+cuBLAS Performance : 8083.13 GFLOPS
+
+Kernel Execution Time : 0.0215899 seconds
+Kernel Performance : 6365.9 GFLOPS
+BK=64 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(472/576)
+Divergence! Should 139.907043, Is -535.778809 (Diff 675.685852) at 0
+Result is different
+cuBLAS Execution Time : 0.0170339 seconds
+cuBLAS Performance : 8068.53 GFLOPS
+
+Kernel Execution Time : 0.0152255 seconds
+Kernel Performance : 9026.9 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(473/576)
+Divergence! Should -441.623352, Is -455.661133 (Diff 14.037781) at 0
+Result is different
+cuBLAS Execution Time : 0.0170244 seconds
+cuBLAS Performance : 8073.05 GFLOPS
+
+Kernel Execution Time : 0.0151978 seconds
+Kernel Performance : 9043.36 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(474/576)
+Divergence! Should 408.170288, Is 437.181000 (Diff 29.010712) at 0
+Result is different
+cuBLAS Execution Time : 0.016911 seconds
+cuBLAS Performance : 8127.17 GFLOPS
+
+Kernel Execution Time : 0.0151721 seconds
+Kernel Performance : 9058.69 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(475/576)
+Divergence! Should -322.919800, Is -396.131470 (Diff 73.211670) at 0
+Result is different
+cuBLAS Execution Time : 0.0169962 seconds
+cuBLAS Performance : 8086.46 GFLOPS
+
+Kernel Execution Time : 0.0151253 seconds
+Kernel Performance : 9086.71 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(476/576)
+Divergence! Should 701.307068, Is 292.399963 (Diff 408.907104) at 0
+Result is different
+cuBLAS Execution Time : 0.0169982 seconds
+cuBLAS Performance : 8085.49 GFLOPS
+
+Kernel Execution Time : 0.0152716 seconds
+Kernel Performance : 8999.65 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(477/576)
+Divergence! Should 167.982513, Is 330.009369 (Diff 162.026855) at 0
+Result is different
+cuBLAS Execution Time : 0.0170586 seconds
+cuBLAS Performance : 8056.89 GFLOPS
+
+Kernel Execution Time : 0.015225 seconds
+Kernel Performance : 9027.19 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(482/576)
+Divergence! Should -71.170822, Is 120.491005 (Diff 191.661835) at 0
+Result is different
+cuBLAS Execution Time : 0.0169887 seconds
+cuBLAS Performance : 8090 GFLOPS
+
+Kernel Execution Time : 0.0152535 seconds
+Kernel Performance : 9010.34 GFLOPS
+BK=64 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(483/576)
+Divergence! Should -195.465576, Is -22.529297 (Diff 172.936279) at 0
+Result is different
+cuBLAS Execution Time : 0.0169309 seconds
+cuBLAS Performance : 8117.65 GFLOPS
+
+Kernel Execution Time : 0.0151666 seconds
+Kernel Performance : 9061.95 GFLOPS
+BK=64 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(485/576)
+Divergence! Should 491.874023, Is 346.242615 (Diff 145.631409) at 0
+Result is different
+cuBLAS Execution Time : 0.0170062 seconds
+cuBLAS Performance : 8081.68 GFLOPS
+
+Kernel Execution Time : 0.0152772 seconds
+Kernel Performance : 8996.35 GFLOPS
+BK=64 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(486/576)
+Divergence! Should 528.445801, Is 219.344604 (Diff 309.101196) at 0
+Result is different
+cuBLAS Execution Time : 0.0170571 seconds
+cuBLAS Performance : 8057.58 GFLOPS
+
+Kernel Execution Time : 0.015157 seconds
+Kernel Performance : 9067.68 GFLOPS
+BK=64 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(492/576)
+Divergence! Should 513.904602, Is 216.075287 (Diff 297.829315) at 0
+Result is different
+cuBLAS Execution Time : 0.0169956 seconds
+cuBLAS Performance : 8086.71 GFLOPS
+
+Kernel Execution Time : 0.0151196 seconds
+Kernel Performance : 9090.1 GFLOPS
+BK=64 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(495/576)
+Divergence! Should 20.919085, Is -27.867699 (Diff 48.786781) at 0
+Result is different
+cuBLAS Execution Time : 0.0169628 seconds
+cuBLAS Performance : 8102.37 GFLOPS
+
+Kernel Execution Time : 0.0151749 seconds
+Kernel Performance : 9057.01 GFLOPS
+BK=64 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(511/576)
+Divergence! Should -174.002808, Is -831.403870 (Diff 657.401062) at 0
+Result is different
+cuBLAS Execution Time : 0.0169865 seconds
+cuBLAS Performance : 8091.06 GFLOPS
+
+Kernel Execution Time : 0.0151531 seconds
+Kernel Performance : 9070 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(512/576)
+Divergence! Should -57.669010, Is -585.542908 (Diff 527.873901) at 0
+Result is different
+cuBLAS Execution Time : 0.0170173 seconds
+cuBLAS Performance : 8076.41 GFLOPS
+
+Kernel Execution Time : 0.0151765 seconds
+Kernel Performance : 9056.04 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(513/576)
+Divergence! Should 77.187111, Is -728.950684 (Diff 806.137817) at 0
+Result is different
+cuBLAS Execution Time : 0.0169593 seconds
+cuBLAS Performance : 8104.03 GFLOPS
+
+Kernel Execution Time : 0.0151222 seconds
+Kernel Performance : 9088.54 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(521/576)
+Divergence! Should 1075.455566, Is 291.912689 (Diff 783.542847) at 0
+Result is different
+cuBLAS Execution Time : 0.0169899 seconds
+cuBLAS Performance : 8089.43 GFLOPS
+
+Kernel Execution Time : 0.0151988 seconds
+Kernel Performance : 9042.74 GFLOPS
+BK=64 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(522/576)
+Divergence! Should -4.213895, Is -3.245256 (Diff 0.968638) at 0
+Result is different
+cuBLAS Execution Time : 0.0169134 seconds
+cuBLAS Performance : 8126.05 GFLOPS
+
+Kernel Execution Time : 0.015131 seconds
+Kernel Performance : 9083.26 GFLOPS
+BK=64 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(531/576)
+Divergence! Should 204.883820, Is 521.634827 (Diff 316.751007) at 0
+Result is different
+cuBLAS Execution Time : 0.0170635 seconds
+cuBLAS Performance : 8054.54 GFLOPS
+
+Kernel Execution Time : 0.0151278 seconds
+Kernel Performance : 9085.2 GFLOPS
+BK=64 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256

@@ -1,0 +1,75 @@
+Total correct results: 6
+
+================================================================================
+Step: 197/576
+cuBLAS Execution Time : 0.0171045 seconds
+cuBLAS Performance : 8035.25 GFLOPS
+Kernel Execution Time : 0.019771800 seconds
+Kernel Performance : 6951.26 GFLOPS
+Relative Percentage : 86.509567%
+BM : 256
+BN : 128
+BK : 16
+TW_M : 8
+TW_N : 8
+================================================================================
+Step: 89/576
+cuBLAS Execution Time : 0.0169210 seconds
+cuBLAS Performance : 8122.40 GFLOPS
+Kernel Execution Time : 0.019775100 seconds
+Kernel Performance : 6950.08 GFLOPS
+Relative Percentage : 85.566828%
+BM : 256
+BN : 128
+BK : 8
+TW_M : 16
+TW_N : 8
+================================================================================
+Step: 50/576
+cuBLAS Execution Time : 0.0170350 seconds
+cuBLAS Performance : 8068.01 GFLOPS
+Kernel Execution Time : 0.019988200 seconds
+Kernel Performance : 6876.01 GFLOPS
+Relative Percentage : 85.225601%
+BM : 128
+BN : 128
+BK : 8
+TW_M : 8
+TW_N : 8
+================================================================================
+Step: 158/576
+cuBLAS Execution Time : 0.0170803 seconds
+cuBLAS Performance : 8046.65 GFLOPS
+Kernel Execution Time : 0.023464000 seconds
+Kernel Performance : 5857.43 GFLOPS
+Relative Percentage : 72.793398%
+BM : 128
+BN : 128
+BK : 16
+TW_M : 4
+TW_N : 8
+================================================================================
+Step: 306/576
+cuBLAS Execution Time : 0.0174382 seconds
+cuBLAS Performance : 7881.48 GFLOPS
+Kernel Execution Time : 0.024929100 seconds
+Kernel Performance : 5513.20 GFLOPS
+Relative Percentage : 69.951329%
+BM : 256
+BN : 256
+BK : 32
+TW_M : 4
+TW_N : 8
+================================================================================
+Step: 305/576
+cuBLAS Execution Time : 0.0170502 seconds
+cuBLAS Performance : 8060.83 GFLOPS
+Kernel Execution Time : 0.024942600 seconds
+Kernel Performance : 5510.20 GFLOPS
+Relative Percentage : 68.357725%
+BM : 256
+BN : 128
+BK : 32
+TW_M : 4
+TW_N : 8
+================================================================================

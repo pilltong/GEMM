@@ -1,0 +1,1065 @@
+
+(5/576)
+Result is correct
+cuBLAS Execution Time : 0.0169837 seconds
+cuBLAS Performance : 8092.41 GFLOPS
+
+Kernel Execution Time : 0.0191959 seconds
+Kernel Performance : 7159.82 GFLOPS
+BK=8 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(6/576)
+Result is correct
+cuBLAS Execution Time : 0.016962 seconds
+cuBLAS Performance : 8102.77 GFLOPS
+
+Kernel Execution Time : 0.0192857 seconds
+Kernel Performance : 7126.45 GFLOPS
+BK=8 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(8/576)
+Result is correct
+cuBLAS Execution Time : 0.0169759 seconds
+cuBLAS Performance : 8096.12 GFLOPS
+
+Kernel Execution Time : 0.0193407 seconds
+Kernel Performance : 7106.21 GFLOPS
+BK=8 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(9/576)
+Result is correct
+cuBLAS Execution Time : 0.0169743 seconds
+cuBLAS Performance : 8096.9 GFLOPS
+
+Kernel Execution Time : 0.0192799 seconds
+Kernel Performance : 7128.6 GFLOPS
+BK=8 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(14/576)
+Result is correct
+cuBLAS Execution Time : 0.0170545 seconds
+cuBLAS Performance : 8058.8 GFLOPS
+
+Kernel Execution Time : 0.0192556 seconds
+Kernel Performance : 7137.61 GFLOPS
+BK=8 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(15/576)
+Result is correct
+cuBLAS Execution Time : 0.0170662 seconds
+cuBLAS Performance : 8053.27 GFLOPS
+
+Kernel Execution Time : 0.0192324 seconds
+Kernel Performance : 7146.23 GFLOPS
+BK=8 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(17/576)
+Result is correct
+cuBLAS Execution Time : 0.0169218 seconds
+cuBLAS Performance : 8121.99 GFLOPS
+
+Kernel Execution Time : 0.0192289 seconds
+Kernel Performance : 7147.54 GFLOPS
+BK=8 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(18/576)
+Result is correct
+cuBLAS Execution Time : 0.016926 seconds
+cuBLAS Performance : 8119.99 GFLOPS
+
+Kernel Execution Time : 0.0192424 seconds
+Kernel Performance : 7142.49 GFLOPS
+BK=8 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(24/576)
+Result is correct
+cuBLAS Execution Time : 0.0169797 seconds
+cuBLAS Performance : 8094.32 GFLOPS
+
+Kernel Execution Time : 0.0192079 seconds
+Kernel Performance : 7155.33 GFLOPS
+BK=8 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(27/576)
+Result is correct
+cuBLAS Execution Time : 0.0169773 seconds
+cuBLAS Performance : 8095.43 GFLOPS
+
+Kernel Execution Time : 0.0192089 seconds
+Kernel Performance : 7154.97 GFLOPS
+BK=8 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(41/576)
+Result is correct
+cuBLAS Execution Time : 0.0169577 seconds
+cuBLAS Performance : 8104.8 GFLOPS
+
+Kernel Execution Time : 0.01924 seconds
+Kernel Performance : 7143.41 GFLOPS
+BK=8 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(42/576)
+Result is correct
+cuBLAS Execution Time : 0.0169938 seconds
+cuBLAS Performance : 8087.62 GFLOPS
+
+Kernel Execution Time : 0.0193872 seconds
+Kernel Performance : 7089.18 GFLOPS
+BK=8 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(44/576)
+Result is correct
+cuBLAS Execution Time : 0.0170182 seconds
+cuBLAS Performance : 8076 GFLOPS
+
+Kernel Execution Time : 0.0194013 seconds
+Kernel Performance : 7084 GFLOPS
+BK=8 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(45/576)
+Result is correct
+cuBLAS Execution Time : 0.0169957 seconds
+cuBLAS Performance : 8086.7 GFLOPS
+
+Kernel Execution Time : 0.0192955 seconds
+Kernel Performance : 7122.87 GFLOPS
+BK=8 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(50/576)
+Result is correct
+cuBLAS Execution Time : 0.0171525 seconds
+cuBLAS Performance : 8012.75 GFLOPS
+
+Kernel Execution Time : 0.0193006 seconds
+Kernel Performance : 7120.97 GFLOPS
+BK=8 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(51/576)
+Result is correct
+cuBLAS Execution Time : 0.017045 seconds
+cuBLAS Performance : 8063.31 GFLOPS
+
+Kernel Execution Time : 0.0193122 seconds
+Kernel Performance : 7116.68 GFLOPS
+BK=8 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(53/576)
+Result is correct
+cuBLAS Execution Time : 0.0170035 seconds
+cuBLAS Performance : 8083 GFLOPS
+
+Kernel Execution Time : 0.0193997 seconds
+Kernel Performance : 7084.61 GFLOPS
+BK=8 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(54/576)
+Result is correct
+cuBLAS Execution Time : 0.0169625 seconds
+cuBLAS Performance : 8102.51 GFLOPS
+
+Kernel Execution Time : 0.0192902 seconds
+Kernel Performance : 7124.82 GFLOPS
+BK=8 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(60/576)
+Result is correct
+cuBLAS Execution Time : 0.016996 seconds
+cuBLAS Performance : 8086.55 GFLOPS
+
+Kernel Execution Time : 0.0192109 seconds
+Kernel Performance : 7154.22 GFLOPS
+BK=8 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(63/576)
+Result is correct
+cuBLAS Execution Time : 0.0169428 seconds
+cuBLAS Performance : 8111.93 GFLOPS
+
+Kernel Execution Time : 0.0192432 seconds
+Kernel Performance : 7142.2 GFLOPS
+BK=8 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(80/576)
+Result is correct
+cuBLAS Execution Time : 0.0169526 seconds
+cuBLAS Performance : 8107.26 GFLOPS
+
+Kernel Execution Time : 0.0192889 seconds
+Kernel Performance : 7125.27 GFLOPS
+BK=8 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(81/576)
+Result is correct
+cuBLAS Execution Time : 0.0169948 seconds
+cuBLAS Performance : 8087.11 GFLOPS
+
+Kernel Execution Time : 0.0192822 seconds
+Kernel Performance : 7127.78 GFLOPS
+BK=8 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(89/576)
+Result is correct
+cuBLAS Execution Time : 0.0169621 seconds
+cuBLAS Performance : 8102.71 GFLOPS
+
+Kernel Execution Time : 0.0192416 seconds
+Kernel Performance : 7142.81 GFLOPS
+BK=8 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(90/576)
+Result is correct
+cuBLAS Execution Time : 0.0170134 seconds
+cuBLAS Performance : 8078.27 GFLOPS
+
+Kernel Execution Time : 0.0192649 seconds
+Kernel Performance : 7134.18 GFLOPS
+BK=8 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(99/576)
+Result is correct
+cuBLAS Execution Time : 0.0169966 seconds
+cuBLAS Performance : 8086.28 GFLOPS
+
+Kernel Execution Time : 0.0193093 seconds
+Kernel Performance : 7117.77 GFLOPS
+BK=8 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(145/576)
+Result is correct
+cuBLAS Execution Time : 0.0170418 seconds
+cuBLAS Performance : 8064.82 GFLOPS
+
+Kernel Execution Time : 0.0192623 seconds
+Kernel Performance : 7135.11 GFLOPS
+BK=16 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(146/576)
+Result is correct
+cuBLAS Execution Time : 0.0169596 seconds
+cuBLAS Performance : 8103.89 GFLOPS
+
+Kernel Execution Time : 0.019255 seconds
+Kernel Performance : 7137.83 GFLOPS
+BK=16 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(147/576)
+Result is correct
+cuBLAS Execution Time : 0.0170028 seconds
+cuBLAS Performance : 8083.32 GFLOPS
+
+Kernel Execution Time : 0.0192615 seconds
+Kernel Performance : 7135.42 GFLOPS
+BK=16 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(148/576)
+Result is correct
+cuBLAS Execution Time : 0.0170193 seconds
+cuBLAS Performance : 8075.48 GFLOPS
+
+Kernel Execution Time : 0.0193968 seconds
+Kernel Performance : 7085.64 GFLOPS
+BK=16 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(149/576)
+Result is correct
+cuBLAS Execution Time : 0.017079 seconds
+cuBLAS Performance : 8047.24 GFLOPS
+
+Kernel Execution Time : 0.0192648 seconds
+Kernel Performance : 7134.22 GFLOPS
+BK=16 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(150/576)
+Result is correct
+cuBLAS Execution Time : 0.0170668 seconds
+cuBLAS Performance : 8053.02 GFLOPS
+
+Kernel Execution Time : 0.0192817 seconds
+Kernel Performance : 7127.94 GFLOPS
+BK=16 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(151/576)
+Result is correct
+cuBLAS Execution Time : 0.0170365 seconds
+cuBLAS Performance : 8067.33 GFLOPS
+
+Kernel Execution Time : 0.01931 seconds
+Kernel Performance : 7117.48 GFLOPS
+BK=16 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(152/576)
+Result is correct
+cuBLAS Execution Time : 0.0169157 seconds
+cuBLAS Performance : 8124.92 GFLOPS
+
+Kernel Execution Time : 0.0192215 seconds
+Kernel Performance : 7150.28 GFLOPS
+BK=16 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(153/576)
+Result is correct
+cuBLAS Execution Time : 0.0169292 seconds
+cuBLAS Performance : 8118.48 GFLOPS
+
+Kernel Execution Time : 0.019234 seconds
+Kernel Performance : 7145.63 GFLOPS
+BK=16 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(155/576)
+Result is correct
+cuBLAS Execution Time : 0.0169443 seconds
+cuBLAS Performance : 8111.2 GFLOPS
+
+Kernel Execution Time : 0.0192601 seconds
+Kernel Performance : 7135.93 GFLOPS
+BK=16 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(156/576)
+Result is correct
+cuBLAS Execution Time : 0.0169545 seconds
+cuBLAS Performance : 8106.34 GFLOPS
+
+Kernel Execution Time : 0.0195806 seconds
+Kernel Performance : 7019.14 GFLOPS
+BK=16 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(158/576)
+Result is correct
+cuBLAS Execution Time : 0.0170876 seconds
+cuBLAS Performance : 8043.2 GFLOPS
+
+Kernel Execution Time : 0.0194915 seconds
+Kernel Performance : 7051.23 GFLOPS
+BK=16 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(159/576)
+Result is correct
+cuBLAS Execution Time : 0.0170742 seconds
+cuBLAS Performance : 8049.53 GFLOPS
+
+Kernel Execution Time : 0.0192633 seconds
+Kernel Performance : 7134.76 GFLOPS
+BK=16 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(161/576)
+Result is correct
+cuBLAS Execution Time : 0.0169463 seconds
+cuBLAS Performance : 8110.26 GFLOPS
+
+Kernel Execution Time : 0.019268 seconds
+Kernel Performance : 7133.03 GFLOPS
+BK=16 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(162/576)
+Result is correct
+cuBLAS Execution Time : 0.0169732 seconds
+cuBLAS Performance : 8097.41 GFLOPS
+
+Kernel Execution Time : 0.0192383 seconds
+Kernel Performance : 7144.04 GFLOPS
+BK=16 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(165/576)
+Result is correct
+cuBLAS Execution Time : 0.0169633 seconds
+cuBLAS Performance : 8102.11 GFLOPS
+
+Kernel Execution Time : 0.0192705 seconds
+Kernel Performance : 7132.11 GFLOPS
+BK=16 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(168/576)
+Result is correct
+cuBLAS Execution Time : 0.0168978 seconds
+cuBLAS Performance : 8133.54 GFLOPS
+
+Kernel Execution Time : 0.0193339 seconds
+Kernel Performance : 7108.7 GFLOPS
+BK=16 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(171/576)
+Result is correct
+cuBLAS Execution Time : 0.0169301 seconds
+cuBLAS Performance : 8118.05 GFLOPS
+
+Kernel Execution Time : 0.0192666 seconds
+Kernel Performance : 7133.55 GFLOPS
+BK=16 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(184/576)
+Result is correct
+cuBLAS Execution Time : 0.0169578 seconds
+cuBLAS Performance : 8104.77 GFLOPS
+
+Kernel Execution Time : 0.0192558 seconds
+Kernel Performance : 7137.55 GFLOPS
+BK=16 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(185/576)
+Result is correct
+cuBLAS Execution Time : 0.0169844 seconds
+cuBLAS Performance : 8092.08 GFLOPS
+
+Kernel Execution Time : 0.0193289 seconds
+Kernel Performance : 7110.56 GFLOPS
+BK=16 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(186/576)
+Result is correct
+cuBLAS Execution Time : 0.0170382 seconds
+cuBLAS Performance : 8066.53 GFLOPS
+
+Kernel Execution Time : 0.019298 seconds
+Kernel Performance : 7121.93 GFLOPS
+BK=16 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(187/576)
+Result is correct
+cuBLAS Execution Time : 0.0170121 seconds
+cuBLAS Performance : 8078.87 GFLOPS
+
+Kernel Execution Time : 0.0193574 seconds
+Kernel Performance : 7100.06 GFLOPS
+BK=16 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(188/576)
+Result is correct
+cuBLAS Execution Time : 0.0170235 seconds
+cuBLAS Performance : 8073.47 GFLOPS
+
+Kernel Execution Time : 0.0192611 seconds
+Kernel Performance : 7135.59 GFLOPS
+BK=16 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(189/576)
+Result is correct
+cuBLAS Execution Time : 0.0170314 seconds
+cuBLAS Performance : 8069.73 GFLOPS
+
+Kernel Execution Time : 0.0192728 seconds
+Kernel Performance : 7131.22 GFLOPS
+BK=16 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(194/576)
+Result is correct
+cuBLAS Execution Time : 0.0170048 seconds
+cuBLAS Performance : 8082.38 GFLOPS
+
+Kernel Execution Time : 0.0192521 seconds
+Kernel Performance : 7138.89 GFLOPS
+BK=16 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(195/576)
+Result is correct
+cuBLAS Execution Time : 0.0170204 seconds
+cuBLAS Performance : 8074.95 GFLOPS
+
+Kernel Execution Time : 0.019293 seconds
+Kernel Performance : 7123.77 GFLOPS
+BK=16 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(197/576)
+Result is correct
+cuBLAS Execution Time : 0.0170543 seconds
+cuBLAS Performance : 8058.88 GFLOPS
+
+Kernel Execution Time : 0.0192617 seconds
+Kernel Performance : 7135.36 GFLOPS
+BK=16 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(198/576)
+Result is correct
+cuBLAS Execution Time : 0.0169788 seconds
+cuBLAS Performance : 8094.75 GFLOPS
+
+Kernel Execution Time : 0.019236 seconds
+Kernel Performance : 7144.87 GFLOPS
+BK=16 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(204/576)
+Result is correct
+cuBLAS Execution Time : 0.0169182 seconds
+cuBLAS Performance : 8123.75 GFLOPS
+
+Kernel Execution Time : 0.0192747 seconds
+Kernel Performance : 7130.53 GFLOPS
+BK=16 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(207/576)
+Result is correct
+cuBLAS Execution Time : 0.0170096 seconds
+cuBLAS Performance : 8080.09 GFLOPS
+
+Kernel Execution Time : 0.0192897 seconds
+Kernel Performance : 7124.98 GFLOPS
+BK=16 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(223/576)
+Result is correct
+cuBLAS Execution Time : 0.017067 seconds
+cuBLAS Performance : 8052.9 GFLOPS
+
+Kernel Execution Time : 0.0192824 seconds
+Kernel Performance : 7127.7 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(224/576)
+Result is correct
+cuBLAS Execution Time : 0.0170398 seconds
+cuBLAS Performance : 8065.77 GFLOPS
+
+Kernel Execution Time : 0.0192842 seconds
+Kernel Performance : 7127.03 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(225/576)
+Result is correct
+cuBLAS Execution Time : 0.0170207 seconds
+cuBLAS Performance : 8074.8 GFLOPS
+
+Kernel Execution Time : 0.0192243 seconds
+Kernel Performance : 7149.21 GFLOPS
+BK=16 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(233/576)
+Result is correct
+cuBLAS Execution Time : 0.0169454 seconds
+cuBLAS Performance : 8110.7 GFLOPS
+
+Kernel Execution Time : 0.0192126 seconds
+Kernel Performance : 7153.57 GFLOPS
+BK=16 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(234/576)
+Result is correct
+cuBLAS Execution Time : 0.0170528 seconds
+cuBLAS Performance : 8059.59 GFLOPS
+
+Kernel Execution Time : 0.0193753 seconds
+Kernel Performance : 7093.51 GFLOPS
+BK=16 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(243/576)
+Result is correct
+cuBLAS Execution Time : 0.0169395 seconds
+cuBLAS Performance : 8113.53 GFLOPS
+
+Kernel Execution Time : 0.0192305 seconds
+Kernel Performance : 7146.94 GFLOPS
+BK=16 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(289/576)
+Result is correct
+cuBLAS Execution Time : 0.0169994 seconds
+cuBLAS Performance : 8084.92 GFLOPS
+
+Kernel Execution Time : 0.0192374 seconds
+Kernel Performance : 7144.35 GFLOPS
+BK=32 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(290/576)
+Result is correct
+cuBLAS Execution Time : 0.0170047 seconds
+cuBLAS Performance : 8082.41 GFLOPS
+
+Kernel Execution Time : 0.0193827 seconds
+Kernel Performance : 7090.81 GFLOPS
+BK=32 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(291/576)
+Result is correct
+cuBLAS Execution Time : 0.0170092 seconds
+cuBLAS Performance : 8080.28 GFLOPS
+
+Kernel Execution Time : 0.0192775 seconds
+Kernel Performance : 7129.51 GFLOPS
+BK=32 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(292/576)
+Result is correct
+cuBLAS Execution Time : 0.0170815 seconds
+cuBLAS Performance : 8046.08 GFLOPS
+
+Kernel Execution Time : 0.0192881 seconds
+Kernel Performance : 7125.6 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(293/576)
+Result is correct
+cuBLAS Execution Time : 0.0170797 seconds
+cuBLAS Performance : 8046.94 GFLOPS
+
+Kernel Execution Time : 0.0192935 seconds
+Kernel Performance : 7123.59 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(294/576)
+Result is correct
+cuBLAS Execution Time : 0.0170636 seconds
+cuBLAS Performance : 8054.51 GFLOPS
+
+Kernel Execution Time : 0.0192991 seconds
+Kernel Performance : 7121.51 GFLOPS
+BK=32 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(295/576)
+Result is correct
+cuBLAS Execution Time : 0.0169937 seconds
+cuBLAS Performance : 8087.63 GFLOPS
+
+Kernel Execution Time : 0.0193293 seconds
+Kernel Performance : 7110.41 GFLOPS
+BK=32 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(296/576)
+Result is correct
+cuBLAS Execution Time : 0.0169086 seconds
+cuBLAS Performance : 8128.37 GFLOPS
+
+Kernel Execution Time : 0.0192496 seconds
+Kernel Performance : 7139.82 GFLOPS
+BK=32 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(297/576)
+Result is correct
+cuBLAS Execution Time : 0.0169183 seconds
+cuBLAS Performance : 8123.69 GFLOPS
+
+Kernel Execution Time : 0.0192588 seconds
+Kernel Performance : 7136.41 GFLOPS
+BK=32 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(299/576)
+Result is correct
+cuBLAS Execution Time : 0.0169706 seconds
+cuBLAS Performance : 8098.63 GFLOPS
+
+Kernel Execution Time : 0.0192938 seconds
+Kernel Performance : 7123.47 GFLOPS
+BK=32 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(300/576)
+Result is correct
+cuBLAS Execution Time : 0.0169366 seconds
+cuBLAS Performance : 8114.89 GFLOPS
+
+Kernel Execution Time : 0.0192462 seconds
+Kernel Performance : 7141.09 GFLOPS
+BK=32 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(302/576)
+Result is correct
+cuBLAS Execution Time : 0.0169141 seconds
+cuBLAS Performance : 8125.7 GFLOPS
+
+Kernel Execution Time : 0.0192304 seconds
+Kernel Performance : 7146.97 GFLOPS
+BK=32 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(303/576)
+Result is correct
+cuBLAS Execution Time : 0.0171129 seconds
+cuBLAS Performance : 8031.3 GFLOPS
+
+Kernel Execution Time : 0.0192642 seconds
+Kernel Performance : 7134.43 GFLOPS
+BK=32 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(305/576)
+Result is correct
+cuBLAS Execution Time : 0.0169381 seconds
+cuBLAS Performance : 8114.21 GFLOPS
+
+Kernel Execution Time : 0.0192782 seconds
+Kernel Performance : 7129.25 GFLOPS
+BK=32 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(306/576)
+Result is correct
+cuBLAS Execution Time : 0.0170469 seconds
+cuBLAS Performance : 8062.42 GFLOPS
+
+Kernel Execution Time : 0.0192758 seconds
+Kernel Performance : 7130.11 GFLOPS
+BK=32 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(309/576)
+Result is correct
+cuBLAS Execution Time : 0.0170277 seconds
+cuBLAS Performance : 8071.48 GFLOPS
+
+Kernel Execution Time : 0.019299 seconds
+Kernel Performance : 7121.54 GFLOPS
+BK=32 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(312/576)
+Result is correct
+cuBLAS Execution Time : 0.0169395 seconds
+cuBLAS Performance : 8113.5 GFLOPS
+
+Kernel Execution Time : 0.0192384 seconds
+Kernel Performance : 7143.98 GFLOPS
+BK=32 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(315/576)
+Result is correct
+cuBLAS Execution Time : 0.0169152 seconds
+cuBLAS Performance : 8125.16 GFLOPS
+
+Kernel Execution Time : 0.0192671 seconds
+Kernel Performance : 7133.36 GFLOPS
+BK=32 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(328/576)
+Result is correct
+cuBLAS Execution Time : 0.016969 seconds
+cuBLAS Performance : 8099.43 GFLOPS
+
+Kernel Execution Time : 0.0192199 seconds
+Kernel Performance : 7150.86 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(329/576)
+Result is correct
+cuBLAS Execution Time : 0.0169287 seconds
+cuBLAS Performance : 8118.68 GFLOPS
+
+Kernel Execution Time : 0.0192959 seconds
+Kernel Performance : 7122.69 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(330/576)
+Result is correct
+cuBLAS Execution Time : 0.0169093 seconds
+cuBLAS Performance : 8128 GFLOPS
+
+Kernel Execution Time : 0.0192517 seconds
+Kernel Performance : 7139.07 GFLOPS
+BK=32 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(331/576)
+Result is correct
+cuBLAS Execution Time : 0.0169115 seconds
+cuBLAS Performance : 8126.96 GFLOPS
+
+Kernel Execution Time : 0.019245 seconds
+Kernel Performance : 7141.56 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(332/576)
+Result is correct
+cuBLAS Execution Time : 0.0169739 seconds
+cuBLAS Performance : 8097.06 GFLOPS
+
+Kernel Execution Time : 0.0192304 seconds
+Kernel Performance : 7146.95 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(333/576)
+Result is correct
+cuBLAS Execution Time : 0.0169645 seconds
+cuBLAS Performance : 8101.57 GFLOPS
+
+Kernel Execution Time : 0.0192208 seconds
+Kernel Performance : 7150.52 GFLOPS
+BK=32 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(338/576)
+Result is correct
+cuBLAS Execution Time : 0.0169092 seconds
+cuBLAS Performance : 8128.06 GFLOPS
+
+Kernel Execution Time : 0.0192286 seconds
+Kernel Performance : 7147.63 GFLOPS
+BK=32 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(339/576)
+Result is correct
+cuBLAS Execution Time : 0.0170178 seconds
+cuBLAS Performance : 8076.2 GFLOPS
+
+Kernel Execution Time : 0.0192491 seconds
+Kernel Performance : 7140 GFLOPS
+BK=32 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(341/576)
+Result is correct
+cuBLAS Execution Time : 0.0169727 seconds
+cuBLAS Performance : 8097.63 GFLOPS
+
+Kernel Execution Time : 0.0192911 seconds
+Kernel Performance : 7124.48 GFLOPS
+BK=32 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(342/576)
+Result is correct
+cuBLAS Execution Time : 0.0170072 seconds
+cuBLAS Performance : 8081.24 GFLOPS
+
+Kernel Execution Time : 0.0192489 seconds
+Kernel Performance : 7140.1 GFLOPS
+BK=32 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(348/576)
+Result is correct
+cuBLAS Execution Time : 0.0169364 seconds
+cuBLAS Performance : 8114.99 GFLOPS
+
+Kernel Execution Time : 0.019279 seconds
+Kernel Performance : 7128.95 GFLOPS
+BK=32 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(351/576)
+Result is correct
+cuBLAS Execution Time : 0.0170135 seconds
+cuBLAS Performance : 8078.21 GFLOPS
+
+Kernel Execution Time : 0.0193232 seconds
+Kernel Performance : 7112.65 GFLOPS
+BK=32 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(367/576)
+Result is correct
+cuBLAS Execution Time : 0.0169519 seconds
+cuBLAS Performance : 8107.61 GFLOPS
+
+Kernel Execution Time : 0.0192339 seconds
+Kernel Performance : 7145.65 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(368/576)
+Result is correct
+cuBLAS Execution Time : 0.0171141 seconds
+cuBLAS Performance : 8030.75 GFLOPS
+
+Kernel Execution Time : 0.0192588 seconds
+Kernel Performance : 7136.43 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(369/576)
+Result is correct
+cuBLAS Execution Time : 0.0170005 seconds
+cuBLAS Performance : 8084.4 GFLOPS
+
+Kernel Execution Time : 0.0192977 seconds
+Kernel Performance : 7122.04 GFLOPS
+BK=32 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(377/576)
+Result is correct
+cuBLAS Execution Time : 0.0169799 seconds
+cuBLAS Performance : 8094.22 GFLOPS
+
+Kernel Execution Time : 0.0192235 seconds
+Kernel Performance : 7149.54 GFLOPS
+BK=32 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(378/576)
+Result is correct
+cuBLAS Execution Time : 0.0169432 seconds
+cuBLAS Performance : 8111.76 GFLOPS
+
+Kernel Execution Time : 0.0192519 seconds
+Kernel Performance : 7139 GFLOPS
+BK=32 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(387/576)
+Result is correct
+cuBLAS Execution Time : 0.0171121 seconds
+cuBLAS Performance : 8031.69 GFLOPS
+
+Kernel Execution Time : 0.01927 seconds
+Kernel Performance : 7132.29 GFLOPS
+BK=32 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
+(433/576)
+Result is correct
+cuBLAS Execution Time : 0.0169928 seconds
+cuBLAS Performance : 8088.09 GFLOPS
+
+Kernel Execution Time : 0.0192438 seconds
+Kernel Performance : 7141.99 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=64 NUM_THREADS=256
+(434/576)
+Result is correct
+cuBLAS Execution Time : 0.0169486 seconds
+cuBLAS Performance : 8109.15 GFLOPS
+
+Kernel Execution Time : 0.0192254 seconds
+Kernel Performance : 7148.82 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=128 NUM_THREADS=256
+(435/576)
+Result is correct
+cuBLAS Execution Time : 0.0169695 seconds
+cuBLAS Performance : 8099.17 GFLOPS
+
+Kernel Execution Time : 0.0192103 seconds
+Kernel Performance : 7154.46 GFLOPS
+BK=64 TM=4 TN=4 BM=64 BN=256 NUM_THREADS=256
+(436/576)
+Result is correct
+cuBLAS Execution Time : 0.0169057 seconds
+cuBLAS Performance : 8129.73 GFLOPS
+
+Kernel Execution Time : 0.0192869 seconds
+Kernel Performance : 7126.03 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=64 NUM_THREADS=256
+(437/576)
+Result is correct
+cuBLAS Execution Time : 0.0169111 seconds
+cuBLAS Performance : 8127.12 GFLOPS
+
+Kernel Execution Time : 0.0192319 seconds
+Kernel Performance : 7146.41 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=128 NUM_THREADS=256
+(438/576)
+Result is correct
+cuBLAS Execution Time : 0.0169827 seconds
+cuBLAS Performance : 8092.88 GFLOPS
+
+Kernel Execution Time : 0.0193112 seconds
+Kernel Performance : 7117.05 GFLOPS
+BK=64 TM=4 TN=4 BM=128 BN=256 NUM_THREADS=256
+(439/576)
+Result is correct
+cuBLAS Execution Time : 0.0169524 seconds
+cuBLAS Performance : 8107.33 GFLOPS
+
+Kernel Execution Time : 0.0191929 seconds
+Kernel Performance : 7160.95 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=64 NUM_THREADS=256
+(440/576)
+Result is correct
+cuBLAS Execution Time : 0.0170193 seconds
+cuBLAS Performance : 8075.49 GFLOPS
+
+Kernel Execution Time : 0.0193461 seconds
+Kernel Performance : 7104.22 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=128 NUM_THREADS=256
+(441/576)
+Result is correct
+cuBLAS Execution Time : 0.0169456 seconds
+cuBLAS Performance : 8110.61 GFLOPS
+
+Kernel Execution Time : 0.0193239 seconds
+Kernel Performance : 7112.38 GFLOPS
+BK=64 TM=4 TN=4 BM=256 BN=256 NUM_THREADS=256
+(443/576)
+Result is correct
+cuBLAS Execution Time : 0.0169799 seconds
+cuBLAS Performance : 8094.21 GFLOPS
+
+Kernel Execution Time : 0.0191988 seconds
+Kernel Performance : 7158.74 GFLOPS
+BK=64 TM=4 TN=8 BM=64 BN=128 NUM_THREADS=256
+(444/576)
+Result is correct
+cuBLAS Execution Time : 0.0170004 seconds
+cuBLAS Performance : 8084.45 GFLOPS
+
+Kernel Execution Time : 0.019219 seconds
+Kernel Performance : 7151.19 GFLOPS
+BK=64 TM=4 TN=8 BM=64 BN=256 NUM_THREADS=256
+(446/576)
+Result is correct
+cuBLAS Execution Time : 0.0169306 seconds
+cuBLAS Performance : 8117.78 GFLOPS
+
+Kernel Execution Time : 0.0192398 seconds
+Kernel Performance : 7143.49 GFLOPS
+BK=64 TM=4 TN=8 BM=128 BN=128 NUM_THREADS=256
+(447/576)
+Result is correct
+cuBLAS Execution Time : 0.0170617 seconds
+cuBLAS Performance : 8055.41 GFLOPS
+
+Kernel Execution Time : 0.0192847 seconds
+Kernel Performance : 7126.82 GFLOPS
+BK=64 TM=4 TN=8 BM=128 BN=256 NUM_THREADS=256
+(449/576)
+Result is correct
+cuBLAS Execution Time : 0.0170141 seconds
+cuBLAS Performance : 8077.96 GFLOPS
+
+Kernel Execution Time : 0.0194039 seconds
+Kernel Performance : 7083.06 GFLOPS
+BK=64 TM=4 TN=8 BM=256 BN=128 NUM_THREADS=256
+(450/576)
+Result is correct
+cuBLAS Execution Time : 0.0169703 seconds
+cuBLAS Performance : 8098.78 GFLOPS
+
+Kernel Execution Time : 0.0192438 seconds
+Kernel Performance : 7141.98 GFLOPS
+BK=64 TM=4 TN=8 BM=256 BN=256 NUM_THREADS=256
+(453/576)
+Result is correct
+cuBLAS Execution Time : 0.0169694 seconds
+cuBLAS Performance : 8099.21 GFLOPS
+
+Kernel Execution Time : 0.0192867 seconds
+Kernel Performance : 7126.11 GFLOPS
+BK=64 TM=4 TN=16 BM=64 BN=256 NUM_THREADS=256
+(456/576)
+Result is correct
+cuBLAS Execution Time : 0.0170335 seconds
+cuBLAS Performance : 8068.74 GFLOPS
+
+Kernel Execution Time : 0.0193671 seconds
+Kernel Performance : 7096.5 GFLOPS
+BK=64 TM=4 TN=16 BM=128 BN=256 NUM_THREADS=256
+(459/576)
+Result is correct
+cuBLAS Execution Time : 0.0170201 seconds
+cuBLAS Performance : 8075.11 GFLOPS
+
+Kernel Execution Time : 0.0192283 seconds
+Kernel Performance : 7147.74 GFLOPS
+BK=64 TM=4 TN=16 BM=256 BN=256 NUM_THREADS=256
+(472/576)
+Result is correct
+cuBLAS Execution Time : 0.0169839 seconds
+cuBLAS Performance : 8092.3 GFLOPS
+
+Kernel Execution Time : 0.0192465 seconds
+Kernel Performance : 7140.97 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=64 NUM_THREADS=256
+(473/576)
+Result is correct
+cuBLAS Execution Time : 0.0170865 seconds
+cuBLAS Performance : 8043.72 GFLOPS
+
+Kernel Execution Time : 0.0192729 seconds
+Kernel Performance : 7131.21 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=128 NUM_THREADS=256
+(474/576)
+Result is correct
+cuBLAS Execution Time : 0.0170772 seconds
+cuBLAS Performance : 8048.08 GFLOPS
+
+Kernel Execution Time : 0.0192846 seconds
+Kernel Performance : 7126.89 GFLOPS
+BK=64 TM=8 TN=4 BM=128 BN=256 NUM_THREADS=256
+(475/576)
+Result is correct
+cuBLAS Execution Time : 0.0169934 seconds
+cuBLAS Performance : 8087.81 GFLOPS
+
+Kernel Execution Time : 0.0192765 seconds
+Kernel Performance : 7129.88 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=64 NUM_THREADS=256
+(476/576)
+Result is correct
+cuBLAS Execution Time : 0.0169872 seconds
+cuBLAS Performance : 8090.74 GFLOPS
+
+Kernel Execution Time : 0.0192884 seconds
+Kernel Performance : 7125.47 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=128 NUM_THREADS=256
+(477/576)
+Result is correct
+cuBLAS Execution Time : 0.0169093 seconds
+cuBLAS Performance : 8128.03 GFLOPS
+
+Kernel Execution Time : 0.0193085 seconds
+Kernel Performance : 7118.04 GFLOPS
+BK=64 TM=8 TN=4 BM=256 BN=256 NUM_THREADS=256
+(482/576)
+Result is correct
+cuBLAS Execution Time : 0.0170171 seconds
+cuBLAS Performance : 8076.54 GFLOPS
+
+Kernel Execution Time : 0.0192564 seconds
+Kernel Performance : 7137.31 GFLOPS
+BK=64 TM=8 TN=8 BM=128 BN=128 NUM_THREADS=256
+(483/576)
+Result is correct
+cuBLAS Execution Time : 0.0170387 seconds
+cuBLAS Performance : 8066.27 GFLOPS
+
+Kernel Execution Time : 0.019291 seconds
+Kernel Performance : 7124.5 GFLOPS
+BK=64 TM=8 TN=8 BM=128 BN=256 NUM_THREADS=256
+(485/576)
+Result is correct
+cuBLAS Execution Time : 0.0169856 seconds
+cuBLAS Performance : 8091.48 GFLOPS
+
+Kernel Execution Time : 0.0192965 seconds
+Kernel Performance : 7122.49 GFLOPS
+BK=64 TM=8 TN=8 BM=256 BN=128 NUM_THREADS=256
+(486/576)
+Result is correct
+cuBLAS Execution Time : 0.0170961 seconds
+cuBLAS Performance : 8039.22 GFLOPS
+
+Kernel Execution Time : 0.0192558 seconds
+Kernel Performance : 7137.53 GFLOPS
+BK=64 TM=8 TN=8 BM=256 BN=256 NUM_THREADS=256
+(492/576)
+Result is correct
+cuBLAS Execution Time : 0.0170521 seconds
+cuBLAS Performance : 8059.95 GFLOPS
+
+Kernel Execution Time : 0.019263 seconds
+Kernel Performance : 7134.85 GFLOPS
+BK=64 TM=8 TN=16 BM=128 BN=256 NUM_THREADS=256
+(495/576)
+Result is correct
+cuBLAS Execution Time : 0.0170748 seconds
+cuBLAS Performance : 8049.21 GFLOPS
+
+Kernel Execution Time : 0.0192705 seconds
+Kernel Performance : 7132.11 GFLOPS
+BK=64 TM=8 TN=16 BM=256 BN=256 NUM_THREADS=256
+(511/576)
+Result is correct
+cuBLAS Execution Time : 0.0171008 seconds
+cuBLAS Performance : 8037 GFLOPS
+
+Kernel Execution Time : 0.0192435 seconds
+Kernel Performance : 7142.1 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=64 NUM_THREADS=256
+(512/576)
+Result is correct
+cuBLAS Execution Time : 0.0169605 seconds
+cuBLAS Performance : 8103.46 GFLOPS
+
+Kernel Execution Time : 0.0192464 seconds
+Kernel Performance : 7141.03 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=128 NUM_THREADS=256
+(513/576)
+Result is correct
+cuBLAS Execution Time : 0.0169127 seconds
+cuBLAS Performance : 8126.36 GFLOPS
+
+Kernel Execution Time : 0.0192402 seconds
+Kernel Performance : 7143.32 GFLOPS
+BK=64 TM=16 TN=4 BM=256 BN=256 NUM_THREADS=256
+(521/576)
+Result is correct
+cuBLAS Execution Time : 0.0169204 seconds
+cuBLAS Performance : 8122.69 GFLOPS
+
+Kernel Execution Time : 0.0192429 seconds
+Kernel Performance : 7142.33 GFLOPS
+BK=64 TM=16 TN=8 BM=256 BN=128 NUM_THREADS=256
+(522/576)
+Result is correct
+cuBLAS Execution Time : 0.0169857 seconds
+cuBLAS Performance : 8091.45 GFLOPS
+
+Kernel Execution Time : 0.019266 seconds
+Kernel Performance : 7133.77 GFLOPS
+BK=64 TM=16 TN=8 BM=256 BN=256 NUM_THREADS=256
+(531/576)
+Result is correct
+cuBLAS Execution Time : 0.0170171 seconds
+cuBLAS Performance : 8076.5 GFLOPS
+
+Kernel Execution Time : 0.0192599 seconds
+Kernel Performance : 7136.03 GFLOPS
+BK=64 TM=16 TN=16 BM=256 BN=256 NUM_THREADS=256
