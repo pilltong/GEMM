@@ -1,0 +1,2419 @@
+Total correct results: 151
+
+================================================================================
+Step: 31841/73728
+cuBLAS Execution Time : 0.0170201 seconds
+cuBLAS Performance : 8075.08 GFLOPS
+Kernel Execution Time : 0.014995100 seconds
+Kernel Performance : 9165.59 GFLOPS
+Relative Percentage : 113.504634%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31817/73728
+cuBLAS Execution Time : 0.0170234 seconds
+cuBLAS Performance : 8073.55 GFLOPS
+Kernel Execution Time : 0.015003800 seconds
+Kernel Performance : 9160.26 GFLOPS
+Relative Percentage : 113.460126%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31809/73728
+cuBLAS Execution Time : 0.0170128 seconds
+cuBLAS Performance : 8078.55 GFLOPS
+Kernel Execution Time : 0.015006000 seconds
+Kernel Performance : 9158.95 GFLOPS
+Relative Percentage : 113.373687%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31425/73728
+cuBLAS Execution Time : 0.0170507 seconds
+cuBLAS Performance : 8060.60 GFLOPS
+Kernel Execution Time : 0.015489200 seconds
+Kernel Performance : 8873.19 GFLOPS
+Relative Percentage : 110.081011%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31457/73728
+cuBLAS Execution Time : 0.0170035 seconds
+cuBLAS Performance : 8082.97 GFLOPS
+Kernel Execution Time : 0.015519200 seconds
+Kernel Performance : 8856.07 GFLOPS
+Relative Percentage : 109.564554%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31433/73728
+cuBLAS Execution Time : 0.0169392 seconds
+cuBLAS Performance : 8113.68 GFLOPS
+Kernel Execution Time : 0.015512200 seconds
+Kernel Performance : 8860.05 GFLOPS
+Relative Percentage : 109.198909%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31274/73728
+cuBLAS Execution Time : 0.0171525 seconds
+cuBLAS Performance : 8012.78 GFLOPS
+Kernel Execution Time : 0.017050700 seconds
+Kernel Performance : 8060.59 GFLOPS
+Relative Percentage : 100.596672%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 31298/73728
+cuBLAS Execution Time : 0.0171198 seconds
+cuBLAS Performance : 8028.06 GFLOPS
+Kernel Execution Time : 0.017018900 seconds
+Kernel Performance : 8075.65 GFLOPS
+Relative Percentage : 100.592796%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 25121/73728
+cuBLAS Execution Time : 0.0171452 seconds
+cuBLAS Performance : 8016.18 GFLOPS
+Kernel Execution Time : 0.017185200 seconds
+Kernel Performance : 7997.51 GFLOPS
+Relative Percentage : 99.767096%
+BM : 128
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43137/73728
+cuBLAS Execution Time : 0.0171247 seconds
+cuBLAS Performance : 8025.78 GFLOPS
+Kernel Execution Time : 0.017185000 seconds
+Kernel Performance : 7997.62 GFLOPS
+Relative Percentage : 99.649131%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 30914/73728
+cuBLAS Execution Time : 0.0172102 seconds
+cuBLAS Performance : 7985.88 GFLOPS
+Kernel Execution Time : 0.017296700 seconds
+Kernel Performance : 7945.95 GFLOPS
+Relative Percentage : 99.499992%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 43145/73728
+cuBLAS Execution Time : 0.0171285 seconds
+cuBLAS Performance : 8023.98 GFLOPS
+Kernel Execution Time : 0.017235100 seconds
+Kernel Performance : 7974.36 GFLOPS
+Relative Percentage : 99.381604%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24713/73728
+cuBLAS Execution Time : 0.0171351 seconds
+cuBLAS Performance : 8020.91 GFLOPS
+Kernel Execution Time : 0.017252400 seconds
+Kernel Performance : 7966.37 GFLOPS
+Relative Percentage : 99.320027%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 25153/73728
+cuBLAS Execution Time : 0.0171256 seconds
+cuBLAS Performance : 8025.37 GFLOPS
+Kernel Execution Time : 0.017282700 seconds
+Kernel Performance : 7952.39 GFLOPS
+Relative Percentage : 99.090634%
+BM : 128
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24705/73728
+cuBLAS Execution Time : 0.0170387 seconds
+cuBLAS Performance : 8066.27 GFLOPS
+Kernel Execution Time : 0.017199700 seconds
+Kernel Performance : 7990.77 GFLOPS
+Relative Percentage : 99.064004%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31266/73728
+cuBLAS Execution Time : 0.0169270 seconds
+cuBLAS Performance : 8119.52 GFLOPS
+Kernel Execution Time : 0.017087400 seconds
+Kernel Performance : 8043.27 GFLOPS
+Relative Percentage : 99.060905%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 43201/73728
+cuBLAS Execution Time : 0.0171684 seconds
+cuBLAS Performance : 8005.36 GFLOPS
+Kernel Execution Time : 0.017339500 seconds
+Kernel Performance : 7926.33 GFLOPS
+Relative Percentage : 99.012786%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 25129/73728
+cuBLAS Execution Time : 0.0169709 seconds
+cuBLAS Performance : 8098.50 GFLOPS
+Kernel Execution Time : 0.017141300 seconds
+Kernel Performance : 8017.98 GFLOPS
+Relative Percentage : 99.005742%
+BM : 128
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43561/73728
+cuBLAS Execution Time : 0.0170305 seconds
+cuBLAS Performance : 8070.17 GFLOPS
+Kernel Execution Time : 0.017207000 seconds
+Kernel Performance : 7987.38 GFLOPS
+Relative Percentage : 98.974123%
+BM : 128
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 25089/73728
+cuBLAS Execution Time : 0.0170491 seconds
+cuBLAS Performance : 8061.35 GFLOPS
+Kernel Execution Time : 0.017253400 seconds
+Kernel Performance : 7965.90 GFLOPS
+Relative Percentage : 98.815955%
+BM : 128
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43553/73728
+cuBLAS Execution Time : 0.0170333 seconds
+cuBLAS Performance : 8068.83 GFLOPS
+Kernel Execution Time : 0.017249600 seconds
+Kernel Performance : 7967.65 GFLOPS
+Relative Percentage : 98.746039%
+BM : 128
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43585/73728
+cuBLAS Execution Time : 0.0169766 seconds
+cuBLAS Performance : 8095.79 GFLOPS
+Kernel Execution Time : 0.017228600 seconds
+Kernel Performance : 7977.37 GFLOPS
+Relative Percentage : 98.537264%
+BM : 128
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31745/73728
+cuBLAS Execution Time : 0.0170816 seconds
+cuBLAS Performance : 8046.01 GFLOPS
+Kernel Execution Time : 0.017343400 seconds
+Kernel Performance : 7924.59 GFLOPS
+Relative Percentage : 98.490929%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43169/73728
+cuBLAS Execution Time : 0.0170416 seconds
+cuBLAS Performance : 8064.89 GFLOPS
+Kernel Execution Time : 0.017329800 seconds
+Kernel Performance : 7930.78 GFLOPS
+Relative Percentage : 98.337113%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24769/73728
+cuBLAS Execution Time : 0.0170811 seconds
+cuBLAS Performance : 8046.27 GFLOPS
+Kernel Execution Time : 0.017382400 seconds
+Kernel Performance : 7906.78 GFLOPS
+Relative Percentage : 98.266402%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43177/73728
+cuBLAS Execution Time : 0.0170177 seconds
+cuBLAS Performance : 8076.22 GFLOPS
+Kernel Execution Time : 0.017319800 seconds
+Kernel Performance : 7935.38 GFLOPS
+Relative Percentage : 98.256115%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 30866/73728
+cuBLAS Execution Time : 0.0171064 seconds
+cuBLAS Performance : 8034.34 GFLOPS
+Kernel Execution Time : 0.017415700 seconds
+Kernel Performance : 7891.66 GFLOPS
+Relative Percentage : 98.224123%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 30858/73728
+cuBLAS Execution Time : 0.0171075 seconds
+cuBLAS Performance : 8033.83 GFLOPS
+Kernel Execution Time : 0.017417500 seconds
+Kernel Performance : 7890.86 GFLOPS
+Relative Percentage : 98.220400%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 30850/73728
+cuBLAS Execution Time : 0.0170980 seconds
+cuBLAS Performance : 8038.33 GFLOPS
+Kernel Execution Time : 0.017422700 seconds
+Kernel Performance : 7888.49 GFLOPS
+Relative Percentage : 98.135931%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 31753/73728
+cuBLAS Execution Time : 0.0169864 seconds
+cuBLAS Performance : 8091.13 GFLOPS
+Kernel Execution Time : 0.017312300 seconds
+Kernel Performance : 7938.80 GFLOPS
+Relative Percentage : 98.117321%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43521/73728
+cuBLAS Execution Time : 0.0169523 seconds
+cuBLAS Performance : 8107.39 GFLOPS
+Kernel Execution Time : 0.017282400 seconds
+Kernel Performance : 7952.55 GFLOPS
+Relative Percentage : 98.090138%
+BM : 128
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31377/73728
+cuBLAS Execution Time : 0.0171578 seconds
+cuBLAS Performance : 8010.30 GFLOPS
+Kernel Execution Time : 0.017499900 seconds
+Kernel Performance : 7853.72 GFLOPS
+Relative Percentage : 98.045267%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 30882/73728
+cuBLAS Execution Time : 0.0169842 seconds
+cuBLAS Performance : 8092.18 GFLOPS
+Kernel Execution Time : 0.017330400 seconds
+Kernel Performance : 7930.51 GFLOPS
+Relative Percentage : 98.002145%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 31761/73728
+cuBLAS Execution Time : 0.0169604 seconds
+cuBLAS Performance : 8103.53 GFLOPS
+Kernel Execution Time : 0.017312300 seconds
+Kernel Performance : 7938.83 GFLOPS
+Relative Percentage : 97.967552%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 30890/73728
+cuBLAS Execution Time : 0.0170353 seconds
+cuBLAS Performance : 8067.88 GFLOPS
+Kernel Execution Time : 0.017391100 seconds
+Kernel Performance : 7902.83 GFLOPS
+Relative Percentage : 97.954233%
+BM : 256
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 43529/73728
+cuBLAS Execution Time : 0.0169699 seconds
+cuBLAS Performance : 8098.97 GFLOPS
+Kernel Execution Time : 0.017368600 seconds
+Kernel Performance : 7913.06 GFLOPS
+Relative Percentage : 97.704523%
+BM : 128
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 12937/73728
+cuBLAS Execution Time : 0.0170668 seconds
+cuBLAS Performance : 8052.99 GFLOPS
+Kernel Execution Time : 0.017524700 seconds
+Kernel Performance : 7842.59 GFLOPS
+Relative Percentage : 97.387306%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31361/73728
+cuBLAS Execution Time : 0.0170462 seconds
+cuBLAS Performance : 8062.76 GFLOPS
+Kernel Execution Time : 0.017505100 seconds
+Kernel Performance : 7851.37 GFLOPS
+Relative Percentage : 97.378193%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24737/73728
+cuBLAS Execution Time : 0.0170297 seconds
+cuBLAS Performance : 8070.56 GFLOPS
+Kernel Execution Time : 0.017491100 seconds
+Kernel Performance : 7857.67 GFLOPS
+Relative Percentage : 97.362141%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31369/73728
+cuBLAS Execution Time : 0.0170010 seconds
+cuBLAS Performance : 8084.15 GFLOPS
+Kernel Execution Time : 0.017465700 seconds
+Kernel Performance : 7869.09 GFLOPS
+Relative Percentage : 97.339733%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 25097/73728
+cuBLAS Execution Time : 0.0170566 seconds
+cuBLAS Performance : 8057.81 GFLOPS
+Kernel Execution Time : 0.017539800 seconds
+Kernel Performance : 7835.82 GFLOPS
+Relative Percentage : 97.245033%
+BM : 128
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 12977/73728
+cuBLAS Execution Time : 0.0171041 seconds
+cuBLAS Performance : 8035.45 GFLOPS
+Kernel Execution Time : 0.017610900 seconds
+Kernel Performance : 7804.19 GFLOPS
+Relative Percentage : 97.122003%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 12961/73728
+cuBLAS Execution Time : 0.0170594 seconds
+cuBLAS Performance : 8056.48 GFLOPS
+Kernel Execution Time : 0.017575800 seconds
+Kernel Performance : 7819.76 GFLOPS
+Relative Percentage : 97.061744%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13361/73728
+cuBLAS Execution Time : 0.0170702 seconds
+cuBLAS Performance : 8051.42 GFLOPS
+Kernel Execution Time : 0.017587000 seconds
+Kernel Performance : 7814.81 GFLOPS
+Relative Percentage : 97.061264%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24745/73728
+cuBLAS Execution Time : 0.0170920 seconds
+cuBLAS Performance : 8041.14 GFLOPS
+Kernel Execution Time : 0.017631100 seconds
+Kernel Performance : 7795.26 GFLOPS
+Relative Percentage : 96.942225%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 12969/73728
+cuBLAS Execution Time : 0.0171020 seconds
+cuBLAS Performance : 8036.42 GFLOPS
+Kernel Execution Time : 0.017655000 seconds
+Kernel Performance : 7784.71 GFLOPS
+Relative Percentage : 96.867884%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13345/73728
+cuBLAS Execution Time : 0.0169832 seconds
+cuBLAS Performance : 8092.64 GFLOPS
+Kernel Execution Time : 0.017540000 seconds
+Kernel Performance : 7835.74 GFLOPS
+Relative Percentage : 96.825511%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13353/73728
+cuBLAS Execution Time : 0.0170036 seconds
+cuBLAS Performance : 8082.92 GFLOPS
+Kernel Execution Time : 0.017565600 seconds
+Kernel Performance : 7824.33 GFLOPS
+Relative Percentage : 96.800785%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31393/73728
+cuBLAS Execution Time : 0.0171118 seconds
+cuBLAS Performance : 8031.81 GFLOPS
+Kernel Execution Time : 0.017687900 seconds
+Kernel Performance : 7770.24 GFLOPS
+Relative Percentage : 96.743324%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31401/73728
+cuBLAS Execution Time : 0.0171067 seconds
+cuBLAS Performance : 8034.22 GFLOPS
+Kernel Execution Time : 0.017686600 seconds
+Kernel Performance : 7770.78 GFLOPS
+Relative Percentage : 96.721026%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31250/73728
+cuBLAS Execution Time : 0.0171007 seconds
+cuBLAS Performance : 8037.04 GFLOPS
+Kernel Execution Time : 0.017706600 seconds
+Kernel Performance : 7762.00 GFLOPS
+Relative Percentage : 96.577845%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 12945/73728
+cuBLAS Execution Time : 0.0169103 seconds
+cuBLAS Performance : 8127.53 GFLOPS
+Kernel Execution Time : 0.017545400 seconds
+Kernel Performance : 7833.32 GFLOPS
+Relative Percentage : 96.380081%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31242/73728
+cuBLAS Execution Time : 0.0170918 seconds
+cuBLAS Performance : 8041.21 GFLOPS
+Kernel Execution Time : 0.017743100 seconds
+Kernel Performance : 7746.05 GFLOPS
+Relative Percentage : 96.329408%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 12929/73728
+cuBLAS Execution Time : 0.0169376 seconds
+cuBLAS Performance : 8114.43 GFLOPS
+Kernel Execution Time : 0.017600200 seconds
+Kernel Performance : 7808.92 GFLOPS
+Relative Percentage : 96.234979%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31234/73728
+cuBLAS Execution Time : 0.0170246 seconds
+cuBLAS Performance : 8072.97 GFLOPS
+Kernel Execution Time : 0.017729100 seconds
+Kernel Performance : 7752.17 GFLOPS
+Relative Percentage : 96.026246%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 31777/73728
+cuBLAS Execution Time : 0.0170943 seconds
+cuBLAS Performance : 8040.04 GFLOPS
+Kernel Execution Time : 0.017831000 seconds
+Kernel Performance : 7707.86 GFLOPS
+Relative Percentage : 95.868429%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31409/73728
+cuBLAS Execution Time : 0.0169589 seconds
+cuBLAS Performance : 8104.22 GFLOPS
+Kernel Execution Time : 0.017700600 seconds
+Kernel Performance : 7764.64 GFLOPS
+Relative Percentage : 95.809837%
+BM : 256
+BN : 64
+BK : 16
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31785/73728
+cuBLAS Execution Time : 0.0170374 seconds
+cuBLAS Performance : 8066.92 GFLOPS
+Kernel Execution Time : 0.017846400 seconds
+Kernel Performance : 7701.23 GFLOPS
+Relative Percentage : 95.466795%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 31793/73728
+cuBLAS Execution Time : 0.0169784 seconds
+cuBLAS Performance : 8094.95 GFLOPS
+Kernel Execution Time : 0.017791300 seconds
+Kernel Performance : 7725.08 GFLOPS
+Relative Percentage : 95.430855%
+BM : 256
+BN : 64
+BK : 16
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49282/73728
+cuBLAS Execution Time : 0.0171009 seconds
+cuBLAS Performance : 8036.93 GFLOPS
+Kernel Execution Time : 0.017936300 seconds
+Kernel Performance : 7662.61 GFLOPS
+Relative Percentage : 95.342500%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49298/73728
+cuBLAS Execution Time : 0.0170316 seconds
+cuBLAS Performance : 8069.65 GFLOPS
+Kernel Execution Time : 0.017867700 seconds
+Kernel Performance : 7692.02 GFLOPS
+Relative Percentage : 95.320367%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49290/73728
+cuBLAS Execution Time : 0.0170683 seconds
+cuBLAS Performance : 8052.29 GFLOPS
+Kernel Execution Time : 0.017915600 seconds
+Kernel Performance : 7671.46 GFLOPS
+Relative Percentage : 95.270538%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49682/73728
+cuBLAS Execution Time : 0.0170789 seconds
+cuBLAS Performance : 8047.27 GFLOPS
+Kernel Execution Time : 0.017973300 seconds
+Kernel Performance : 7646.86 GFLOPS
+Relative Percentage : 95.024275%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 13321/73728
+cuBLAS Execution Time : 0.0170998 seconds
+cuBLAS Performance : 8037.44 GFLOPS
+Kernel Execution Time : 0.018022700 seconds
+Kernel Performance : 7625.88 GFLOPS
+Relative Percentage : 94.879464%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13329/73728
+cuBLAS Execution Time : 0.0170400 seconds
+cuBLAS Performance : 8065.69 GFLOPS
+Kernel Execution Time : 0.017969700 seconds
+Kernel Performance : 7648.38 GFLOPS
+Relative Percentage : 94.826109%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13409/73728
+cuBLAS Execution Time : 0.0171265 seconds
+cuBLAS Performance : 8024.91 GFLOPS
+Kernel Execution Time : 0.018074900 seconds
+Kernel Performance : 7603.85 GFLOPS
+Relative Percentage : 94.753088%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6721/73728
+cuBLAS Execution Time : 0.0171273 seconds
+cuBLAS Performance : 8024.55 GFLOPS
+Kernel Execution Time : 0.018095000 seconds
+Kernel Performance : 7595.43 GFLOPS
+Relative Percentage : 94.652410%
+BM : 128
+BN : 64
+BK : 8
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13313/73728
+cuBLAS Execution Time : 0.0170709 seconds
+cuBLAS Performance : 8051.09 GFLOPS
+Kernel Execution Time : 0.018035900 seconds
+Kernel Performance : 7620.30 GFLOPS
+Relative Percentage : 94.649296%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49674/73728
+cuBLAS Execution Time : 0.0169565 seconds
+cuBLAS Performance : 8105.40 GFLOPS
+Kernel Execution Time : 0.017970800 seconds
+Kernel Performance : 7647.91 GFLOPS
+Relative Percentage : 94.355738%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49666/73728
+cuBLAS Execution Time : 0.0169237 seconds
+cuBLAS Performance : 8121.11 GFLOPS
+Kernel Execution Time : 0.017970700 seconds
+Kernel Performance : 7647.93 GFLOPS
+Relative Percentage : 94.173457%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 13385/73728
+cuBLAS Execution Time : 0.0169966 seconds
+cuBLAS Performance : 8086.28 GFLOPS
+Kernel Execution Time : 0.018058500 seconds
+Kernel Performance : 7610.77 GFLOPS
+Relative Percentage : 94.119546%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13377/73728
+cuBLAS Execution Time : 0.0170097 seconds
+cuBLAS Performance : 8080.01 GFLOPS
+Kernel Execution Time : 0.018085200 seconds
+Kernel Performance : 7599.55 GFLOPS
+Relative Percentage : 94.053720%
+BM : 256
+BN : 64
+BK : 8
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6689/73728
+cuBLAS Execution Time : 0.0169598 seconds
+cuBLAS Performance : 8103.78 GFLOPS
+Kernel Execution Time : 0.018056800 seconds
+Kernel Performance : 7611.49 GFLOPS
+Relative Percentage : 93.925181%
+BM : 128
+BN : 64
+BK : 8
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6697/73728
+cuBLAS Execution Time : 0.0170329 seconds
+cuBLAS Performance : 8069.03 GFLOPS
+Kernel Execution Time : 0.018139400 seconds
+Kernel Performance : 7576.84 GFLOPS
+Relative Percentage : 93.900258%
+BM : 128
+BN : 64
+BK : 8
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6657/73728
+cuBLAS Execution Time : 0.0171717 seconds
+cuBLAS Performance : 8003.82 GFLOPS
+Kernel Execution Time : 0.018303300 seconds
+Kernel Performance : 7508.99 GFLOPS
+Relative Percentage : 93.817577%
+BM : 128
+BN : 64
+BK : 8
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49698/73728
+cuBLAS Execution Time : 0.0170333 seconds
+cuBLAS Performance : 8068.85 GFLOPS
+Kernel Execution Time : 0.018174500 seconds
+Kernel Performance : 7562.20 GFLOPS
+Relative Percentage : 93.720914%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 6281/73728
+cuBLAS Execution Time : 0.0170627 seconds
+cuBLAS Performance : 8054.92 GFLOPS
+Kernel Execution Time : 0.018211400 seconds
+Kernel Performance : 7546.85 GFLOPS
+Relative Percentage : 93.692426%
+BM : 128
+BN : 64
+BK : 8
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49706/73728
+cuBLAS Execution Time : 0.0169597 seconds
+cuBLAS Performance : 8103.86 GFLOPS
+Kernel Execution Time : 0.018119200 seconds
+Kernel Performance : 7585.27 GFLOPS
+Relative Percentage : 93.600704%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49314/73728
+cuBLAS Execution Time : 0.0170272 seconds
+cuBLAS Performance : 8071.74 GFLOPS
+Kernel Execution Time : 0.018213100 seconds
+Kernel Performance : 7546.14 GFLOPS
+Relative Percentage : 93.488393%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49730/73728
+cuBLAS Execution Time : 0.0169723 seconds
+cuBLAS Performance : 8097.84 GFLOPS
+Kernel Execution Time : 0.018184500 seconds
+Kernel Performance : 7558.02 GFLOPS
+Relative Percentage : 93.333778%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49346/73728
+cuBLAS Execution Time : 0.0170549 seconds
+cuBLAS Performance : 8058.61 GFLOPS
+Kernel Execution Time : 0.018291400 seconds
+Kernel Performance : 7513.84 GFLOPS
+Relative Percentage : 93.239901%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 6313/73728
+cuBLAS Execution Time : 0.0170632 seconds
+cuBLAS Performance : 8054.72 GFLOPS
+Kernel Execution Time : 0.018316000 seconds
+Kernel Performance : 7503.76 GFLOPS
+Relative Percentage : 93.159787%
+BM : 128
+BN : 64
+BK : 8
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49322/73728
+cuBLAS Execution Time : 0.0169720 seconds
+cuBLAS Performance : 8097.97 GFLOPS
+Kernel Execution Time : 0.018231300 seconds
+Kernel Performance : 7538.63 GFLOPS
+Relative Percentage : 93.092837%
+BM : 256
+BN : 64
+BK : 32
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 6337/73728
+cuBLAS Execution Time : 0.0170487 seconds
+cuBLAS Performance : 8061.54 GFLOPS
+Kernel Execution Time : 0.018324200 seconds
+Kernel Performance : 7500.42 GFLOPS
+Relative Percentage : 93.039543%
+BM : 128
+BN : 64
+BK : 8
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6273/73728
+cuBLAS Execution Time : 0.0170312 seconds
+cuBLAS Performance : 8069.85 GFLOPS
+Kernel Execution Time : 0.018311900 seconds
+Kernel Performance : 7505.45 GFLOPS
+Relative Percentage : 93.006066%
+BM : 128
+BN : 64
+BK : 8
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6305/73728
+cuBLAS Execution Time : 0.0170563 seconds
+cuBLAS Performance : 8057.98 GFLOPS
+Kernel Execution Time : 0.018361400 seconds
+Kernel Performance : 7485.20 GFLOPS
+Relative Percentage : 92.891767%
+BM : 128
+BN : 64
+BK : 8
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 6665/73728
+cuBLAS Execution Time : 0.0169743 seconds
+cuBLAS Performance : 8096.87 GFLOPS
+Kernel Execution Time : 0.018338100 seconds
+Kernel Performance : 7494.71 GFLOPS
+Relative Percentage : 92.563052%
+BM : 128
+BN : 64
+BK : 8
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13025/73728
+cuBLAS Execution Time : 0.0170916 seconds
+cuBLAS Performance : 8041.33 GFLOPS
+Kernel Execution Time : 0.018498900 seconds
+Kernel Performance : 7429.57 GFLOPS
+Relative Percentage : 92.392303%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 12993/73728
+cuBLAS Execution Time : 0.0171393 seconds
+cuBLAS Performance : 8018.95 GFLOPS
+Kernel Execution Time : 0.018576500 seconds
+Kernel Performance : 7398.54 GFLOPS
+Relative Percentage : 92.263202%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 13001/73728
+cuBLAS Execution Time : 0.0170535 seconds
+cuBLAS Performance : 8059.29 GFLOPS
+Kernel Execution Time : 0.018566600 seconds
+Kernel Performance : 7402.47 GFLOPS
+Relative Percentage : 91.850151%
+BM : 256
+BN : 64
+BK : 8
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49841/73728
+cuBLAS Execution Time : 0.0170539 seconds
+cuBLAS Performance : 8059.10 GFLOPS
+Kernel Execution Time : 0.018571900 seconds
+Kernel Performance : 7400.36 GFLOPS
+Relative Percentage : 91.826134%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50225/73728
+cuBLAS Execution Time : 0.0170823 seconds
+cuBLAS Performance : 8045.67 GFLOPS
+Kernel Execution Time : 0.018664900 seconds
+Kernel Performance : 7363.49 GFLOPS
+Relative Percentage : 91.521154%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49833/73728
+cuBLAS Execution Time : 0.0169602 seconds
+cuBLAS Performance : 8103.63 GFLOPS
+Kernel Execution Time : 0.018583500 seconds
+Kernel Performance : 7395.74 GFLOPS
+Relative Percentage : 91.264532%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50209/73728
+cuBLAS Execution Time : 0.0169783 seconds
+cuBLAS Performance : 8094.96 GFLOPS
+Kernel Execution Time : 0.018641700 seconds
+Kernel Performance : 7372.67 GFLOPS
+Relative Percentage : 91.077288%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50217/73728
+cuBLAS Execution Time : 0.0170052 seconds
+cuBLAS Performance : 8082.16 GFLOPS
+Kernel Execution Time : 0.018671700 seconds
+Kernel Performance : 7360.81 GFLOPS
+Relative Percentage : 91.074787%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49825/73728
+cuBLAS Execution Time : 0.0169329 seconds
+cuBLAS Performance : 8116.68 GFLOPS
+Kernel Execution Time : 0.018596400 seconds
+Kernel Performance : 7390.64 GFLOPS
+Relative Percentage : 91.054963%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49801/73728
+cuBLAS Execution Time : 0.0170891 seconds
+cuBLAS Performance : 8042.50 GFLOPS
+Kernel Execution Time : 0.018800400 seconds
+Kernel Performance : 7310.41 GFLOPS
+Relative Percentage : 90.897233%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24578/73728
+cuBLAS Execution Time : 0.0169673 seconds
+cuBLAS Performance : 8100.25 GFLOPS
+Kernel Execution Time : 0.018687300 seconds
+Kernel Performance : 7354.67 GFLOPS
+Relative Percentage : 90.795593%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49809/73728
+cuBLAS Execution Time : 0.0170829 seconds
+cuBLAS Performance : 8045.42 GFLOPS
+Kernel Execution Time : 0.018821000 seconds
+Kernel Performance : 7302.42 GFLOPS
+Relative Percentage : 90.764932%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 24586/73728
+cuBLAS Execution Time : 0.0169298 seconds
+cuBLAS Performance : 8118.16 GFLOPS
+Kernel Execution Time : 0.018673600 seconds
+Kernel Performance : 7360.06 GFLOPS
+Relative Percentage : 90.661677%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 24610/73728
+cuBLAS Execution Time : 0.0170518 seconds
+cuBLAS Performance : 8060.08 GFLOPS
+Kernel Execution Time : 0.018825600 seconds
+Kernel Performance : 7300.63 GFLOPS
+Relative Percentage : 90.577637%
+BM : 128
+BN : 64
+BK : 16
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 49793/73728
+cuBLAS Execution Time : 0.0170612 seconds
+cuBLAS Performance : 8055.66 GFLOPS
+Kernel Execution Time : 0.018844800 seconds
+Kernel Performance : 7293.22 GFLOPS
+Relative Percentage : 90.535350%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50193/73728
+cuBLAS Execution Time : 0.0171586 seconds
+cuBLAS Performance : 8009.91 GFLOPS
+Kernel Execution Time : 0.018980400 seconds
+Kernel Performance : 7241.10 GFLOPS
+Relative Percentage : 90.401765%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 16
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50177/73728
+cuBLAS Execution Time : 0.0170971 seconds
+cuBLAS Performance : 8038.71 GFLOPS
+Kernel Execution Time : 0.019013800 seconds
+Kernel Performance : 7228.40 GFLOPS
+Relative Percentage : 89.919900%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50185/73728
+cuBLAS Execution Time : 0.0169930 seconds
+cuBLAS Performance : 8087.98 GFLOPS
+Kernel Execution Time : 0.018978300 seconds
+Kernel Performance : 7241.91 GFLOPS
+Relative Percentage : 89.539168%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50273/73728
+cuBLAS Execution Time : 0.0170973 seconds
+cuBLAS Performance : 8038.63 GFLOPS
+Kernel Execution Time : 0.019139800 seconds
+Kernel Performance : 7180.78 GFLOPS
+Relative Percentage : 89.328405%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43018/73728
+cuBLAS Execution Time : 0.0171833 seconds
+cuBLAS Performance : 7998.41 GFLOPS
+Kernel Execution Time : 0.019303600 seconds
+Kernel Performance : 7119.87 GFLOPS
+Relative Percentage : 89.016067%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 50241/73728
+cuBLAS Execution Time : 0.0170257 seconds
+cuBLAS Performance : 8072.44 GFLOPS
+Kernel Execution Time : 0.019130400 seconds
+Kernel Performance : 7184.31 GFLOPS
+Relative Percentage : 88.997998%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49865/73728
+cuBLAS Execution Time : 0.0170314 seconds
+cuBLAS Performance : 8069.74 GFLOPS
+Kernel Execution Time : 0.019189100 seconds
+Kernel Performance : 7162.33 GFLOPS
+Relative Percentage : 88.755400%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 50249/73728
+cuBLAS Execution Time : 0.0169467 seconds
+cuBLAS Performance : 8110.08 GFLOPS
+Kernel Execution Time : 0.019116400 seconds
+Kernel Performance : 7189.58 GFLOPS
+Relative Percentage : 88.649927%
+BM : 256
+BN : 64
+BK : 32
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49857/73728
+cuBLAS Execution Time : 0.0169756 seconds
+cuBLAS Performance : 8096.26 GFLOPS
+Kernel Execution Time : 0.019163300 seconds
+Kernel Performance : 7171.97 GFLOPS
+Relative Percentage : 88.583741%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 49889/73728
+cuBLAS Execution Time : 0.0169873 seconds
+cuBLAS Performance : 8090.71 GFLOPS
+Kernel Execution Time : 0.019209000 seconds
+Kernel Performance : 7154.93 GFLOPS
+Relative Percentage : 88.433895%
+BM : 256
+BN : 64
+BK : 32
+WM : 64
+WN : 64
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 43042/73728
+cuBLAS Execution Time : 0.0170867 seconds
+cuBLAS Performance : 8043.63 GFLOPS
+Kernel Execution Time : 0.019348400 seconds
+Kernel Performance : 7103.36 GFLOPS
+Relative Percentage : 88.310377%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 43010/73728
+cuBLAS Execution Time : 0.0170277 seconds
+cuBLAS Performance : 8071.52 GFLOPS
+Kernel Execution Time : 0.019348800 seconds
+Kernel Performance : 7103.23 GFLOPS
+Relative Percentage : 88.003623%
+BM : 128
+BN : 64
+BK : 32
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 18465/73728
+cuBLAS Execution Time : 0.0171919 seconds
+cuBLAS Performance : 7994.39 GFLOPS
+Kernel Execution Time : 0.020118900 seconds
+Kernel Performance : 6831.33 GFLOPS
+Relative Percentage : 85.451548%
+BM : 64
+BN : 64
+BK : 16
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 18433/73728
+cuBLAS Execution Time : 0.0170839 seconds
+cuBLAS Performance : 8044.94 GFLOPS
+Kernel Execution Time : 0.020127400 seconds
+Kernel Performance : 6828.46 GFLOPS
+Relative Percentage : 84.878943%
+BM : 64
+BN : 64
+BK : 16
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 36865/73728
+cuBLAS Execution Time : 0.0169577 seconds
+cuBLAS Performance : 8104.82 GFLOPS
+Kernel Execution Time : 0.020046800 seconds
+Kernel Performance : 6855.92 GFLOPS
+Relative Percentage : 84.590651%
+BM : 64
+BN : 64
+BK : 32
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 36897/73728
+cuBLAS Execution Time : 0.0170818 seconds
+cuBLAS Performance : 8045.91 GFLOPS
+Kernel Execution Time : 0.020378000 seconds
+Kernel Performance : 6744.49 GFLOPS
+Relative Percentage : 83.825074%
+BM : 64
+BN : 64
+BK : 32
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 33/73728
+cuBLAS Execution Time : 0.0169782 seconds
+cuBLAS Performance : 8095.02 GFLOPS
+Kernel Execution Time : 0.020996500 seconds
+Kernel Performance : 6545.82 GFLOPS
+Relative Percentage : 80.862308%
+BM : 64
+BN : 64
+BK : 8
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 1/73728
+cuBLAS Execution Time : 0.0169346 seconds
+cuBLAS Performance : 8115.88 GFLOPS
+Kernel Execution Time : 0.021009400 seconds
+Kernel Performance : 6541.78 GFLOPS
+Relative Percentage : 80.604691%
+BM : 64
+BN : 64
+BK : 8
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61442/73728
+cuBLAS Execution Time : 0.0171493 seconds
+cuBLAS Performance : 8014.24 GFLOPS
+Kernel Execution Time : 0.022819700 seconds
+Kernel Performance : 6022.81 GFLOPS
+Relative Percentage : 75.151356%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 61474/73728
+cuBLAS Execution Time : 0.0169970 seconds
+cuBLAS Performance : 8086.07 GFLOPS
+Kernel Execution Time : 0.022798200 seconds
+Kernel Performance : 6028.51 GFLOPS
+Relative Percentage : 74.554264%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 61450/73728
+cuBLAS Execution Time : 0.0169965 seconds
+cuBLAS Performance : 8086.29 GFLOPS
+Kernel Execution Time : 0.022822000 seconds
+Kernel Performance : 6022.20 GFLOPS
+Relative Percentage : 74.474203%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 256
+================================================================================
+Step: 55329/73728
+cuBLAS Execution Time : 0.0171068 seconds
+cuBLAS Performance : 8034.16 GFLOPS
+Kernel Execution Time : 0.023548400 seconds
+Kernel Performance : 5836.45 GFLOPS
+Relative Percentage : 72.645429%
+BM : 64
+BN : 64
+BK : 64
+WM : 32
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 55297/73728
+cuBLAS Execution Time : 0.0170224 seconds
+cuBLAS Performance : 8074.03 GFLOPS
+Kernel Execution Time : 0.023512700 seconds
+Kernel Performance : 5845.31 GFLOPS
+Relative Percentage : 72.396436%
+BM : 64
+BN : 64
+BK : 64
+WM : 32
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61577/73728
+cuBLAS Execution Time : 0.0170437 seconds
+cuBLAS Performance : 8063.91 GFLOPS
+Kernel Execution Time : 0.024089500 seconds
+Kernel Performance : 5705.34 GFLOPS
+Relative Percentage : 70.751534%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61961/73728
+cuBLAS Execution Time : 0.0170162 seconds
+cuBLAS Performance : 8076.96 GFLOPS
+Kernel Execution Time : 0.024137900 seconds
+Kernel Performance : 5693.92 GFLOPS
+Relative Percentage : 70.495830%
+BM : 128
+BN : 64
+BK : 64
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61953/73728
+cuBLAS Execution Time : 0.0170566 seconds
+cuBLAS Performance : 8057.80 GFLOPS
+Kernel Execution Time : 0.024202700 seconds
+Kernel Performance : 5678.66 GFLOPS
+Relative Percentage : 70.474075%
+BM : 128
+BN : 64
+BK : 64
+WM : 64
+WN : 32
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61569/73728
+cuBLAS Execution Time : 0.0169587 seconds
+cuBLAS Performance : 8104.34 GFLOPS
+Kernel Execution Time : 0.024093300 seconds
+Kernel Performance : 5704.44 GFLOPS
+Relative Percentage : 70.387471%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 64
+WNITER : 1
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61993/73728
+cuBLAS Execution Time : 0.0171263 seconds
+cuBLAS Performance : 8025.04 GFLOPS
+Kernel Execution Time : 0.024651400 seconds
+Kernel Performance : 5575.29 GFLOPS
+Relative Percentage : 69.473672%
+BM : 128
+BN : 64
+BK : 64
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61601/73728
+cuBLAS Execution Time : 0.0171465 seconds
+cuBLAS Performance : 8015.57 GFLOPS
+Kernel Execution Time : 0.024698500 seconds
+Kernel Performance : 5564.66 GFLOPS
+Relative Percentage : 69.423135%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61985/73728
+cuBLAS Execution Time : 0.0170263 seconds
+cuBLAS Performance : 8072.15 GFLOPS
+Kernel Execution Time : 0.024550900 seconds
+Kernel Performance : 5598.12 GFLOPS
+Relative Percentage : 69.351040%
+BM : 128
+BN : 64
+BK : 64
+WM : 64
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61633/73728
+cuBLAS Execution Time : 0.0170992 seconds
+cuBLAS Performance : 8037.75 GFLOPS
+Kernel Execution Time : 0.024734500 seconds
+Kernel Performance : 5556.57 GFLOPS
+Relative Percentage : 69.130914%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 64
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 62017/73728
+cuBLAS Execution Time : 0.0170037 seconds
+cuBLAS Performance : 8082.89 GFLOPS
+Kernel Execution Time : 0.024618600 seconds
+Kernel Performance : 5582.73 GFLOPS
+Relative Percentage : 69.068489%
+BM : 128
+BN : 64
+BK : 64
+WM : 64
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 61609/73728
+cuBLAS Execution Time : 0.0170493 seconds
+cuBLAS Performance : 8061.28 GFLOPS
+Kernel Execution Time : 0.024709800 seconds
+Kernel Performance : 5562.12 GFLOPS
+Relative Percentage : 68.997976%
+BM : 128
+BN : 64
+BK : 64
+WM : 32
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 27715/73728
+cuBLAS Execution Time : 0.0170126 seconds
+cuBLAS Performance : 8078.65 GFLOPS
+Kernel Execution Time : 0.028215200 seconds
+Kernel Performance : 4871.09 GFLOPS
+Relative Percentage : 60.295842%
+BM : 128
+BN : 128
+BK : 16
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 8
+NUM_THREADS : 128
+================================================================================
+Step: 27721/73728
+cuBLAS Execution Time : 0.0171005 seconds
+cuBLAS Performance : 8037.15 GFLOPS
+Kernel Execution Time : 0.028362500 seconds
+Kernel Performance : 4845.80 GFLOPS
+Relative Percentage : 60.292517%
+BM : 128
+BN : 128
+BK : 16
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 27745/73728
+cuBLAS Execution Time : 0.0170716 seconds
+cuBLAS Performance : 8050.75 GFLOPS
+Kernel Execution Time : 0.028384000 seconds
+Kernel Performance : 4842.13 GFLOPS
+Relative Percentage : 60.145080%
+BM : 128
+BN : 128
+BK : 16
+WM : 128
+WN : 32
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 27713/73728
+cuBLAS Execution Time : 0.0170521 seconds
+cuBLAS Performance : 8059.95 GFLOPS
+Kernel Execution Time : 0.028431200 seconds
+Kernel Performance : 4834.09 GFLOPS
+Relative Percentage : 59.976675%
+BM : 128
+BN : 128
+BK : 16
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46153/73728
+cuBLAS Execution Time : 0.0170912 seconds
+cuBLAS Performance : 8041.50 GFLOPS
+Kernel Execution Time : 0.030038100 seconds
+Kernel Performance : 4575.49 GFLOPS
+Relative Percentage : 56.898464%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46177/73728
+cuBLAS Execution Time : 0.0171409 seconds
+cuBLAS Performance : 8018.19 GFLOPS
+Kernel Execution Time : 0.030141400 seconds
+Kernel Performance : 4559.81 GFLOPS
+Relative Percentage : 56.868321%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 8
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46147/73728
+cuBLAS Execution Time : 0.0170325 seconds
+cuBLAS Performance : 8069.22 GFLOPS
+Kernel Execution Time : 0.030117200 seconds
+Kernel Performance : 4563.48 GFLOPS
+Relative Percentage : 56.554165%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 8
+NUM_THREADS : 128
+================================================================================
+Step: 45737/73728
+cuBLAS Execution Time : 0.0170980 seconds
+cuBLAS Performance : 8038.32 GFLOPS
+Kernel Execution Time : 0.030321300 seconds
+Kernel Performance : 4532.76 GFLOPS
+Relative Percentage : 56.389395%
+BM : 128
+BN : 128
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46115/73728
+cuBLAS Execution Time : 0.0170829 seconds
+cuBLAS Performance : 8045.43 GFLOPS
+Kernel Execution Time : 0.030347200 seconds
+Kernel Performance : 4528.89 GFLOPS
+Relative Percentage : 56.291460%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 8
+NUM_THREADS : 128
+================================================================================
+Step: 45729/73728
+cuBLAS Execution Time : 0.0170757 seconds
+cuBLAS Performance : 8048.79 GFLOPS
+Kernel Execution Time : 0.030337500 seconds
+Kernel Performance : 4530.34 GFLOPS
+Relative Percentage : 56.285976%
+BM : 128
+BN : 128
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46121/73728
+cuBLAS Execution Time : 0.0170757 seconds
+cuBLAS Performance : 8048.78 GFLOPS
+Kernel Execution Time : 0.030357200 seconds
+Kernel Performance : 4527.39 GFLOPS
+Relative Percentage : 56.249394%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 45739/73728
+cuBLAS Execution Time : 0.0170429 seconds
+cuBLAS Performance : 8064.30 GFLOPS
+Kernel Execution Time : 0.030316400 seconds
+Kernel Performance : 4533.49 GFLOPS
+Relative Percentage : 56.216783%
+BM : 128
+BN : 128
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 8
+TW_N : 8
+NUM_THREADS : 128
+================================================================================
+Step: 46145/73728
+cuBLAS Execution Time : 0.0169334 seconds
+cuBLAS Performance : 8116.45 GFLOPS
+Kernel Execution Time : 0.030143000 seconds
+Kernel Performance : 4559.57 GFLOPS
+Relative Percentage : 56.176900%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 4
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46113/73728
+cuBLAS Execution Time : 0.0170772 seconds
+cuBLAS Performance : 8048.08 GFLOPS
+Kernel Execution Time : 0.030410200 seconds
+Kernel Performance : 4519.50 GFLOPS
+Relative Percentage : 56.156251%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 4
+TW_N : 4
+NUM_THREADS : 128
+================================================================================
+Step: 46123/73728
+cuBLAS Execution Time : 0.0170367 seconds
+cuBLAS Performance : 8067.24 GFLOPS
+Kernel Execution Time : 0.030358600 seconds
+Kernel Performance : 4527.19 GFLOPS
+Relative Percentage : 56.118202%
+BM : 128
+BN : 128
+BK : 32
+WM : 128
+WN : 32
+WNITER : 2
+TW_M : 8
+TW_N : 8
+NUM_THREADS : 128
+================================================================================
+Step: 45731/73728
+cuBLAS Execution Time : 0.0169999 seconds
+cuBLAS Performance : 8084.68 GFLOPS
+Kernel Execution Time : 0.030337200 seconds
+Kernel Performance : 4530.37 GFLOPS
+Relative Percentage : 56.036479%
+BM : 128
+BN : 128
+BK : 32
+WM : 64
+WN : 64
+WNITER : 2
+TW_M : 4
+TW_N : 8
+NUM_THREADS : 128
+================================================================================

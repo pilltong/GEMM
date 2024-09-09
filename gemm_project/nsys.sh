@@ -1,0 +1,1 @@
+nsys profile -t cuda,cublas --gpu-metrics-device all --cudabacktrace=all ./main

@@ -8,3 +8,4 @@
 #include "cuda_kernels/6_vectorized.cuh"
 #include "cuda_kernels/6_vectorized_revised.cuh"
 #include "cuda_kernels/7_resolve_bank_conflict.cuh"
+#include "cuda_kernels/10_warptiling.cuh"

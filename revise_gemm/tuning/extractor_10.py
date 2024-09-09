@@ -25,8 +25,9 @@ def parse_data(file_path):
             elif 'BK=' in line:
                 params = line.split()
                 for param in params:
-                    key, value = param.split('=')
-                    current_data[key.lower()] = int(value)
+                    if '=' in param:  # Only process if it contains an '='
+                        key, value = param.split('=')
+                        current_data[key.lower()] = int(value)
     
     if current_data and 'is_correct' in current_data and current_data['is_correct']:
         results.append(current_data)
@@ -34,7 +35,7 @@ def parse_data(file_path):
     return results
 
 def save_results(results, output_file):
-    # 결과를 GFLOPS 비율에 따라 내림차순으로 정렬
+    # Sort results by GFLOPS ratio (Kernel GFLOPS / cuBLAS GFLOPS) in descending order
     sorted_results = sorted(results, key=lambda x: x['kernel_gflops'] / x['cublas_gflops'], reverse=True)
     
     with open(output_file, 'w') as file:
@@ -48,22 +49,20 @@ def save_results(results, output_file):
             file.write(f"Kernel Execution Time : {data['kernel_time']:.9f} seconds\n")
             file.write(f"Kernel Performance : {data['kernel_gflops']:.2f} GFLOPS\n")
             file.write(f"Relative Percentage : {relative_percentage:.6f}%\n")
-            file.write(f"BM : {data['bm']}\n")
-            file.write(f"BN : {data['bn']}\n")
-            file.write(f"BK : {data['bk']}\n")
-            file.write(f"TW_M : {data['tm']}\n")
-            file.write(f"TW_N : {data['tn']}\n")
-            file.write(f"NUM_THREADS : {data['num_threads']}\n")
+            file.write(f"BM : {data.get('bm', 'N/A')}\n")
+            file.write(f"BN : {data.get('bn', 'N/A')}\n")
+            file.write(f"BK : {data.get('bk', 'N/A')}\n")
+            file.write(f"WM : {data.get('wm', 'N/A')}\n")
+            file.write(f"WN : {data.get('wn', 'N/A')}\n")
+            file.write(f"WNITER : {data.get('wn_iter', 'N/A')}\n")
+            file.write(f"TW_M : {data.get('tm', 'N/A')}\n")
+            file.write(f"TW_N : {data.get('tn', 'N/A')}\n")
+            file.write(f"NUM_THREADS : {data.get('num_threads', 'N/A')}\n")
             file.write("="*80 + "\n")
 
-# 사용 예시
-kernels = ['6_vectorized_t2.txt']
-#kernels = ['10_warptiling.txt']
-input_file = 'benchmark_results/'  # 입력 파일 경로
-output_file = 'tuned_results/'  # 출력 파일 경로
+# Example usage:
+input_file = 'benchmark_results/10_warptiling_t2.txt'
+output_file = 'tuned_results/10_warptiling_t2.txt'  # Path to save the filtered output
 
-for kernel in kernels:
-    input_path = input_file + kernel
-    output_path = output_file + kernel
-    parsed_data = parse_data(input_path)
-    save_results(parsed_data, output_path)
+parsed_data = parse_data(input_file)
+save_results(parsed_data, output_file)

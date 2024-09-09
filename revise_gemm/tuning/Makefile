@@ -1,5 +1,5 @@
 CC=nvcc
-SRC=single_kernel.cu
+SRC=cuda_kernel.cu
 TARGET=main
 FLAGS=-lcublas -arch=sm_89
 INCLUDE_DIR=../headers

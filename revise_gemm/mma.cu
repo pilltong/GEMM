@@ -174,10 +174,31 @@ void run_resolve_bank_conflict(float *A, float *B, float *C, int m, int n, int k
     resolve_bank_conflict<bm, bn, bk, tw_m, tw_n> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
+void run_warptiling(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    const uint k10_num_threads = 128;
+    const uint k10_bm = 128;
+    const uint k10_bn = 128;
+    const uint k10_bk = 16;
+    const uint k10_wm = 64;
+    const uint k10_wn = 64;
+    const uint k10_wniter = 4;
+    const uint k10_tw_m = 8;
+    const uint k10_tw_n = 4;
+    dim3 blockDim(k10_num_threads);
+    dim3 gridDim(ceil_div(n, k10_bn), ceil_div(m, k10_bm));
+    warptiling_fp<k10_bm, k10_bn, k10_bk, k10_wm, k10_wn, k10_wniter, k10_tw_m, k10_tw_n, k10_num_threads> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
 void run_global_tf(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     dim3 blockDim(16 * 16);
     dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
     global_tf <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+}
+
+void run_shared_tf(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
+    dim3 blockDim(16 * 16);
+    dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
+    shm_tf <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void run_global_bf(__nv_bfloat16 *A, __nv_bfloat16 *B, float *C, int m, int n, int k, float alpha, float beta) {
@@ -263,7 +284,6 @@ void launch_kernel_with_option_fp(int op, cublasHandle_t handle, float *A, float
             run_blocking_2d_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 6 :
-            //run_vectorized_fp_revised(A, B, C, m, n, k, alpha, beta);
             run_vectorized_fp(A, B, C, m, n, k, alpha, beta);
             break;
         case 7:
@@ -272,22 +292,22 @@ void launch_kernel_with_option_fp(int op, cublasHandle_t handle, float *A, float
         case 8 :
             run_resolve_bank_conflict(A, B, C, m, n, k, alpha, beta);
             break;
-        // case 8 :
-        //     runCublasTF32_with_TC(handle, A, B, C, m, n, k, alpha, beta);
-        //     break;
+        case 9 :
+            run_warptiling(A, B, C, m, n, k, alpha, beta);
+            break;
     }
 }
 
 void launch_kernel_with_option_tf(int op, cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
     switch(op) {
         case 0 :
-            runCublasTF32_with_TC(handle, A, B, C, m, n, k, alpha, beta);
-            break;
-        case 1 :
             runCublasTF32(handle, A, B, C, m, n, k, alpha, beta);
             break;
-        case 2 :
+        case 1 :
             run_global_tf(A, B, C, m, n, k, alpha, beta);
+            break;
+        case 2 :
+            run_shared_tf(A, B, C, m, n, k, alpha, beta);
             break;
         default :
             break;
@@ -390,7 +410,8 @@ int main(int argc, char **argv) {
     Matrix_C *d_C_ref = (Matrix_C*)malloc(sizeof(Matrix));
 
     // define the various matrix size
-    std::vector<int> SIZE = {128, 256, 512, 1024, 2048, 4096};
+    //std::vector<int> SIZE = {128, 256, 512, 1024, 2048, 4096};
+    std::vector<int> SIZE = {2048, 4096, 8192};
     long max_size;
     max_size = SIZE[SIZE.size() - 1];
 
@@ -406,11 +427,11 @@ int main(int argc, char **argv) {
     convert_to_tf32(d_A -> tf, d_B -> tf, max_size, max_size, max_size);
 
     // number of precisions
-    // fp32, bf16, fp16
+    // fp32, tf32, bf16, fp16
     int precision_num = 1;
 
     // number of kernels
-    int op_num = 8;
+    int op_num = 9;
 
     // for storing the gflops and elapsed_time
     result ***exe_results = (result***)malloc(sizeof(result**) * precision_num);
@@ -421,13 +442,13 @@ int main(int argc, char **argv) {
     }
 
     // repeat same kernel as 'repeat'
-    int repeat = 1;
+    int repeat = 100;
 
     // index for accessing the 'exe_results', tracking the matrix size
     int cnt = 0;
     
     // execute kernels with different precisions
-    for(int prec = FP32; prec <= FP32; prec++) {
+    for(int prec = 0; prec < precision_num; prec++) {
         cnt = 0;
         if(prec == FP32)
             printf("This is FP32\n");
@@ -445,22 +466,24 @@ int main(int argc, char **argv) {
             std::cout << "size : " << size << std::endl;
 
             // warm up the device and compare the result
-            if(prec == FP32)
-                launch_kernel_with_option_fp(0, handle, d_A -> fp, d_B -> fp, d_C_ref -> fp, m, n, k, alpha, beta);
-            else if(prec == TF32)
-                launch_kernel_with_option_tf(0, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
-            else if(prec == BF16)
-                launch_kernel_with_option_bf(0, handle, d_A -> bf, d_B -> bf, d_C_ref -> bf, m, n, k, alpha, beta);
-            else if(prec == FP16)
-                launch_kernel_with_option_h(0, handle, d_A -> h, d_B -> h, d_C_ref -> h, m, n, k, alpha, beta);
-            CHECK_CUDA(cudaDeviceSynchronize());
+            for(int warm_up = 0; warm_up < 10; warm_up++) {
+                if(prec == FP32)
+                    launch_kernel_with_option_fp(0, handle, d_A -> fp, d_B -> fp, d_C_ref -> fp, m, n, k, alpha, beta);
+                else if(prec == TF32)
+                    launch_kernel_with_option_tf(0, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+                else if(prec == BF16)
+                    launch_kernel_with_option_bf(0, handle, d_A -> bf, d_B -> bf, d_C_ref -> bf, m, n, k, alpha, beta);
+                else if(prec == FP16)
+                    launch_kernel_with_option_h(0, handle, d_A -> h, d_B -> h, d_C_ref -> h, m, n, k, alpha, beta);
+                CHECK_CUDA(cudaDeviceSynchronize());
+            }
             
-            for(int i = 1; i <= op_num; i++) {
+            for(int i = 0; i <= op_num; i++) {
                 std::cout << "This is op " << i << std::endl;
                 if(prec == FP32)
                     launch_kernel_with_option_fp(i, handle, d_A -> fp, d_B -> fp, d_C -> fp, m, n, k, alpha, beta);
                 else if(prec == TF32)
-                    launch_kernel_with_option_tf(i, handle, d_A -> tf, d_B -> tf, d_C_ref -> tf, m, n, k, alpha, beta);
+                    launch_kernel_with_option_tf(i, handle, d_A -> tf, d_B -> tf, d_C -> tf, m, n, k, alpha, beta);
                 else if(prec == BF16)
                     launch_kernel_with_option_bf(i, handle, d_A -> bf, d_B -> bf, d_C -> bf, m, n, k, alpha, beta);
                 else if(prec == FP16)

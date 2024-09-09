@@ -14,7 +14,7 @@ cd ".."
 
 RUNNER="runner.cuh"
 KERNEL="../headers/cuda_kernels/6_vectorized.cuh"
-OUTPUT="benchmark_results/6_vectorized.txt"
+OUTPUT="benchmark_results/6_vectorized_t2.txt"
 
 # Clear the output file
 echo "" > $OUTPUT

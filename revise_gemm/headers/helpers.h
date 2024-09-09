@@ -99,8 +99,7 @@ void randomize_matrix(int N, Matrix *M) {
 		float tmp = (float)(rand() % 5) + 0.01 * (rand() % 5);
 		tmp = (rand() % 2 == 0) ? tmp : tmp * (-1.);
 		M -> fp[i] = tmp;
-		M -> tf[i] = tmp; 
-		//nvcuda::wmma::__float_to_tf32(M -> fp[i]);
+		M -> tf[i] = tmp;
 		M -> bf[i] = __float2bfloat16(M -> fp[i]);
 		M -> h[i] = __float2half(M -> fp[i]);
 	}
