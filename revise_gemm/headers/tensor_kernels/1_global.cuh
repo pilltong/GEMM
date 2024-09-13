@@ -31,8 +31,8 @@ __global__ void global_tf(const float *A, const float *B, float *C, int m, int n
         wmma::mma_sync(c_frag, a_frag, b_frag, c_frag);
     }
     
-    for(int i = 0; i < c_frag.num_elements; i++)
-        c_frag.x[i] = alpha * c_frag.x[i] + beta * C[Crow * n + Ccol + i];
+    // for(int i = 0; i < c_frag.num_elements; i++)
+    //     c_frag.x[i] = alpha * c_frag.x[i] + beta * C[Crow * n + Ccol + i];
 
     // Store the result back to the output matrix
     wmma::store_matrix_sync(C + (Crow * n + Ccol) * 16, c_frag, n, wmma::mem_row_major);

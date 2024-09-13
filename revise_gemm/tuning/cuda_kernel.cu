@@ -49,10 +49,10 @@ int main(int argc, char **argv) {
     float alpha = 1.0, beta = 0.0;
 
     // 행렬 크기 설정 (예시: 4096x4096 크기의 행렬)
-    long m = 16384, n = 16384, k = 16384;
+    long m = 4096, n = 4096, k = 4096;
 
     // repeats
-    int repeat_time = 1;
+    int repeat_time = 50;
 
     // 호스트 메모리 할당
     float *A = (float*)malloc(sizeof(float) * m * k);

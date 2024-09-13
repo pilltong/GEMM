@@ -81,10 +81,10 @@ void run_warptiling(float *A, float *B, float *C, int m, int n, int k, float alp
     const uint k10_bm = 256;
     const uint k10_bn = 64;
     const uint k10_bk = 16;
-    const uint k10_wm = 128;
+    const uint k10_wm = 256;
     const uint k10_wn = 32;
-    const uint k10_wniter = 8;
-    const uint k10_tw_m = 4;
+    const uint k10_wniter = 4;
+    const uint k10_tw_m = 8;
     const uint k10_tw_n = 4;
     dim3 blockDim(k10_num_threads);
     dim3 gridDim(ceil_div(n, k10_bn), ceil_div(m, k10_bm));
@@ -104,9 +104,15 @@ void run_global_tf(float *A, float *B, float *C, int m, int n, int k, float alph
 }
 
 void run_shared_tf(float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {
-    dim3 blockDim(16 * 16);
-    dim3 gridDim(ceil_div(n * m, 16 * 16 * 8));
-    shm_tf <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
+    const uint bm = 128;
+    const uint bn = 128;
+    const uint bk = 16;
+    const uint wm = 64;
+    const uint wn = 32;
+    const uint num_threads = 256;
+    dim3 blockDim(num_threads);
+    dim3 gridDim(ceil_div(n, bn), ceil_div(m, bm));
+    shm_tf<bm, bn, bk, wm, wn, num_threads> <<<gridDim, blockDim>>>(A, B, C, m, n, k, alpha, beta);
 }
 
 void runCublasTF32_with_TC(cublasHandle_t handle, float *A, float *B, float *C, int m, int n, int k, float alpha, float beta) {

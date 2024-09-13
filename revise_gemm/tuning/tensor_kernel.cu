@@ -50,7 +50,9 @@ int main(int argc, char **argv) {
     float alpha = 1.0, beta = 0.0;
 
     // 행렬 크기 설정 (예시: 4096x4096 크기의 행렬)
-    long m = 16384, n = 16384, k = 16384;
+    //long m = 4096, n = 4096, k = 4096;
+    //long m = 8192, n = 8192, k = 8192;
+     long m = 16384, n = 16384, k = 16384;
 
     // repeats
     int repeat_time = 100;
@@ -100,7 +102,7 @@ int main(int argc, char **argv) {
     CHECK_CUDA(cudaEventSynchronize(stop));
     CHECK_CUDA(cudaEventElapsedTime(&elapsed_time1, start, stop));
     
-    cudaMemcpy(C_ref, d_C_ref, sizeof(float) * m * n, cudaMemcpyDeviceToHost);
+    CHECK_CUDA(cudaMemcpy(C_ref, d_C_ref, sizeof(float) * m * n, cudaMemcpyDeviceToHost));
 
     CHECK_CUDA(cudaEventRecord(start));
     for(int i = 0; i < repeat_time; i++) {

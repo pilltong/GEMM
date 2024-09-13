@@ -11,13 +11,13 @@ WN_VALUES=(32 64 128 256)
 WNITER_VALUES=(1 2 4 8)
 TM_VALUES=(4 8 16 32)
 TN_VALUES=(4 8 16 32)
-NUM_THREADS_VALUES=(128 256)
+NUM_THREADS_VALUES=(128)
 
 cd ".."
 
 RUNNER="runner.cuh"
 KERNEL="../headers/cuda_kernels/10_warptiling.cuh"
-OUTPUT="benchmark_results/10_warptiling_t2.txt"
+OUTPUT="benchmark_results/10_warptiling_t3.txt"
 
 # Clear the output file
 echo "" > $OUTPUT
